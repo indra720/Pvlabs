@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, CheckCircle, Play } from "lucide-react";
-
+import herosection from "../../assets/hero-section.jpg"
 const Hero = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Background Video */}
@@ -11,7 +11,7 @@ const Hero = () => (
       loop
       playsInline
       className="absolute inset-0 w-full h-full object-cover"
-      poster="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&q=80"
+      poster={herosection}
     >
       <source
         src="https://cdn.coverr.co/videos/coverr-a-team-working-on-computers-in-an-office-1080p/1080p.mp4"

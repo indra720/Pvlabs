@@ -83,12 +83,12 @@ const serviceCategories = [
 
 const ServicesGrid = () => (
   <section className="section-padding gradient-bg-soft">
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-10"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Services</span>
         <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
