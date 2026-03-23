@@ -14,15 +14,15 @@ const reasons = [
 
 const WhyChoose = () => (
   <section className="section-padding gradient-bg-soft">
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-5"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">Why PV Labs</span>
-        <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
+        <h2 className="font-heading text-4xl md:text-5xl font-bold mb-3 text-foreground">
           Why leading brands <span className="gradient-text">choose us</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -30,7 +30,7 @@ const WhyChoose = () => (
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {reasons.map((r, i) => (
           <motion.div
             key={i}

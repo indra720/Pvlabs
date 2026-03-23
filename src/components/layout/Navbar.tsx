@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../../assets/logo-removebg-preview (1).png"
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -49,9 +50,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
-        <Link to="/" className="font-heading text-2xl font-bold tracking-tight">
-          <span className="gradient-text">PV</span>
-          <span className="text-foreground"> Labs</span>
+        <Link to="/" className="flex items-center group">
+          <img 
+            src={logo} 
+            alt="PV Labs" 
+            className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-105" 
+          />
         </Link>
 
         {/* Desktop */}
@@ -108,7 +112,7 @@ const Navbar = () => {
             Login
           </Link>
           <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
-            Get a Quote
+            Free Consultation
           </Link>
         </div>
 

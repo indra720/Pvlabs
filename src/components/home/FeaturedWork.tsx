@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ExternalLink, Eye } from "lucide-react";
-import portfolioShowcase from "@/assets/portfolio-showcase.jpg";
-import serviceBranding from "@/assets/service-branding.jpg";
-import serviceAppdesign from "@/assets/service-appdesign.jpg";
-import servicePackaging from "@/assets/service-packaging.jpg";
-import serviceWebdesign from "@/assets/service-webdesign.jpg";
-import serviceMotion from "@/assets/service-motion.jpg";
-import servicePrint from "@/assets/service-print.jpg";
+// Realistic professional photography URLs from Unsplash
+const portfolioShowcase = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426";
+const serviceBranding = "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071";
+const serviceAppdesign = "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1974";
+const servicePackaging = "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070";
+const serviceWebdesign = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072";
+const serviceMotion = "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070";
+const servicePrint = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=2070";
 
 const projects = [
   { title: "NovaTech Rebrand", category: "Branding", image: serviceBranding, client: "NovaTech Inc.", result: "Brand recognition increased by 280%" },
@@ -20,7 +21,7 @@ const projects = [
 
 const FeaturedWork = () => (
   <section className="section-padding">
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full ">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -43,10 +44,10 @@ const FeaturedWork = () => (
         viewport={{ once: true }}
         className="rounded-[24px] overflow-hidden mb-12 shadow-lg"
       >
-        <img src={portfolioShowcase} alt="PV Labs portfolio showcase" className="w-full h-auto" />
+        <img src={portfolioShowcase} alt="PV Labs portfolio showcase" className="w-full h-auto sm:h-[90vh]" />
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {projects.map((p, i) => (
           <motion.div
             key={i}

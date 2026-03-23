@@ -2,8 +2,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Target, Eye, Figma, PenTool, Monitor, Palette, Layers, Award, Trophy, Star } from "lucide-react";
-import aboutTeam from "@/assets/about-team.jpg";
-import portfolioShowcase from "@/assets/portfolio-showcase.jpg";
+// Realistic professional photography URLs from Unsplash
+const aboutTeam = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070";
+const portfolioShowcase = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426";
 
 const team = [
   { name: "Priya Verma", role: "Founder & Creative Director", initials: "PV", bio: "15+ years in design leadership. Previously at Google and IDEO. Passionate about design that drives business growth." },
