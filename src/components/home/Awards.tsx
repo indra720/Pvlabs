@@ -12,12 +12,12 @@ const awards = [
 
 const Awards = () => (
   <section className="section-padding">
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-5"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">Recognition</span>
         <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
@@ -26,7 +26,7 @@ const Awards = () => (
         <p className="text-muted-foreground max-w-xl mx-auto">50+ industry awards recognizing our commitment to design excellence.</p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {awards.map((a, i) => (
           <motion.div
             key={i}

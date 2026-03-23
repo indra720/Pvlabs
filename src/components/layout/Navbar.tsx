@@ -112,7 +112,7 @@ const Navbar = () => {
             Login
           </Link>
           <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
-            Get a Quote
+            Free Consultation
           </Link>
         </div>
 

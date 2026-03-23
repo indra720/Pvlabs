@@ -11,7 +11,7 @@ const steps = [
 
 const DesignProcess = () => (
   <section className="section-padding gradient-bg-soft">
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const DesignProcess = () => (
         className="text-center mb-16"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Process</span>
-        <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
+        <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
           How we <span className="gradient-text">work</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ const DesignProcess = () => (
         {/* Connection line */}
         <div className="hidden md:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20" />
 
-        <div className="grid md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {steps.map((s, i) => (
             <motion.div
               key={i}

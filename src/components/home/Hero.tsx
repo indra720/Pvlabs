@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, CheckCircle, Play } from "lucide-react";
-import herosection from "../../assets/hero-section.jpg"
+// Realistic professional photography URL from Unsplash
+const herosection = "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070";
+
 const Hero = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Background Video */}
@@ -21,7 +23,7 @@ const Hero = () => (
 
     {/* Dark overlay with gradient */}
     <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/60 to-foreground/80" />
-    
+
     {/* Animated accent blobs */}
     <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
     <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px]" />
@@ -41,39 +43,40 @@ const Hero = () => (
             className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2.5 mb-8"
           >
             <Sparkles size={14} className="text-primary" />
-            <span className="text-xs font-semibold text-primary-foreground">Award-Winning Creative Agency</span>
+            <span className="text-xs font-semibold text-primary-foreground">"India's E-Commerce Visual Studio"</span>
           </motion.div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 tracking-tight text-primary-foreground">
-            We craft
+          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 tracking-tight text-primary-foreground">
+            Your Competitor Just Launched.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
-              digital experiences
+              You're Still Waiting.
             </span>
-            <br />
-            that inspire
+
           </h1>
 
-          <p className="text-base md:text-lg text-primary-foreground/70 max-w-lg mb-10 leading-relaxed">
-            PV Labs is a premium creative design agency helping brands worldwide with stunning visuals,
-            brand identity, UI/UX design, and marketing creatives that drive real results.
+          <p className="text-base md:text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
+            Product visuals, A+ content, packaging & logo — Amazon & Flipkart ready in <b className="text-white">3–5 days</b> at <b className="text-white">80%</b> less cost than a traditional studio shoot. No camera. No shipping. No delays."
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <br />
+          <span className="text-[#60B8F0] font-bold bottom-2 text-sm">⚡ Sellers who switched saved ₹15,000–₹50,000 per shoot</span>
+          
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-4">
             <Link
               to="/contact"
               className="gradient-btn px-8 py-4 text-base flex items-center justify-center gap-2 shadow-2xl"
             >
-              Start Your Project <ArrowRight size={18} />
+              → Free 1-SKU Makeover<ArrowRight size={18} />
             </Link>
             <Link
               to="/portfolio"
               className="px-8 py-4 text-base font-semibold text-primary-foreground border border-primary-foreground/30 rounded-full hover:bg-primary-foreground/10 backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2"
             >
-              <Play size={16} /> View Our Work
+              <Play size={16} /> See Real Results
             </Link>
           </div>
-
+          
+          <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month — only 4 remaining</span>
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
             {["500+ Projects Delivered", "200+ Global Clients", "50+ Awards Won"].map((t, i) => (
               <motion.span

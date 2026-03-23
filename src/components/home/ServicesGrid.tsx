@@ -88,8 +88,8 @@ const ServicesGrid = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-10"
-      >
+        className="text-center mb-5"
+       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Services</span>
         <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
           Everything your brand <span className="gradient-text">needs</span>
@@ -99,7 +99,7 @@ const ServicesGrid = () => (
         </p>
       </motion.div>
 
-      <div className="space-y-12">
+      <div className="space-y-6 ">
         {serviceCategories.map((cat, idx) => (
           <motion.div
             key={idx}
@@ -111,16 +111,16 @@ const ServicesGrid = () => (
             <div className="aspect-[4/3] md:aspect-auto">
               <img src={cat.image} alt={cat.title} className="w-full h-full object-cover" />
             </div>
-            <div className="p-8 flex flex-col justify-center">
-              <h3 className="font-heading text-2xl font-bold mb-2 text-foreground">{cat.title}</h3>
-              <p className="text-muted-foreground text-sm mb-6">{cat.desc}</p>
-              <div className="grid grid-cols-2 gap-3">
+            <div className="px-8 py-2 flex flex-col justify-center">
+              <h3 className="font-heading text-xl md:text-3xl lg:text-4xl font-bold mb-2 text-foreground text-center ">{cat.title}</h3>
+              <p className="text-muted-foreground text-sm sm:text-md mb-6 text-justify">{cat.desc}</p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 text-base">
                 {cat.services.map((s, i) => (
-                  <div key={i} className="flex items-start gap-2 p-2 rounded-xl hover:bg-secondary/60 transition-colors">
+                  <div key={i} className="flex items-start  gap-2  rounded-xl hover:bg-secondary/60 transition-colors ">
                     <s.icon size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="text-sm font-medium text-foreground">{s.name}</div>
-                      <div className="text-xs text-muted-foreground">{s.desc}</div>
+                    <div className="">
+                      <div className="text-md font-medium text-foreground">{s.name}</div>
+                      <div className="text-sm sm:text- text-muted-foreground ">{s.desc}</div>
                     </div>
                   </div>
                 ))}

@@ -3,22 +3,28 @@ import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowRight, Check, Clock, Layers, Palette, PenTool, Monitor, Smartphone, Zap, Star, Users, MessageCircle } from "lucide-react";
-import serviceBranding from "@/assets/service-branding.jpg";
-import serviceWebdesign from "@/assets/service-webdesign.jpg";
-import serviceAppdesign from "@/assets/service-appdesign.jpg";
-import servicePackaging from "@/assets/service-packaging.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import serviceMotion from "@/assets/service-motion.jpg";
-import servicePrint from "@/assets/service-print.jpg";
+// Realistic professional photography URLs from Unsplash
+const serviceBranding = "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071";
+const serviceWebdesign = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072";
+const serviceAppdesign = "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1974";
+const servicePackaging = "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070";
+const serviceSocial = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1974";
+const serviceMotion = "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070";
+const servicePrint = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=2070";
 
-const serviceData: Record<string, {
-  title: string; tagline: string; desc: string; image: string;
+interface ServiceData {
+  title: string;
+  tagline: string;
+  desc: string;
+  image: string;
   process: { step: string; desc: string }[];
   tools: string[];
   benefits: string[];
   pricing: { tier: string; price: string; features: string[] }[];
   faqs: { q: string; a: string }[];
-}> = {
+}
+
+const serviceData: Record<string, ServiceData> = {
   "logo-design": {
     title: "Logo Design", tagline: "Logos that last a lifetime", image: serviceBranding,
     desc: "Your logo is the cornerstone of your brand. We create timeless, versatile marks that capture your essence and build instant recognition across every medium — from business cards to billboards to favicons.",

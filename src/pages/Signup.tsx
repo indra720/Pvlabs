@@ -1,62 +1,106 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Mail, Lock, User, ArrowRight, Eye, EyeOff, CheckCircle } from "lucide-react";
+import { Mail, Lock, User, ArrowRight, Eye, EyeOff, CheckCircle, Shield, Star, Zap } from "lucide-react";
 import { useState } from "react";
 import logo from "../../src/assets/logo-removebg-preview (1).png"
-import showcaseVisual from "../../src/assets/portfolio-showcase.jpg"; 
 
-const Signup = () => {
-  const [showPassword, setShowPassword] = useState(false);
+const Signup = () => {  const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex">
-      {/* Left Side - Visual (Hidden on Mobile) */}
-      <div className="hidden lg:flex w-1/2 relative bg-black items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-60">
-           <img src={showcaseVisual} alt="Creative Portfolio" className="w-full h-full object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10" />
+    <div className="h-screen w-full flex items-center justify-center bg-black p-4 lg:p-8 overflow-hidden">
+      {/* Main Card Container */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="w-full max-w-6xl h-[90vh] bg-white rounded-[32px] shadow-2xl flex overflow-hidden"
+      >
         
-        <div className="relative z-20 max-w-lg px-12 text-center text-white">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <h2 className="text-4xl font-heading font-bold mb-6 leading-tight">
-              Start Your <span className="gradient-text">Journey</span>
-            </h2>
-            <p className="text-lg text-white/80 font-light">
-              Create an account to manage projects, collaborate with teams, and bring your ideas to life.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+        {/* Left Side - Visual & Branding */}
+        <div className="hidden lg:flex w-1/2 relative bg-gradient-to-br from-slate-100 to-slate-200/50 items-center justify-center overflow-hidden p-12">
+          
+          {/* Decorative Background Blob */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-      {/* Right Side - Form */}
-      <div className="w-full lg:w-1/2 bg-background flex flex-col justify-center items-center px-6 lg:px-20 relative py-12 lg:py-0">
-        <div className="w-full max-w-md">
+          {/* Content Container */}
+          <div className="relative z-10 w-full h-full flex flex-col justify-between">
             
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }} 
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8 text-center lg:text-left"
-          >
-            <Link to="/" className="inline-block mb-4 group">
-              <img 
-                src={logo} 
-                alt="PV Labs" 
-                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-              />
-            </Link>
-            <h1 className="font-heading text-3xl font-bold text-foreground mb-2">Create Account</h1>
-            <p className="text-muted-foreground">
-              Join us today and start your creative journey.
-            </p>
-          </motion.div>
+            {/* Floating Logo Section */}
+            <div className="flex-1 flex items-center justify-center relative">
+              {/* Main Floating Logo */}
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-30 p-8 bg-white/40 backdrop-blur-xl border border-white/50 rounded-3xl shadow-xl flex items-center justify-center"
+              >
+                <img 
+                  src={logo} 
+                  alt="PV Labs" 
+                  className="h-28 w-auto object-contain relative z-10 filter drop-shadow-lg" 
+                />
+              </motion.div>
 
-          <div className="space-y-6">
-             <button className="w-full flex items-center justify-center gap-3 py-3 rounded-xl border border-border hover:bg-secondary/50 transition-all font-medium text-foreground group">
+              {/* Orbiting Elements */}
+              <motion.div
+                animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute top-10 left-10 p-3 bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl shadow-lg"
+              >
+                <Shield className="text-primary w-6 h-6" />
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, 12, 0], x: [0, -5, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="absolute bottom-20 right-10 p-3 bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl shadow-lg"
+              >
+                <Star className="text-yellow-400 w-6 h-6 fill-yellow-400" />
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                className="absolute top-20 right-12 p-2 bg-white/60 backdrop-blur-md border border-white/40 rounded-xl shadow-md"
+              >
+                <Zap className="text-blue-400 w-5 h-5 fill-blue-400" />
+              </motion.div>
+            </div>
+
+            {/* Bottom Text */}
+            <div className="text-center mt-8">
+              <h2 className="text-3xl font-heading font-bold mb-4 leading-tight text-slate-800">
+                Start Your <span className="gradient-text">Journey</span>
+              </h2>
+              <p className="text-slate-600 font-medium">
+                Create an account to manage projects, collaborate with teams, and bring your ideas to life.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Form */}
+        <div className="w-full lg:w-1/2 bg-white flex flex-col justify-center px-8 lg:px-12 py-6 overflow-y-auto">
+          <div className="w-full max-w-md mx-auto h-full flex flex-col justify-center">
+
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }} 
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-4"
+            >
+              {/* Mobile Logo (Visible only on small screens) */}
+              <div className="lg:hidden flex justify-center mb-4">
+                 <img src={logo} alt="PV Labs" className="h-12 w-auto" />
+              </div>
+
+              <h1 className="font-heading text-2xl font-bold text-foreground mb-1">Create Account</h1>
+              <p className="text-sm text-muted-foreground">
+                Join us today and start your creative journey.
+              </p>
+            </motion.div>
+
+            <div className="space-y-4">
+             <button className="w-full flex items-center justify-center gap-3 py-2.5 rounded-xl border border-border hover:bg-secondary/50 transition-all font-medium text-foreground text-sm group">
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -78,81 +122,82 @@ const Signup = () => {
               <span className="group-hover:text-primary transition-colors">Sign up with Google</span>
             </button>
 
-            <div className="relative flex items-center py-2">
+            <div className="relative flex items-center py-1">
               <div className="flex-grow border-t border-border"></div>
               <span className="flex-shrink-0 mx-4 text-xs text-muted-foreground uppercase tracking-wider">Or register with email</span>
               <div className="flex-grow border-t border-border"></div>
             </div>
 
-            <form className="space-y-5">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Full Name</label>
+            <form className="space-y-4">
+              <div className="space-y-1.5">
+                <label className="text-xs font-medium text-foreground">Full Name</label>
                 <div className="relative group">
-                  <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <User size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
                   <input 
                     type="text" 
                     placeholder="John Doe" 
-                    className="w-full bg-secondary/30 border border-border rounded-xl pl-12 pr-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
+                    className="w-full bg-secondary/30 border border-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Email Address</label>
+              <div className="space-y-1.5">
+                <label className="text-xs font-medium text-foreground">Email Address</label>
                 <div className="relative group">
-                  <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
                   <input 
                     type="email" 
                     placeholder="name@example.com" 
-                    className="w-full bg-secondary/30 border border-border rounded-xl pl-12 pr-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
+                    className="w-full bg-secondary/30 border border-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Password</label>
+              <div className="space-y-1.5">
+                <label className="text-xs font-medium text-foreground">Password</label>
                 <div className="relative group">
-                  <Lock size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
                   <input 
                     type={showPassword ? "text" : "password"} 
                     placeholder="Create a strong password" 
-                    className="w-full bg-secondary/30 border border-border rounded-xl pl-12 pr-12 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
+                    className="w-full bg-secondary/30 border border-border rounded-xl pl-10 pr-10 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
                   />
                   <button 
                     type="button" 
                     onClick={() => setShowPassword(!showPassword)} 
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                   </button>
                 </div>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
-                   {["8+ characters", "1 uppercase", "1 number"].map((r, i) => (
-                    <span key={i} className="text-xs text-muted-foreground flex items-center gap-1"><CheckCircle size={12} className="text-primary" /> {r}</span>
+                <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1.5">
+                   {["8+ chars", "1 uppercase", "1 number"].map((r, i) => (
+                    <span key={i} className="text-[10px] text-muted-foreground flex items-center gap-1"><CheckCircle size={10} className="text-primary" /> {r}</span>
                   ))}
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 pt-1">
-                <input type="checkbox" id="terms" className="w-4 h-4 mt-0.5 rounded border-border text-primary focus:ring-primary/20" />
-                <label htmlFor="terms" className="text-xs text-muted-foreground leading-relaxed">
-                  I agree to the <Link to="/terms" className="text-primary hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>
+              <div className="flex items-start gap-2 pt-0.5">
+                <input type="checkbox" id="terms" className="w-3.5 h-3.5 mt-0.5 rounded border-border text-primary focus:ring-primary/20" />
+                <label htmlFor="terms" className="text-[11px] text-muted-foreground leading-relaxed">
+                  I agree to the <Link to="/terms" className="text-primary hover:underline">Terms</Link> and <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>
                 </label>
               </div>
 
-              <Link to="/dashboard" className="gradient-btn w-full py-4 text-sm font-bold tracking-wide flex items-center justify-center gap-2 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5">
-                Create Account <ArrowRight size={18} />
+              <Link to="/dashboard" className="gradient-btn w-full py-3 text-sm font-bold tracking-wide flex items-center justify-center gap-2 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5">
+                Create Account <ArrowRight size={16} />
               </Link>
             </form>
 
-            <p className="text-center text-sm text-muted-foreground">
+            <p className="text-center text-xs text-muted-foreground mt-4">
               Already have an account? <Link to="/login" className="text-primary font-semibold hover:underline ml-1">Sign in</Link>
             </p>
           </div>
-        </div>
-      </div>
+        </div>        </div>
+      </motion.div>
     </div>
   );
 };
 
 export default Signup;
+             

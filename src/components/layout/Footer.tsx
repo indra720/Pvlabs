@@ -2,18 +2,22 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight, Heart } from "lucide-react";
 import { useState } from "react";
 import { socialLinks } from "@/lib/social-links";
-
+import logo from "../../assets/logo-removebg-preview (1).png"
 const Footer = () => {
   const [email, setEmail] = useState("");
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <div className="w-full px-6 md:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="font-heading text-2xl font-bold mb-4 inline-block">
-              <span className="text-primary">PV</span> Labs
+             <img 
+            src={logo} 
+            alt="PV Labs" 
+            className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-105" 
+          />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed mb-6">
               We craft bold digital experiences that elevate brands and captivate audiences. 500+ projects delivered for 200+ clients across 20+ countries.

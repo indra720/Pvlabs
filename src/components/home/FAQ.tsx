@@ -14,21 +14,21 @@ const faqs = [
 
 const FAQ = () => (
   <section className="section-padding">
-    <div className="max-w-3xl mx-auto">
+    <div className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">FAQ</span>
-        <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
+        <h2 className="font-heading text-4xl md:text-5xl font-bold  mb-4 text-foreground">
           Common <span className="gradient-text">Questions</span>
         </h2>
         <p className="text-muted-foreground">Everything you need to know about working with PV Labs.</p>
       </motion.div>
 
-      <Accordion type="single" collapsible className="space-y-3">
+      <Accordion type="single" collapsible className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {faqs.map((f, i) => (
           <AccordionItem key={i} value={`faq-${i}`} className="glass-card px-6 border-none">
             <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline">

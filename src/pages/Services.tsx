@@ -8,15 +8,48 @@ import {
   Diamond, Play, Film, Presentation, Camera, Megaphone, Mail, Target,
   ArrowRight, Check
 } from "lucide-react";
-import serviceBranding from "@/assets/service-branding.jpg";
-import serviceWebdesign from "@/assets/service-webdesign.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import servicePackaging from "@/assets/service-packaging.jpg";
-import serviceAppdesign from "@/assets/service-appdesign.jpg";
-import serviceMotion from "@/assets/service-motion.jpg";
-import servicePrint from "@/assets/service-print.jpg";
 
-const images = [serviceBranding, serviceBranding, serviceSocial, servicePrint, servicePrint, servicePrint, serviceBranding, servicePackaging, servicePackaging, serviceWebdesign, serviceAppdesign, serviceWebdesign, servicePrint, servicePrint, serviceBranding, serviceMotion, serviceMotion, servicePrint, serviceSocial, serviceSocial, serviceWebdesign, serviceSocial];
+// Import local assets
+import logoDesignImg from "@/assets/logodesign.webp";
+import brandIdentityImg from "@/assets/brandindentity.webp";
+import socialMediaImg from "@/assets/service-social.jpg";
+import flyerDesignImg from "@/assets/flayer-design.avif";
+import brochureDesignImg from "@/assets/Brochure Design.webp";
+import bannerDesignImg from "@/assets/Banner & Hoarding Design.jpg";
+import appDesignImg from "@/assets/service-appdesign.jpg";
+import packagingImg from "@/assets/service-packaging.jpg";
+import motionImg from "@/assets/service-motion.jpg";
+import webDesignImg from "@/assets/service-webdesign.jpg";
+import printImg from "@/assets/service-print.jpg";
+import graphicDesignImg from "@/assets/graphicdesign.webp";
+
+// Fallback/Reuse for other services
+const servicePrint = printImg;
+
+const images = [
+  logoDesignImg,          // Logo Design
+  brandIdentityImg,       // Brand Identity
+  socialMediaImg,         // Social Media
+  flyerDesignImg,         // Posters & Flyers
+  brochureDesignImg,      // Brochure
+  bannerDesignImg,        // Banner & Hoarding
+  servicePrint,           // Business Card (Print)
+  packagingImg,           // Packaging
+  packagingImg,           // Product Label (Packaging)
+  webDesignImg,           // Website UI
+  appDesignImg,           // Mobile App UI
+  webDesignImg,           // Landing Page
+  graphicDesignImg,       // Infographics
+  graphicDesignImg,       // Illustration
+  logoDesignImg,          // Icon Design
+  motionImg,              // Motion Graphics
+  motionImg,              // Video Editing
+  webDesignImg,           // Presentation
+  brandIdentityImg,       // Photo Editing
+  socialMediaImg,         // Marketing Creatives
+  webDesignImg,           // Email Template
+  socialMediaImg          // Digital Ads
+];
 
 const allServices = [
   { icon: Palette, title: "Logo Design", desc: "Memorable, timeless logos that capture your brand essence and build instant recognition. We create versatile logos that work across all mediums.", benefits: ["5+ unique concepts", "Unlimited revisions", "All vector formats", "Brand guidelines included"] },
@@ -54,11 +87,11 @@ const Services = () => (
     <Navbar />
 
     {/* Hero */}
-    <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="pt-32 pb-2 px-6 md:px-12 gradient-bg-soft">
+      <div className="w-full text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Services</span>
-          <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
+          <h1 className="font-heading text-5xl md:text-7xl font-extrabold  mb-6 text-foreground">
             <span className="gradient-text">22+ Services</span> for your brand
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -72,7 +105,7 @@ const Services = () => (
     {/* Service Sections */}
     {allServices.map((s, i) => (
       <section key={i} className={`section-padding ${i % 2 === 0 ? "" : "gradient-bg-soft"}`}>
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +143,7 @@ const Services = () => (
 
     {/* Pricing */}
     <section className="section-padding gradient-bg-soft">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
