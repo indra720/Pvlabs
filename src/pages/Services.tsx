@@ -7,6 +7,30 @@ import {
   Zap, FileText, Image, BarChart3, Presentation, Layout
 } from "lucide-react";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Image collection for variety
+const allImages = [
+  "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1999",
+  "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=2070",
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+  "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071",
+  "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070",
+  "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1974",
+  "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070"
+];
+
+const getImages = (mainImage: string) => {
+  const otherImages = allImages.filter(img => img !== mainImage);
+  // Shuffle and take 4
+  const shuffled = otherImages.sort(() => 0.5 - Math.random());
+  return [mainImage, ...shuffled.slice(0, 4)];
+};
 
 const ecommerceServices = [
   {
@@ -24,6 +48,7 @@ const ecommerceServices = [
     ],
     cta: "See Hero Image Examples",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1999",
+    images: getImages("https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1999"),
     imageAlt: "Product hero image design by PV Labs India"
   },
   {
@@ -39,6 +64,7 @@ const ecommerceServices = [
     ],
     cta: "See Lifestyle Examples",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=2070",
+    images: getImages("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=2070"),
     imageAlt: "AI lifestyle product photography by PV Labs"
   },
   {
@@ -56,6 +82,7 @@ const ecommerceServices = [
     ],
     cta: "See A+ Content Examples",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+    images: getImages("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"),
     imageAlt: "Amazon A+ content design by PV Labs India"
   },
   {
@@ -71,6 +98,7 @@ const ecommerceServices = [
     ],
     cta: "See Infographic Examples",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+    images: getImages("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"),
     imageAlt: "Product infographic design for Amazon listing by PV Labs"
   },
   {
@@ -88,6 +116,7 @@ const ecommerceServices = [
     ],
     cta: "Talk to Us About Catalog",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+    images: getImages("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"),
     imageAlt: "Flipkart catalog and RPD creation service by PV Labs"
   }
 ];
@@ -106,6 +135,7 @@ const brandServices = [
     ],
     cta: "See Branding Examples",
     image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071",
+    images: getImages("https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071"),
     imageAlt: "Logo and brand identity design by PV Labs India"
   },
   {
@@ -121,6 +151,7 @@ const brandServices = [
     ],
     cta: "See Packaging Examples",
     image: "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070",
+    images: getImages("https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070"),
     imageAlt: "Product packaging design by PV Labs India"
   },
   {
@@ -136,6 +167,7 @@ const brandServices = [
     ],
     cta: "See Social Examples",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1974",
+    images: getImages("https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1974"),
     imageAlt: "Social media creative design by PV Labs India"
   },
   {
@@ -153,6 +185,7 @@ const brandServices = [
     ],
     cta: "See Ad Creative Examples",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+    images: getImages("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"),
     imageAlt: "Meta and Google ad creative design by PV Labs India"
   },
   {
@@ -168,6 +201,7 @@ const brandServices = [
     ],
     cta: "See Deck Examples",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070",
+    images: getImages("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070"),
     imageAlt: "Pitch deck and presentation design by PV Labs India"
   }
 ];
@@ -185,6 +219,37 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      <style>{`
+        .swiper-button-next, .swiper-button-prev {
+          background-color: rgba(255, 255, 255, 0.35);
+          backdrop-filter: blur(4px);
+          width: 24px !important;
+          height: 24px !important;
+          border-radius: 50%;
+          color: #ffffff !important;
+          transition: all 0.3s ease;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+          background-color: rgba(255, 255, 255, 0.55);
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+          font-size: 8px !important;
+          font-weight: 900 !important;
+        }
+        .swiper-pagination-bullet {
+          background: #ffffff !important;
+          opacity: 0.5;
+          width: 5px !important;
+          height: 5px !important;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+          background: #ffffff !important;
+        }
+      `}</style>
       <Navbar />
 
       {/* Hero Header */}
@@ -297,14 +362,42 @@ const ServiceCard = ({ service, index, category }: { service: any, index: number
       className="flex flex-col gap-8"
     >
       <div className="relative rounded-2xl overflow-hidden bg-[#111] aspect-video group">
-        <img 
-          src={service.image} 
-          alt={service.imageAlt} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <Swiper
+          modules={[Autoplay, Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          pagination={{ clickable: true }}
+          loop={true}
+          className="w-full h-full"
+        >
+          {service.images && service.images.length > 0 ? (
+            service.images.map((img: string, idx: number) => (
+              <SwiperSlide key={idx} className="w-full h-full">
+                <img 
+                  src={img} 
+                  alt={`${service.title} - ${idx + 1}`} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+              </SwiperSlide>
+            ))
+          ) : (
+            <SwiperSlide className="w-full h-full">
+              <img 
+                src={service.image} 
+                alt={service.imageAlt} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+            </SwiperSlide>
+          )}
+        </Swiper>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[5]" />
         {service.badge && (
-          <div className={`absolute top-4 left-4 px-4 py-1.5 rounded-full text-[12px] font-bold text-white shadow-lg ${
+          <div className={`absolute top-4 left-4 px-4 py-1.5 rounded-full text-[12px] font-bold text-white shadow-lg z-10 ${
             service.badgeType === 'hot' ? 'gradient-bg-vivid' : 
             service.badgeType === 'amazon' ? 'bg-blue-600' : 'bg-cyan-600'
           }`}>
