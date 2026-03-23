@@ -46,10 +46,10 @@ const Hero = () => (
             <span className="text-xs font-semibold text-primary-foreground">"India's E-Commerce Visual Studio"</span>
           </motion.div>
 
-          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 tracking-tight text-primary-foreground">
+          <h1 className="font-heading text-3xl sm:text-4xl  lg:text-5xl font-extrabold leading-[1.05] mb-6 tracking-tight text-primary-foreground">
             Your Competitor Just Launched.
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary text-5xl">
               You're Still Waiting.
             </span>
 
@@ -77,7 +77,7 @@ const Hero = () => (
           </div>
 
           <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month — only 4 remaining</span>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
+          {/* <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
             {["500+ Projects Delivered", "200+ Global Clients", "50+ Awards Won"].map((t, i) => (
               <motion.span
                 key={i}
@@ -89,7 +89,7 @@ const Hero = () => (
                 <CheckCircle size={14} className="text-primary" /> {t}
               </motion.span>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Right — floating stat cards */}

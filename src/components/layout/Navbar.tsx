@@ -37,9 +37,9 @@ const navLinks = [
       { label: "FAQ", path: "/faq" },
     ],
   },
-  { label: "Clients", path: "/clients" },
-  { label: "Resources", path: "/tools" },
-  { label: "Contact", path: "/contact" },
+  // { label: "Clients", path: "/clients" },
+  // { label: "Resources", path: "/tools" },
+  // { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
         <Link to="/" className="flex items-center group">
           <img 
@@ -59,7 +59,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center justify-between gap-12">
           {navLinks.map((link) => (
             <div
               key={link.path}
