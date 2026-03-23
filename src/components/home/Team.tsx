@@ -1,53 +1,107 @@
 import { motion } from "framer-motion";
-import { socialLinks } from "@/lib/social-links";
+import { Link } from "react-router-dom";
+import { Phone, Linkedin, Instagram } from "lucide-react";
+import tankaarImg from "@/assets/about-team.jpg";
+import rudraImg from "@/assets/teamcreativity.jpg";
 
-const team = [
-  { name: "Priya Verma", role: "Founder & Creative Director", initials: "PV", specialty: "Brand Strategy" },
-  { name: "Alex Rivera", role: "Lead UI/UX Designer", initials: "AR", specialty: "Design Systems" },
-  { name: "Jordan Lee", role: "Brand Strategist", initials: "JL", specialty: "Market Research" },
-  { name: "Mia Zhang", role: "Motion Designer", initials: "MZ", specialty: "Animation" },
+const founders = [
+  {
+    name: "Tankaar Sharma",
+    role: "Co-Founder & Creative Director",
+    image: tankaarImg,
+    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good."
+  },
+  {
+    name: "Rudra Sharma",
+    role: "Co-Founder & Growth Lead",
+    image: rudraImg,
+    bio: "Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell."
+  }
 ];
 
 const Team = () => (
-  <section className="section-padding gradient-bg-soft">
-    <div className="w-full">
+  <section className="section-padding bg-[#0a0a0a]">
+    <div className="w-full max-w-7xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-5"
+        className="text-center mb-20"
       >
-        <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Team</span>
-        <h2 className="font-heading text-4xl md:text-5xl font-bold  mb-4 text-foreground">
-          Meet the <span className="gradient-text">creators</span>
+        <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
+          THE TEAM BEHIND PV LABS
+        </span>
+        <h2 className="font-heading text-3xl md:text-5xl font-bold mt-6 mb-4 text-white">
+          Built by people who understand <br className="hidden md:block" /> both design and business.
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">A team of 15+ passionate designers, strategists, and developers.</p>
+        <p className="text-[#888] max-w-2xl mx-auto">
+          PV Labs was founded by two brothers — one obsessed with visuals, one obsessed with growth.
+        </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-        {team.map((m, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        {founders.map((m, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="glass-card p-6 text-center group hover:shadow-xl transition-shadow"
+            transition={{ delay: i * 0.2 }}
+            className="group relative"
           >
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center text-xl font-bold text-primary-foreground shadow-lg">
-              {m.initials}
-            </div>
-            <h3 className="font-heading font-bold text-foreground">{m.name}</h3>
-            <p className="text-sm text-primary font-medium">{m.role}</p>
-            <span className="text-xs text-muted-foreground bg-secondary px-3 py-1 rounded-full inline-block mt-2">{m.specialty}</span>
-            <div className="flex justify-center gap-2 mt-4">
-              {socialLinks.slice(0, 4).map(({ icon: Icon, label, href }, j) => (
-                <a key={j} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-muted-foreground hover:text-primary transition-colors"><Icon size={16} /></a>
-              ))}
+            {/* Main Card */}
+            <div className="bg-[#111] rounded-[32px] p-8 border border-[#1a1a1a] h-full flex flex-col items-center text-center transition-all duration-500 group-hover:border-[#7B2FD9]/50 group-hover:shadow-[0_0_40px_-10px_rgba(123,47,217,0.3)]">
+              
+              {/* Modern Circular Image */}
+              <div className="relative w-40 h-40 mb-8 -mt-16 md:-mt-20">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#7B2FD9] to-[#60B8F0] rounded-full p-[2px]">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-[#0a0a0a]">
+                    <img 
+                      src={m.image} 
+                      alt={m.name} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    />
+                  </div>
+                </div>
+                {/* Status Dot */}
+                <div className="absolute bottom-2 right-4 w-4 h-4 rounded-full bg-green-500 border-4 border-[#111] z-10 animate-pulse" />
+              </div>
+
+              <h3 className="font-heading text-2xl font-bold text-white mb-1">{m.name}</h3>
+              <p className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent font-bold text-sm mb-6 uppercase tracking-wider">
+                {m.role}
+              </p>
+              
+              <p className="text-[#888] text-sm leading-relaxed mb-8 flex-1">
+                {m.bio}
+              </p>
+
+              {/* Social Actions */}
+              <div className="flex items-center gap-4">
+                <a href="#" className="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-white hover:bg-[#7B2FD9] transition-all duration-300">
+                  <Linkedin size={18} />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-white hover:bg-[#60B8F0] transition-all duration-300">
+                  <Instagram size={18} />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-all duration-300">
+                  <Phone size={18} />
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
+      
+      <motion.p 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+        className="mt-20 text-center text-[#444] italic text-sm font-medium tracking-wide"
+      >
+        "Two founders. One mission — make Indian brands look world-class."
+      </motion.p>
     </div>
   </section>
 );

@@ -23,12 +23,12 @@ const Index = () => (
     <AboutPreview />
     <ServicesGrid />
     <FeaturedWork />
-    <DesignProcess />
-    <Testimonials />
+    {/*    */}
+    {/* <Testimonials /> */}
     <WhyChoose />
-    <Industries />
+    {/* <Industries /> */}
     <Team />
-    <Awards />
+    {/* <Awards /> */}
     <BlogPreview />
     <FAQ />
     <ContactCTA />
