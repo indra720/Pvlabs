@@ -224,8 +224,8 @@ const Pricing = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-8">
-                  <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-purple-50 transition-colors">
+                <div className="mt-4">
+                  <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-slate-900 p-2 rounded-sm font-bold hover:bg-purple-50 transition-colors">
                     Talk to us about a monthly retainer <ArrowRight size={18}/>
                   </Link>
                 </div>
