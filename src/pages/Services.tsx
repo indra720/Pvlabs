@@ -3,200 +3,342 @@ import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Palette, PenTool, Share2, Image, BookOpen, Flag, CreditCard,
-  Package, Tag, Monitor, Smartphone, Layout, BarChart3, Brush,
-  Diamond, Play, Film, Presentation, Camera, Megaphone, Mail, Target,
-  ArrowRight, Check
+  ArrowRight, Check, ShoppingCart, Palette, Package, Share2, 
+  Zap, FileText, Image, BarChart3, Presentation, Layout
 } from "lucide-react";
+import { useState } from "react";
 
-// Import local assets
-import logoDesignImg from "@/assets/logodesign.webp";
-import brandIdentityImg from "@/assets/brandindentity.webp";
-import socialMediaImg from "@/assets/service-social.jpg";
-import flyerDesignImg from "@/assets/flayer-design.avif";
-import brochureDesignImg from "@/assets/Brochure Design.webp";
-import bannerDesignImg from "@/assets/Banner & Hoarding Design.jpg";
-import appDesignImg from "@/assets/service-appdesign.jpg";
-import packagingImg from "@/assets/service-packaging.jpg";
-import motionImg from "@/assets/service-motion.jpg";
-import webDesignImg from "@/assets/service-webdesign.jpg";
-import printImg from "@/assets/service-print.jpg";
-import graphicDesignImg from "@/assets/graphicdesign.webp";
-
-// Fallback/Reuse for other services
-const servicePrint = printImg;
-
-const images = [
-  logoDesignImg,          // Logo Design
-  brandIdentityImg,       // Brand Identity
-  socialMediaImg,         // Social Media
-  flyerDesignImg,         // Posters & Flyers
-  brochureDesignImg,      // Brochure
-  bannerDesignImg,        // Banner & Hoarding
-  servicePrint,           // Business Card (Print)
-  packagingImg,           // Packaging
-  packagingImg,           // Product Label (Packaging)
-  webDesignImg,           // Website UI
-  appDesignImg,           // Mobile App UI
-  webDesignImg,           // Landing Page
-  graphicDesignImg,       // Infographics
-  graphicDesignImg,       // Illustration
-  logoDesignImg,          // Icon Design
-  motionImg,              // Motion Graphics
-  motionImg,              // Video Editing
-  webDesignImg,           // Presentation
-  brandIdentityImg,       // Photo Editing
-  socialMediaImg,         // Marketing Creatives
-  webDesignImg,           // Email Template
-  socialMediaImg          // Digital Ads
+const ecommerceServices = [
+  {
+    badge: "Most Ordered",
+    badgeType: "hot",
+    title: "Product Hero Images",
+    desc: "Your main listing image is the single most important factor in getting a click. We create hero images that stop the scroll — clean, sharp, marketplace-compliant, and built to convert. No studio visit needed.",
+    checklist: [
+      "White background (marketplace compliant)",
+      "Gradient & colored backgrounds",
+      "Multiple angle shots",
+      "Amazon 2000×2000px ready",
+      "Flipkart & Myntra optimized",
+      "3–5 day delivery"
+    ],
+    cta: "See Hero Image Examples",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1999",
+    imageAlt: "Product hero image design by PV Labs India"
+  },
+  {
+    title: "Lifestyle & Scene Images",
+    desc: "Show your product in real life. Build emotional desire. Increase 'Add to Cart.' We create AI-powered lifestyle scenes — home, kitchen, outdoor, festive — that look 100% real without booking a single model or location.",
+    checklist: [
+      "Home & kitchen scenes",
+      "Festive & seasonal themes",
+      "Flat lay compositions",
+      "AI model integration",
+      "Brand color matched backgrounds",
+      "Multiple scenes per product"
+    ],
+    cta: "See Lifestyle Examples",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=2070",
+    imageAlt: "AI lifestyle product photography by PV Labs"
+  },
+  {
+    badge: "Amazon Exclusive",
+    badgeType: "amazon",
+    title: "A+ Content & EBC Design",
+    desc: "Amazon sellers with A+ content see up to 10% more sales. We design scroll-stopping A+ modules — brand story, feature banners, comparison charts — fully compliant with Amazon's latest guidelines.",
+    checklist: [
+      "Brand story module",
+      "Feature highlight banners",
+      "Product comparison charts",
+      "Amazon guideline compliant",
+      "Desktop + mobile layout",
+      "Delivered within 5 days"
+    ],
+    cta: "See A+ Content Examples",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+    imageAlt: "Amazon A+ content design by PV Labs India"
+  },
+  {
+    title: "Infographics & Listing Images",
+    desc: "Images 2–7 in your listing do the heavy lifting. A buyer who doesn't read your description will still read your infographic. We design visuals that answer every buyer question before they even think to ask it.",
+    checklist: [
+      "Feature callout graphics",
+      "Size & dimension charts",
+      "How-to-use visuals",
+      "USP highlight images",
+      "Competitor comparison graphics",
+      "Trust & certification badges"
+    ],
+    cta: "See Infographic Examples",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+    imageAlt: "Product infographic design for Amazon listing by PV Labs"
+  },
+  {
+    badge: "Flipkart Specialist",
+    badgeType: "flipkart",
+    title: "Catalog & RPD Creation",
+    desc: "Launching on Flipkart or Meesho? We handle complete catalog creation — product listings, RPD sheets, image uploads — so your products go live faster with zero compliance rejections.",
+    checklist: [
+      "Flipkart catalog creation",
+      "RPD sheet preparation",
+      "Meesho listing setup",
+      "Category-specific optimization",
+      "Bulk listing support",
+      "Image spec compliance"
+    ],
+    cta: "Talk to Us About Catalog",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+    imageAlt: "Flipkart catalog and RPD creation service by PV Labs"
+  }
 ];
 
-const allServices = [
-  { icon: Palette, title: "Logo Design", desc: "Memorable, timeless logos that capture your brand essence and build instant recognition. We create versatile logos that work across all mediums.", benefits: ["5+ unique concepts", "Unlimited revisions", "All vector formats", "Brand guidelines included"] },
-  { icon: PenTool, title: "Brand Identity Design", desc: "Complete visual identity systems ensuring brand consistency across every touchpoint — from business cards to billboards.", benefits: ["Full logo suite", "Color palette system", "Typography guide", "Comprehensive brand book"] },
-  { icon: Share2, title: "Social Media Graphics", desc: "Scroll-stopping content optimized for every platform — Instagram, Facebook, LinkedIn, Twitter, TikTok, and more.", benefits: ["Platform-optimized sizes", "Content calendar templates", "Story & Reel templates", "Carousel designs"] },
-  { icon: Image, title: "Posters & Flyers Design", desc: "Eye-catching print materials that communicate your message with visual impact and clarity.", benefits: ["Print-ready CMYK files", "Multiple size options", "QR code integration", "24-hour rush available"] },
-  { icon: BookOpen, title: "Brochure Design", desc: "Professional brochures that tell your brand story with compelling visuals and strategic layouts.", benefits: ["Bi-fold & tri-fold options", "Print-ready files", "Digital PDF versions", "Custom die-cut layouts"] },
-  { icon: Flag, title: "Banner & Hoarding Design", desc: "Large-format designs engineered to grab attention from any distance, any angle.", benefits: ["Ultra high-resolution", "Weather-proof specifications", "Multiple billboard sizes", "Installation guidelines"] },
-  { icon: CreditCard, title: "Business Card Design", desc: "Premium business cards that make powerful first impressions and reflect your brand's quality.", benefits: ["Double-sided designs", "Foil & emboss options", "NFC-ready templates", "Multiple staff variants"] },
-  { icon: Package, title: "Packaging Design", desc: "Product packaging that sells from the shelf, delights on unboxing, and builds brand loyalty.", benefits: ["Photorealistic 3D mockups", "Die-cut templates", "Material specifications", "Eco-friendly options"] },
-  { icon: Tag, title: "Product Label Design", desc: "Labels that meet all regulatory requirements while making your products irresistible to buyers.", benefits: ["Compliance-ready", "Material guidance", "Custom die-cut shapes", "Batch & variant systems"] },
-  { icon: Monitor, title: "Website UI Design", desc: "Modern, responsive website designs that convert visitors into loyal customers and advocates.", benefits: ["Fully responsive", "Figma design handoff", "Interactive prototypes", "SEO-optimized structure"] },
-  { icon: Smartphone, title: "Mobile App UI Design", desc: "Intuitive, delightful app interfaces that users love to use and keep coming back to.", benefits: ["iOS & Android", "Complete user flows", "Clickable prototypes", "Full design system"] },
-  { icon: Layout, title: "Landing Page Design", desc: "High-converting landing pages engineered to maximize your marketing ROI.", benefits: ["A/B test variants", "CRO-optimized layout", "Fast-loading design", "Analytics integration"] },
-  { icon: BarChart3, title: "Infographics Design", desc: "Complex data and information transformed into visually compelling, easily shareable graphics.", benefits: ["Data visualization", "Interactive versions", "Print & digital formats", "Custom illustrations"] },
-  { icon: Brush, title: "Illustration Design", desc: "Custom illustrations that add personality, uniqueness, and emotional depth to your brand.", benefits: ["Multiple art styles", "Vector & raster", "Character design", "Scene illustrations"] },
-  { icon: Diamond, title: "Icon Design", desc: "Consistent, pixel-perfect icon sets that enhance usability and reinforce brand identity.", benefits: ["SVG & PNG formats", "Multiple sizes", "Style consistency", "Animation-ready assets"] },
-  { icon: Play, title: "Motion Graphics", desc: "Dynamic animations that bring your brand to life and captivate audiences across all platforms.", benefits: ["Logo animations", "Social media motion", "Explainer videos", "UI micro-animations"] },
-  { icon: Film, title: "Video Editing Graphics", desc: "Professional video overlays, lower thirds, titles, and graphics that elevate your content.", benefits: ["Lower third designs", "Custom transitions", "YouTube thumbnails", "End screen templates"] },
-  { icon: Presentation, title: "Presentation Design", desc: "Pitch decks and presentations that win deals, impress stakeholders, and tell your story.", benefits: ["Custom templates", "Data-rich charts", "Smooth animations", "Speaker note guides"] },
-  { icon: Camera, title: "Photo Editing & Retouching", desc: "Professional photo enhancement that makes every visual in your brand perfect.", benefits: ["Advanced color correction", "Background removal", "Beauty retouching", "Batch processing"] },
-  { icon: Megaphone, title: "Marketing Creatives", desc: "Conversion-focused marketing materials designed to drive results across all channels.", benefits: ["Multi-channel assets", "A/B test variants", "Campaign kits", "Performance tracking"] },
-  { icon: Mail, title: "Email Template Design", desc: "Responsive email templates that drive opens, clicks, and conversions in every inbox.", benefits: ["Mobile responsive", "Dark mode support", "A/B test variants", "ESP compatible"] },
-  { icon: Target, title: "Digital Ads Creatives", desc: "High-performing ad creatives for Google, Facebook, Instagram, LinkedIn, and TikTok.", benefits: ["All standard ad sizes", "A/B test variants", "Platform specifications", "Performance optimized"] },
+const brandServices = [
+  {
+    title: "Logo & Brand Identity",
+    desc: "Your logo is the face of your business. Your brand identity is everything behind it. We build complete brand systems for Indian businesses — from the first logo concept to a full identity kit that works across every touchpoint.",
+    checklist: [
+      "Logo design (5+ concepts)",
+      "Brand color palette",
+      "Typography system",
+      "Business card design",
+      "Product label design",
+      "Complete brand guidelines PDF"
+    ],
+    cta: "See Branding Examples",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2071",
+    imageAlt: "Logo and brand identity design by PV Labs India"
+  },
+  {
+    title: "Packaging Design",
+    desc: "Packaging is your first physical brand moment. It's what the customer sees, touches, and remembers. We design shelf-worthy packaging — boxes, labels, pouches, inserts — that builds brand recall and drives repeat purchases.",
+    checklist: [
+      "Box & carton design",
+      "Product label & sticker",
+      "Pouch & sachet design",
+      "Insert & thank-you cards",
+      "Print-ready CMYK files",
+      "Multiple size variants"
+    ],
+    cta: "See Packaging Examples",
+    image: "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=2070",
+    imageAlt: "Product packaging design by PV Labs India"
+  },
+  {
+    title: "Social Media Creatives",
+    desc: "Your Instagram and Facebook feed is your brand's shop window. We design scroll-stopping social creatives — posts, reels covers, stories, carousels — that look premium, stay on-brand, and drive engagement.",
+    checklist: [
+      "Instagram posts & carousels",
+      "Story & reel cover designs",
+      "Facebook ad creatives",
+      "LinkedIn company banners",
+      "Platform-optimized sizes",
+      "Batch delivery (30 posts/month)"
+    ],
+    cta: "See Social Examples",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1974",
+    imageAlt: "Social media creative design by PV Labs India"
+  },
+  {
+    badge: "High Converting",
+    badgeType: "hot",
+    title: "Ad Creatives (Meta & Google)",
+    desc: "A great product with a bad ad creative wastes your entire ad budget. We design high-converting Meta and Google ad creatives — static banners, carousel ads, display ads — built around your product's core USP and target audience psychology.",
+    checklist: [
+      "Meta (Facebook & Instagram) ads",
+      "Google display banners",
+      "Multiple size variants",
+      "A/B test versions",
+      "Conversion-focused layouts",
+      "Brand consistent design"
+    ],
+    cta: "See Ad Creative Examples",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+    imageAlt: "Meta and Google ad creative design by PV Labs India"
+  },
+  {
+    title: "Presentation & Pitch Deck",
+    desc: "Your pitch deck is the difference between a deal and a no. We design investor decks, sales presentations, and brand decks that tell your story visually — clean, compelling, and built to impress in any boardroom.",
+    checklist: [
+      "Investor pitch decks",
+      "Sales presentations",
+      "Brand decks",
+      "Company profile design",
+      "PowerPoint & Google Slides",
+      "Editable templates delivered"
+    ],
+    cta: "See Deck Examples",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070",
+    imageAlt: "Pitch deck and presentation design by PV Labs India"
+  }
 ];
 
-const pricing = [
-  { name: "Starter", price: "$499", period: "/project", desc: "Perfect for small projects and startups", features: ["1 design service", "3 initial concepts", "5-day delivery", "Source files included", "Email support", "2 revision rounds"] },
-  { name: "Professional", price: "$1,499", period: "/project", desc: "Best value for growing brands", features: ["Up to 3 services", "5 initial concepts", "3-day priority delivery", "All source files", "Priority Slack support", "Unlimited revisions", "Brand guidelines", "Dedicated designer"], popular: true },
-  { name: "Enterprise", price: "Custom", period: "", desc: "For teams with ongoing needs", features: ["All 22+ services", "Unlimited concepts", "Same-day rush available", "Full source ownership", "24/7 dedicated support", "Unlimited revisions", "Brand strategy included", "Dedicated team of 3+", "Monthly retainer option"] },
-];
+const Services = () => {
+  const [activeCategory, setActiveCategory] = useState<"ecommerce" | "brand">("ecommerce");
 
-const Services = () => (
-  <div className="min-h-screen bg-background">
-    <Navbar />
+  const scrollToCategory = (category: "ecommerce" | "brand") => {
+    setActiveCategory(category);
+    const element = document.getElementById(category);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-    {/* Hero */}
-    <section className="pt-32 pb-2 px-6 md:px-12 gradient-bg-soft">
-      <div className="w-full text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Services</span>
-          <h1 className="font-heading text-5xl md:text-7xl font-extrabold  mb-6 text-foreground">
-            <span className="gradient-text">22+ Services</span> for your brand
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            From concept to completion, we deliver end-to-end design solutions across branding, digital, print, motion, and marketing. 
-            Every service backed by 8+ years of expertise and a 98% satisfaction rate.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+  return (
+    <div className="min-h-screen bg-[#0a0a0a]">
+      <Navbar />
 
-    {/* Service Sections */}
-    {allServices.map((s, i) => (
-      <section key={i} className={`section-padding ${i % 2 === 0 ? "" : "gradient-bg-soft"}`}>
-        <div className="w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:[direction:rtl] md:[&>*]:[direction:ltr]" : ""}`}
-          >
-            <div className="rounded-[24px] overflow-hidden shadow-lg">
-              <img src={images[i]} alt={s.title} className="w-full aspect-[4/3] object-cover" />
-            </div>
+      {/* Hero Header */}
+      <section className="pt-32 pb-12 px-6 md:px-12 bg-[#0a0a0a]">
+        <div className="w-full text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
+              WHAT WE CREATE
+            </span>
+            <h1 className="font-heading text-4xl md:text-6xl font-extrabold mt-6 mb-4 text-white">
+              Design that sells.
+            </h1>
+            <h2 className="font-heading text-2xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#7B2FD9] via-[#C84FD8] to-[#60B8F0] bg-clip-text text-transparent">
+              For sellers. For brands. For growth.
+            </h2>
+            <p className="text-[#888] text-lg max-w-3xl mx-auto leading-relaxed">
+              From your first product listing to your complete brand identity — PV Labs creates visuals that make Indian businesses look world-class.
+            </p>
 
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <s.icon size={22} className="text-primary" />
-                </div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">{s.title}</h2>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
-              <ul className="space-y-3 mb-8">
-                {s.benefits.map((b, j) => (
-                  <li key={j} className="flex items-center gap-3 text-sm">
-                    <Check size={16} className="text-primary flex-shrink-0" />
-                    <span className="text-foreground">{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact" className="gradient-btn px-6 py-3 text-sm inline-flex items-center gap-2">
-                Get Started <ArrowRight size={16} />
-              </Link>
+            {/* Category Switcher */}
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
+              <button 
+                onClick={() => scrollToCategory("ecommerce")}
+                className={`flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all ${activeCategory === "ecommerce" ? "gradient-bg-vivid text-white" : "bg-[#111] border border-[#1a1a1a] text-white hover:border-[#7B2FD9]"}`}
+              >
+                <ShoppingCart size={18} /> 🛒 E-Commerce Visuals
+              </button>
+              <button 
+                onClick={() => scrollToCategory("brand")}
+                className={`flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all ${activeCategory === "brand" ? "gradient-bg-vivid text-white" : "bg-[#111] border border-[#1a1a1a] text-white hover:border-[#60B8F0]"}`}
+              >
+                <Palette size={18} /> 🎨 Brand & Marketing
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
-    ))}
 
-    {/* Pricing */}
-    <section className="section-padding gradient-bg-soft">
-      <div className="w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Pricing</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
-            Simple, transparent <span className="gradient-text">pricing</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">Choose the plan that fits your needs. All plans include source files and satisfaction guarantee.</p>
-        </motion.div>
+      {/* Main Split Content */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[calc(100vh-80px)] overflow-hidden">
+        
+        {/* Category 1: E-Commerce Visuals */}
+        <section id="ecommerce" className="bg-[#0d0d0d] border-r border-[#1a1a1a] pb-20 lg:overflow-y-auto custom-scrollbar">
+          <div className="px-6 md:px-12 pt-16">
+            <div className="mb-12 sticky top-0 bg-[#0d0d0d] z-20 py-4">
+              <span className="text-[#7B2FD9] text-sm font-bold uppercase tracking-widest">FOR SELLERS</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">Visuals that convert browsers into buyers.</h2>
+              <p className="text-[#888] mt-4 max-w-md">Built for Amazon, Flipkart, Myntra & Meesho sellers who want more clicks, more carts, more sales.</p>
+            </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {pricing.map((p, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`glass-card p-8 relative ${p.popular ? "border-primary/50 ring-2 ring-primary/20 shadow-xl" : ""}`}
-            >
-              {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 gradient-bg-vivid text-primary-foreground text-xs font-bold px-4 py-1 rounded-full shadow-md">
-                  Most Popular
-                </div>
-              )}
-              <h3 className="font-heading text-xl font-bold text-foreground mb-1">{p.name}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
-              <div className="mb-6">
-                <span className="font-heading text-4xl font-bold gradient-text">{p.price}</span>
-                <span className="text-muted-foreground text-sm">{p.period}</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {p.features.map((f, j) => (
-                  <li key={j} className="flex items-center gap-2 text-sm">
-                    <Check size={14} className="text-primary flex-shrink-0" />
-                    <span className="text-muted-foreground">{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact" className={`block text-center py-3.5 rounded-full font-semibold text-sm transition-all ${p.popular ? "gradient-btn" : "border border-border hover:bg-secondary"}`}>
-                Get Started
+            <div className="space-y-20">
+              {ecommerceServices.map((s, i) => (
+                <ServiceCard key={i} service={s} index={i} category="ecommerce" />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Category 2: Brand & Marketing */}
+        <section id="brand" className="bg-[#0a0a0a] pb-20 lg:overflow-y-auto custom-scrollbar">
+          <div className="px-6 md:px-12 pt-16">
+            <div className="mb-12 sticky top-0 bg-[#0a0a0a] z-20 py-4">
+              <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest">FOR BRANDS</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">Look premium. Sound consistent. Grow faster.</h2>
+              <p className="text-[#888] mt-4 max-w-md">Complete brand and marketing design for Indian companies who want to stand out — online and offline.</p>
+            </div>
+
+            <div className="space-y-20">
+              {brandServices.map((s, i) => (
+                <ServiceCard key={i} service={s} index={i} category="brand" />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Bottom CTA Section */}
+      <section className="bg-[#0a0a0a] section-padding">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-[#111] rounded-[24px] p-12 border border-[#1a1a1a] text-center relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7B2FD9]/5 to-[#60B8F0]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative z-10">Not sure which service fits your brand?</h2>
+            <p className="text-[#888] text-lg mb-8 max-w-xl mx-auto relative z-10">
+              Tell us about your business. We'll recommend exactly what you need — free.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+              <Link to="/contact" className="gradient-btn px-8 py-4 font-bold flex items-center justify-center gap-2">
+                Get Free Recommendation <ArrowRight size={18} />
               </Link>
-            </motion.div>
+              <a href="https://wa.me/917417791003" className="px-8 py-4 rounded-full border border-white text-white font-bold hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2">
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+const ServiceCard = ({ service, index, category }: { service: any, index: number, category: string }) => {
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="flex flex-col gap-8"
+    >
+      <div className="relative rounded-2xl overflow-hidden bg-[#111] aspect-video group">
+        <img 
+          src={service.image} 
+          alt={service.imageAlt} 
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        {service.badge && (
+          <div className={`absolute top-4 left-4 px-4 py-1.5 rounded-full text-[12px] font-bold text-white shadow-lg ${
+            service.badgeType === 'hot' ? 'gradient-bg-vivid' : 
+            service.badgeType === 'amazon' ? 'bg-blue-600' : 'bg-cyan-600'
+          }`}>
+            {service.badge}
+          </div>
+        )}
+      </div>
+
+      <div className="flex flex-col">
+        <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+        <p className="text-[#888] leading-relaxed mb-6 text-sm md:text-base">
+          {service.desc}
+        </p>
+        
+        <div className="grid grid-cols-1 gap-y-3 mb-8">
+          {service.checklist.map((item: string, i: number) => (
+            <div key={i} className="flex items-start gap-3 text-sm">
+              <div className="mt-1 w-4 h-4 rounded-full bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] flex items-center justify-center flex-shrink-0">
+                <Check size={10} className="text-white" />
+              </div>
+              <span className="text-[#888]">{item}</span>
+            </div>
           ))}
         </div>
-      </div>
-    </section>
 
-    <Footer />
-  </div>
-);
+        <Link 
+          to="/contact" 
+          className="inline-flex items-center gap-2 text-white font-bold hover:text-[#7B2FD9] transition-colors group underline underline-offset-8 decoration-[#7B2FD9]/30 hover:decoration-[#7B2FD9]"
+        >
+          {service.cta} <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+        </Link>
+      </div>
+    </motion.div>
+  );
+};
 
 export default Services;

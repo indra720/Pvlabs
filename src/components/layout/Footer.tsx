@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowRight, Heart } from "lucide-react";
-import { useState } from "react";
+import { Mail, Phone, Clock, Heart, ArrowRight } from "lucide-react";
 import { socialLinks } from "@/lib/social-links";
 import logo from "../../assets/logo-removebg-preview (1).png"
+
 const Footer = () => {
-  const [email, setEmail] = useState("");
+  // Filter social links to only include requested ones
+  const filteredSocial = socialLinks.filter(s => 
+    ["Instagram", "Facebook", "LinkedIn", "YouTube", "Twitter", "X"].includes(s.label)
+  );
 
   return (
     <footer className="bg-foreground text-background">
@@ -12,37 +15,40 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="font-heading text-2xl font-bold mb-4 inline-block">
-             <img 
-            src={logo} 
-            alt="PV Labs" 
-            className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-105" 
-          />
+            <Link to="/" className="mb-4 inline-block">
+              <img 
+                src={logo} 
+                alt="PV Labs" 
+                className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 hover:scale-105" 
+              />
             </Link>
-            <p className="text-background/60 text-sm leading-relaxed mb-6">
-              We craft bold digital experiences that elevate brands and captivate audiences. 500+ projects delivered for 200+ clients across 20+ countries.
+            <p className="text-background/60 text-sm leading-relaxed mb-6 max-w-[280px]">
+              PV Labs helps Indian sellers and brands create studio-quality visuals — without a studio. Amazon, Flipkart & Myntra ready.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {socialLinks.map(({ icon: Icon, label, href }, i) => (
-                <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center text-background/60 hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Icon size={16} />
-                </a>
-              ))}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap gap-2">
+                {filteredSocial.map(({ icon: Icon, label, href }, i) => (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center text-background/60 hover:bg-primary hover:text-primary-foreground transition-all">
+                    <Icon size={16} />
+                  </a>
+                ))}
+              </div>
+              <span className="text-background/40 text-xs ml-1">@pvlabs</span>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Services</h4>
-            <div className="flex flex-col gap-2">
+            <h4 className="font-heading font-semibold mb-6 text-white uppercase tracking-wider text-xs">Services</h4>
+            <div className="flex flex-col gap-3">
               {[
-                { label: "Logo Design", path: "/services/logo-design" },
-                { label: "Brand Identity", path: "/services/brand-identity" },
-                { label: "Website UI", path: "/services/website-ui-design" },
-                { label: "Mobile App UI", path: "/services/mobile-app-ui" },
-                { label: "Packaging", path: "/services/packaging-design" },
-                { label: "Motion Graphics", path: "/services/motion-graphics" },
-                { label: "All Services", path: "/services" },
+                { label: "Product Hero Images", path: "/services" },
+                { label: "Lifestyle Images", path: "/services" },
+                { label: "A+ Content & EBC", path: "/services" },
+                { label: "Infographics", path: "/services" },
+                { label: "Packaging Design", path: "/services" },
+                { label: "Logo & Brand Identity", path: "/services" },
+                { label: "All Services →", path: "/services" },
               ].map((l) => (
                 <Link key={l.label} to={l.path} className="text-sm text-background/60 hover:text-primary transition-colors">{l.label}</Link>
               ))}
@@ -51,15 +57,11 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Company</h4>
-            <div className="flex flex-col gap-2">
+            <h4 className="font-heading font-semibold mb-6 text-white uppercase tracking-wider text-xs">Company</h4>
+            <div className="flex flex-col gap-3">
               {[
-                { label: "About", path: "/about" },
-                { label: "Team", path: "/team" },
-                { label: "Clients", path: "/clients" },
-                { label: "Careers", path: "/careers" },
-                { label: "Blog", path: "/blog" },
-                { label: "Case Studies", path: "/case-studies" },
+                { label: "About Us", path: "/about" },
+                { label: "Our Work", path: "/portfolio" },
                 { label: "Testimonials", path: "/testimonials" },
                 { label: "FAQ", path: "/faq" },
                 { label: "Contact", path: "/contact" },
@@ -69,34 +71,35 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact - Replacing Newsletter */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Newsletter</h4>
-            <p className="text-sm text-background/60 mb-4">Design tips, trends & exclusive offers weekly.</p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-background/10 border border-background/20 rounded-full px-4 py-2.5 text-sm text-background placeholder:text-background/40 focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-              <button className="gradient-btn p-2.5"><ArrowRight size={16} /></button>
-            </div>
-            <div className="flex flex-col gap-2 mt-6 text-sm text-background/60">
-              <div className="flex items-center gap-2"><Mail size={14} /> hello@pvlabs.design</div>
-              <div className="flex items-center gap-2"><Phone size={14} /> +1 (555) 123-4567</div>
-              <div className="flex items-center gap-2"><MapPin size={14} /> San Francisco, CA</div>
+            <h4 className="font-heading font-semibold mb-6 text-white uppercase tracking-wider text-xs">Talk to us</h4>
+            <div className="flex flex-col gap-4 text-sm text-background/60">
+              <a href="mailto:growth@pvlabs.ai" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail size={14} className="text-primary" /> growth@pvlabs.ai
+              </a>
+              <a href="tel:+917417791003" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone size={14} className="text-primary" /> +91 74177 91003
+              </a>
+              <div className="flex items-center gap-2">
+                <Clock size={14} className="text-primary" /> Mon–Sat · 10am–7pm IST
+              </div>
+              <a 
+                href="https://wa.me/917417791003" 
+                className="mt-2 gradient-bg-vivid text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
+              >
+                💬 WhatsApp Us
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/50">
-          <p className="flex items-center gap-1">© 2026 PV Labs. Crafted with <Heart size={12} className="text-primary" /> in San Francisco.</p>
-          <div className="flex gap-6">
+        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/40">
+          <p className="flex items-center gap-1">© 2026 PV Labs. Made for Indian E-Commerce 🇮🇳</p>
+          <div className="flex gap-6 items-center">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link to="/faq" className="hover:text-primary transition-colors">FAQ</Link>
+            <a href="https://pvlabs.ai" className="hover:text-primary transition-colors font-medium">pvlabs.ai</a>
           </div>
         </div>
       </div>
