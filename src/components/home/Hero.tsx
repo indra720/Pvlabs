@@ -60,13 +60,13 @@ const Hero = () => (
           </p>
           <br />
           <span className="text-[#60B8F0] font-bold bottom-2 text-sm">⚡ Sellers who switched saved ₹15,000–₹50,000 per shoot</span>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-4">
             <Link
               to="/contact"
               className="gradient-btn px-8 py-4 text-base flex items-center justify-center gap-2 shadow-2xl"
             >
-              → Free 1-SKU Makeover<ArrowRight size={18} />
+              Free 1-SKU Makeover<ArrowRight size={18} />
             </Link>
             <Link
               to="/portfolio"
@@ -75,7 +75,7 @@ const Hero = () => (
               <Play size={16} /> See Real Results
             </Link>
           </div>
-          
+
           <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month — only 4 remaining</span>
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
             {["500+ Projects Delivered", "200+ Global Clients", "50+ Awards Won"].map((t, i) => (
@@ -100,10 +100,10 @@ const Hero = () => (
           className="hidden lg:grid grid-cols-2 gap-4"
         >
           {[
-            { num: "500+", label: "Projects Delivered", color: "from-primary to-accent" },
-            { num: "200+", label: "Happy Clients", color: "from-accent to-primary" },
-            { num: "8+", label: "Years Experience", color: "from-primary to-accent" },
-            { num: "50+", label: "Awards Won", color: "from-accent to-primary" },
+            { num: "50+", label: "Brands Launched", color: "from-primary to-accent" },
+            { num: "10k", label: "Visuals Delivered", color: "from-accent to-primary" },
+            { num: "3-5", label: "Day Turnaround", color: "from-primary to-accent" },
+            { num: "80%", label: "Cost Saved vs Studio", color: "from-accent to-primary" },
           ].map((s, i) => (
             <motion.div
               key={i}
@@ -126,16 +126,16 @@ const Hero = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="mt-16 lg:hidden glass-card-dark p-6 grid grid-cols-2 gap-6"
+        className="mt-16 lg:hidden glass-card-dark p-6 grid grid-cols-2 gap-6 "
       >
         {[
-          { num: "500+", label: "Projects Delivered" },
-          { num: "200+", label: "Happy Clients" },
-          { num: "8+", label: "Years Experience" },
-          { num: "50+", label: "Awards Won" },
+          { num: "50+", label: " Brands Launched" },
+          { num: "10,000+", label: "Visuals Delivered" },
+          { num: "3-5+", label: "Day Turnaround" },
+          { num: "80%", label: "Cost Saved Vs Studio" },
         ].map((s, i) => (
-          <div key={i} className="text-center">
-            <div className="font-heading text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <div key={i} className="text-center ">
+            <div className="bg-gradient-to-b from-[#7B2FD9] to-[#60B8F0] text-transparent bg-clip-text text-[1.4rem] font-bold">
               {s.num}
             </div>
             <div className="text-xs text-primary-foreground/60 mt-1">{s.label}</div>
