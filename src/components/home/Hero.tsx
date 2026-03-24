@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, CheckCircle, Play } from "lucide-react";
 // Realistic professional photography URL from Unsplash
-const herosection = "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070";
+import herosection from "../../assets/hero-1.jpeg"
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">

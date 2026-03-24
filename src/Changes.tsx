@@ -799,3 +799,154 @@
 // | **Keep** | Privacy Policy · Terms of Service |
 // | **Remove** | FAQ from bottom bar — already in Company column |
 // | **Add** | `pvlabs.ai` — website link, subtle |
+
+
+
+
+
+
+
+
+
+// # **Free Consultation** 24-03-2026 | 26 march 2026
+
+// ## 🔴 CRITICAL
+
+// | Field | Abhi kya hai | Hona chahiye |
+// | --- | --- | --- |
+// | **Phone** | +1 (555) 123-4567 🇺🇸 | +91 74177 91003 |
+// | **Email** | [hello@pvlabs.design](mailto:hello@pvlabs.design) | [growth@pvlabs.ai](mailto:growth@pvlabs.ai) |
+// | **Address** | 123 Design Street, San Francisco 🇺🇸 | **Remove completely** |
+// | **Map** | San Francisco, CA | **Remove completely** |
+// | **Timezone** | 9AM–6PM PST | Mon–Sat, 10AM–7PM IST |
+
+// ## ✏️ Edit Karo
+
+// - **Form → "Service Needed" dropdown** — services update karni hain (PV Labs ki actual services daalo, generic nahi)
+// - **Form → "Budget Range" dropdown** — Indian pricing daalo (₹5K–₹10K, ₹10K–₹25K, ₹25K+)
+// - **Social icons** — 7 icons dikh rahe hain, PV Labs ke 5 platforms hain: Instagram, Threads, Facebook, LinkedIn, X
+// - 
+
+// ## ➕ Add Karo
+
+// - **WhatsApp CTA** contact section mein bhi daalo (sirf footer mein nahi) — Indian clients WhatsApp prefer karte hain
+
+// # —- Login option remove
+
+// # **Company Dropdown——**
+
+// ## ✅ Recommended Final Dropdown
+
+// `Company
+// ├── About Us
+// ├── Founders
+// ├── Testimonials
+// └── FAQ`
+
+
+// # About US
+
+// ### 1. 🔝 HERO INTRO SECTION
+
+// **Label (small text above heading):**
+
+// `ABOUT US`
+
+// **Heading:**
+
+// `The story behind PV Labs`
+
+// **Body paragraph:**
+
+// `PV Labs was born from a simple frustration — great products on Amazon and 
+// Flipkart were losing sales because of bad visuals. Not bad products. Bad visuals.
+
+// We're a team of two brothers — a data scientist and a business strategist — 
+// who built a studio that replaces expensive photoshoots with world-class 
+// AI-powered product visuals. No camera. No shipping. No delays.
+
+// Today, PV Labs serves sellers and brands across Amazon India, Flipkart, 
+// Myntra, and Meesho — delivering catalog-ready visuals that convert.`
+
+// **Right side image:** Koi professional workspace ya dark studio setup — NOT the current stock photo of random people in an office.
+
+// ### 2. 🎯 MISSION + VISION CARDS
+
+// **Our Mission:**
+
+// `To make premium product visuals accessible to every Indian e-commerce 
+// seller — not just big brands. We believe great design shouldn't require 
+// a ₹50,000 studio shoot.`
+
+// **Our Vision:**
+
+// `To become India's most trusted visual studio for e-commerce — where every 
+// seller, from first-time Flipkart lister to established Amazon brand, gets 
+// visuals that actually sell.`
+
+// ---
+
+// ### 3. ❌ KEY MILESTONES — REMOVE COMPLETELY
+
+// Too many fake entries. Hatao. Baad mein real milestones add karna jab ho jaayein.
+
+// ### 4. 👥 FOUNDERS SECTION (Replace fake team)
+
+// **Section label:**
+
+// `THE FOUNDERS`
+
+// **Heading:**
+
+// `Meet the Minds Behind PV Labs`
+
+// ---
+
+// **Card 1 — Tankaar Sharma**
+
+// Tankaar Sharma
+// Co-Founder & Head of Technology
+
+// When your product visuals cost you a sale - Tankaar built the solution.
+
+// A data scientist who studied exactly why Indian sellers lose to competitors
+// on Amazon and Flipkart — and engineered a system to fix it. Every workflow
+// at PV Labs is designed around one goal: your listing should stop the scroll.
+
+// 3-day delivery. Zero compromise on quality. Built by someone who treats
+// your business like a data problem worth solving.
+
+// **Card 2 — Rudra Sharma**
+// Rudra Sharma
+// Co-Founder & Head of Growth
+
+// He built e-commerce brands before he built PV Labs.
+
+// Rudra knows the exact frustration - great product, bad visuals, losing
+// sales to a competitor whose product isn't even better than yours. That
+// frustration built PV Labs. Today, he works directly with brands and
+// businesses to make sure every project delivers one thing: more conversions.
+
+// Not a salesman. An entrepreneur who became the solution.
+
+// ### 5. 📊 STATS SECTION
+
+// Use **conservative, believable** numbers — not inflated:
+
+// `150+        480+         3-5         100%
+// Projects   Happy       Day         Indian
+// Delivered  Clients     Turnaround  E-Commerce
+//                                    Focused`
+
+// ---
+
+// ---
+
+// ---
+
+// ## Final Page Order for Indar:
+
+// `1. Hero Intro (story)
+// 2. Mission + Vision cards
+// 3. Founders (Tankaar + Rudra)
+// 4. Stats bar`
