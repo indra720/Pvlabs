@@ -47,6 +47,7 @@ const Team = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.2 }}
+            whileHover={{ y: -10, boxShadow: "0 20px 40px -15px rgba(123,47,217,0.2)" }}
             className="group relative"
           >
             {/* Main Card */}

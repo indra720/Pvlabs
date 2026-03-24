@@ -55,6 +55,7 @@ const FeaturedWork = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
+            whileHover={{ y: -10, boxShadow: "0 8px 24px -4px rgba(0,0,0,0.15)" }}
             className="glass-card overflow-hidden group cursor-pointer"
           >
             <div className="aspect-[4/3] overflow-hidden relative">
