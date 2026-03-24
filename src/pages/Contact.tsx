@@ -1,9 +1,15 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
-import { socialLinks } from "@/lib/social-links";
+import { Mail, Phone, Clock, Send, CheckCircle, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { 
+  Instagram, 
+  Facebook, 
+  Linkedin, 
+  Twitter, 
+  MessageCircle 
+} from "lucide-react";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", service: "", budget: "", message: "" });
@@ -14,14 +20,22 @@ const Contact = () => {
     setForm({ name: "", email: "", service: "", budget: "", message: "" });
   };
 
+  const socialLinks = [
+    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: MessageSquare, label: "Threads", href: "#" }, // Using MessageSquare as placeholder for Threads
+    { icon: Facebook, label: "Facebook", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Twitter, label: "X", href: "#" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32  pb-16 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="text-primary text-sm font-semibold uppercase tracking-widest">Contact Us</span>
+            <span className="text-primary text-sm font-semibold uppercase tracking-widest">Free Consultation</span>
             <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
               Let's <span className="gradient-text">talk</span>
             </h1>
@@ -48,7 +62,7 @@ const Contact = () => {
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-sm font-medium mb-2 block text-foreground">Full Name *</label>
-                    <input type="text" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Doe" className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
+                    <input type="text" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your Name" className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block text-foreground">Email Address *</label>
@@ -61,29 +75,24 @@ const Contact = () => {
                     <label className="text-sm font-medium mb-2 block text-foreground">Service Needed</label>
                     <select value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30">
                       <option value="">Select a service</option>
-                      <option>Logo Design</option>
-                      <option>Brand Identity</option>
-                      <option>Website UI Design</option>
-                      <option>Mobile App UI</option>
-                      <option>Social Media Graphics</option>
+                      <option>Product Hero Images</option>
+                      <option>Lifestyle & Scene Images</option>
+                      <option>A+ Content / EBC Design</option>
+                      <option>Listing Infographics</option>
+                      <option>Logo & Brand Identity</option>
                       <option>Packaging Design</option>
-                      <option>Motion Graphics</option>
-                      <option>Marketing Creatives</option>
-                      <option>Print Design</option>
-                      <option>Complete Brand Package</option>
-                      <option>Other</option>
+                      <option>Social Media Creatives</option>
+                      <option>Meta/Google Ad Creatives</option>
+                      <option>Cataloging / RPD Creation</option>
                     </select>
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block text-foreground">Budget Range</label>
                     <select value={form.budget} onChange={e => setForm({ ...form, budget: e.target.value })} className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30">
                       <option value="">Select budget</option>
-                      <option>Under $500</option>
-                      <option>$500 - $1,000</option>
-                      <option>$1,000 - $5,000</option>
-                      <option>$5,000 - $10,000</option>
-                      <option>$10,000 - $25,000</option>
-                      <option>$25,000+</option>
+                      <option>₹5,000 - ₹10,000</option>
+                      <option>₹10,000 - ₹25,000</option>
+                      <option>₹25,000+</option>
                     </select>
                   </div>
                 </div>
@@ -103,10 +112,9 @@ const Contact = () => {
           {/* Info */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-2 space-y-5">
             {[
-              { icon: Mail, label: "Email Us", value: "hello@pvlabs.design", sub: "We respond within 24 hours" },
-              { icon: Phone, label: "Call Us", value: "+1 (555) 123-4567", sub: "Mon-Fri 9AM-6PM PST" },
-              { icon: MapPin, label: "Visit Us", value: "123 Design Street", sub: "San Francisco, CA 94105" },
-              { icon: Clock, label: "Business Hours", value: "Mon - Fri: 9AM - 6PM PST", sub: "Weekend: By appointment" },
+              { icon: Mail, label: "Email Us", value: "growth@pvlabs.ai", sub: "We respond within 24 hours" },
+              { icon: Phone, label: "Call Us", value: "+91 74177 91003", sub: "Mon–Sat, 10AM–7PM IST" },
+              { icon: Clock, label: "Business Hours", value: "Mon – Sat: 10AM – 7PM IST", sub: "Sunday: Closed" },
             ].map((item, i) => (
               <div key={i} className="glass-card p-5 flex items-start gap-4 hover:shadow-lg transition-shadow">
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -131,14 +139,20 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass-card overflow-hidden">
-              <div className="aspect-[4/3] bg-secondary flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={32} className="mx-auto mb-2 text-primary/40" />
-                  <span className="text-sm text-muted-foreground">San Francisco, CA</span>
-                  <p className="text-xs text-muted-foreground mt-1">Map integration available</p>
-                </div>
+            <div className="glass-card p-6 bg-green-50/50 border-green-100 flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white mb-4 shadow-lg shadow-green-200">
+                <MessageCircle size={32} />
               </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp Us</h3>
+              <p className="text-sm text-gray-600 mb-6">Prefer a quick chat? Message us on WhatsApp for instant support.</p>
+              <a 
+                href="https://wa.me/917417791003" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
+              >
+                Start Chat on WhatsApp
+              </a>
             </div>
           </motion.div>
         </div>

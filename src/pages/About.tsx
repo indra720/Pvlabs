@@ -1,194 +1,222 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, Target, Eye, Figma, PenTool, Monitor, Palette, Layers, Award, Trophy, Star } from "lucide-react";
-// Realistic professional photography URLs from Unsplash
-const aboutTeam = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070";
-const portfolioShowcase = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426";
+import { Target, Eye, Linkedin, Globe } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-const team = [
-  { name: "Priya Verma", role: "Founder & Creative Director", initials: "PV", bio: "15+ years in design leadership. Previously at Google and IDEO. Passionate about design that drives business growth." },
-  { name: "Alex Rivera", role: "Lead UI/UX Designer", initials: "AR", bio: "Former Spotify designer. Specialist in design systems, accessibility, and user research methodologies." },
-  { name: "Jordan Lee", role: "Brand Strategist", initials: "JL", bio: "MBA from Stanford. Helped 100+ brands find their authentic voice and strategic positioning." },
-  { name: "Mia Zhang", role: "Motion Designer", initials: "MZ", bio: "Award-winning animator with work featured at Cannes Lions. Expert in After Effects and Cinema 4D." },
-  { name: "Sam Patel", role: "Senior Graphic Designer", initials: "SP", bio: "10+ years in print and packaging for Fortune 500. Master of typography and layout design." },
-  { name: "Olivia Brown", role: "Illustrator", initials: "OB", bio: "Published illustrator blending digital and traditional techniques. Creates unique brand characters and artwork." },
-  { name: "Ryan Kim", role: "Front-End Developer", initials: "RK", bio: "Full-stack developer bridging the gap between design and code. React, Next.js, and Framer expert." },
-  { name: "Emma Davis", role: "Project Manager", initials: "ED", bio: "PMP certified. 8+ years managing creative projects. Ensures every deliverable ships on time and on budget." },
-];
+// Professional studio/workspace image
+const heroImage = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2070";
 
-const tools = [
-  { icon: Figma, name: "Figma" },
-  { icon: PenTool, name: "Illustrator" },
-  { icon: Monitor, name: "Photoshop" },
-  { icon: Palette, name: "After Effects" },
-  { icon: Layers, name: "Sketch" },
-  { icon: PenTool, name: "InDesign" },
-  { icon: Monitor, name: "Premiere Pro" },
-  { icon: Palette, name: "Cinema 4D" },
-];
+const About = () => {
+  const location = useLocation();
 
-const milestones = [
-  { year: "2018", event: "PV Labs founded in San Francisco by Priya Verma with a vision to democratize premium design." },
-  { year: "2019", event: "Reached 50 clients milestone and expanded team to 5 designers." },
-  { year: "2020", event: "Pivoted to fully remote, grew to 10 team members across 4 countries." },
-  { year: "2021", event: "Won first international design award at Design Awards Global." },
-  { year: "2022", event: "Surpassed 200 projects. Launched specialized divisions for branding and digital." },
-  { year: "2023", event: "Opened second office in London. Named Top 10 by Clutch.co." },
-  { year: "2024", event: "50+ awards won. Expanded to 15+ team members." },
-  { year: "2025", event: "500+ projects, 200+ clients across 20+ countries. Launched PV Labs Academy." },
-];
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
-const About = () => (
+  return (
   <div className="min-h-screen bg-background">
     <Navbar />
 
-    {/* Hero */}
+    {/* 1. Hero Intro (Story) */}
     <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-primary text-sm font-semibold uppercase tracking-widest">About Us</span>
+            <span className="text-primary text-sm font-semibold uppercase tracking-widest">ABOUT US</span>
             <h1 className="font-heading text-5xl md:text-6xl font-extrabold mt-3 mb-6 text-foreground">
               The story behind <span className="gradient-text">PV Labs</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Founded in 2018, PV Labs started as a two-person studio with a bold mission: to make world-class design 
-              accessible to brands of every size. Today, we're a team of 15+ creatives serving 200+ clients across 20+ countries.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              PV Labs was born from a simple frustration — great products on Amazon and 
+              Flipkart were losing sales because of bad visuals. Not bad products. Bad visuals.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              We're a team of two brothers — a data scientist and a business strategist — 
+              who built a studio that replaces expensive photoshoots with world-class 
+              AI-powered product visuals. No camera. No shipping. No delays.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              We believe design is the most powerful tool for business transformation. Every pixel we place, every color 
-              we choose, and every layout we create is driven by strategy, powered by creativity, and measured by results.
+              Today, PV Labs serves sellers and brands across Amazon India, Flipkart, 
+              Myntra, and Meesho — delivering catalog-ready visuals that convert.
             </p>
           </div>
-          <div className="rounded-[24px] overflow-hidden shadow-xl">
-            <img src={aboutTeam} alt="PV Labs team" className="w-full h-auto" />
+          <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/20">
+            <img src={heroImage} alt="PV Labs Studio" className="w-full h-auto object-cover aspect-[4/3]" />
           </div>
         </motion.div>
       </div>
     </section>
 
-    {/* Mission & Vision */}
+    {/* 2. Mission + Vision Cards */}
     <section className="section-padding">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-        {[
-          { icon: Target, title: "Our Mission", text: "To empower brands worldwide with design that drives growth, builds trust, and creates lasting connections. We combine strategic thinking with creative excellence to deliver measurable results." },
-          { icon: Eye, title: "Our Vision", text: "To be the world's most trusted creative partner — setting new standards for design excellence, innovation, and client satisfaction. We envision a world where every brand has access to premium design." },
-        ].map((item, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card p-8 hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 rounded-2xl gradient-bg-vivid flex items-center justify-center mb-4 shadow-md">
-              <item.icon size={24} className="text-primary-foreground" />
-            </div>
-            <h2 className="font-heading text-2xl font-bold mb-3 text-foreground">{item.title}</h2>
-            <p className="text-muted-foreground leading-relaxed">{item.text}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-
-    {/* Portfolio Showcase */}
-    <section className="px-6 md:px-12 pb-8">
-      <div className="max-w-7xl mx-auto rounded-[24px] overflow-hidden shadow-lg">
-        <img src={portfolioShowcase} alt="Our work showcase" className="w-full" />
-      </div>
-    </section>
-
-    {/* Timeline */}
-    <section className="section-padding gradient-bg-soft">
-      <div className="max-w-3xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Journey</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 text-foreground">Key <span className="gradient-text">Milestones</span></h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          className="glass-card p-10 hover:shadow-xl transition-all border-l-4 border-primary"
+        >
+          <div className="w-14 h-14 rounded-2xl gradient-bg-vivid flex items-center justify-center mb-6 shadow-lg">
+            <Target size={28} className="text-white" />
+          </div>
+          <h2 className="font-heading text-2xl font-bold mb-4 text-foreground">Our Mission</h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            To make premium product visuals accessible to every Indian e-commerce 
+            seller — not just big brands. We believe great design shouldn't require 
+            a ₹50,000 studio shoot.
+          </p>
         </motion.div>
 
-        <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
-          {milestones.map((m, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className={`relative flex items-center gap-6 mb-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ delay: 0.1 }}
+          className="glass-card p-10 hover:shadow-xl transition-all border-l-4 border-[#60B8F0]"
+        >
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-[#60B8F0] to-[#7B2FD9] flex items-center justify-center mb-6 shadow-lg">
+            <Eye size={28} className="text-white" />
+          </div>
+          <h2 className="font-heading text-2xl font-bold mb-4 text-foreground">Our Vision</h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            To become India's most trusted visual studio for e-commerce — where every 
+            seller, from first-time Flipkart lister to established Amazon brand, gets 
+            visuals that actually sell.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* 3. Founders Section */}
+    <section id="founders" className="section-padding bg-secondary/30">
+      <div className="max-w-7xl mx-auto">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+          <span className="text-primary text-sm font-semibold uppercase tracking-widest">THE FOUNDERS</span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 text-foreground">Meet the Minds Behind <span className="gradient-text">PV Labs</span></h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Tankaar Sharma */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }}
+            className="glass-card overflow-hidden group hover:shadow-2xl transition-all"
+          >
+            <div className="p-8 md:p-12">
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-xl">
+                TS
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-1">Tankaar Sharma</h3>
+              <p className="text-primary font-semibold mb-6 uppercase tracking-wider text-sm">Co-Founder & Head of Technology</p>
+              
+              <p className="text-foreground font-medium mb-4 text-lg">
+                When your product visuals cost you a sale - Tankaar built the solution.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A data scientist who studied exactly why Indian sellers lose to competitors
+                on Amazon and Flipkart — and engineered a system to fix it. Every workflow
+                at PV Labs is designed around one goal: your listing should stop the scroll.
+              </p>
+              
+              <p className="text-muted-foreground italic mb-8 border-l-2 border-primary/30 pl-4">
+                3-day delivery. Zero compromise on quality. Built by someone who treats
+                your business like a data problem worth solving.
+              </p>
+
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all">
+                  <Linkedin size={18} />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all">
+                  <Globe size={18} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Rudra Sharma */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }}
+            className="glass-card overflow-hidden group hover:shadow-2xl transition-all"
+          >
+            <div className="p-8 md:p-12">
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#60B8F0] to-[#7B2FD9] mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-xl">
+                RS
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-1">Rudra Sharma</h3>
+              <p className="text-[#60B8F0] font-semibold mb-6 uppercase tracking-wider text-sm">Co-Founder & Head of Growth</p>
+              
+              <p className="text-foreground font-medium mb-4 text-lg">
+                He built e-commerce brands before he built PV Labs.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Rudra knows the exact frustration - great product, bad visuals, losing
+                sales to a competitor whose product isn't even better than yours. That
+                frustration built PV Labs. Today, he works directly with brands and
+                businesses to make sure every project delivers one thing: more conversions.
+              </p>
+              
+              <p className="text-muted-foreground italic mb-8 border-l-2 border-[#60B8F0]/30 pl-4">
+                Not a salesman. An entrepreneur who became the solution.
+              </p>
+
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
+                  <Linkedin size={18} />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
+                  <Globe size={18} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* 4. Stats Bar */}
+    <section className="py-20 bg-background border-y border-border/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          {[
+            { num: "150+", label: "Projects Delivered" },
+            { num: "480+", label: "Happy Clients" },
+            { num: "3-5", label: "Day Turnaround" },
+            { num: "100%", label: "Indian E-Commerce Focused" },
+          ].map((s, i) => (
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }} 
+              transition={{ delay: i * 0.1 }} 
+              className="text-center"
             >
-              <div className="hidden md:block flex-1" />
-              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 shadow-md" />
-              <div className="ml-12 md:ml-0 flex-1 glass-card p-5">
-                <span className="text-sm font-bold text-primary">{m.year}</span>
-                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{m.event}</p>
-              </div>
+              <div className="font-heading text-4xl md:text-5xl font-bold gradient-text mb-2">{s.num}</div>
+              <div className="text-xs md:text-sm text-muted-foreground font-bold uppercase tracking-widest">{s.label}</div>
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
-
-    {/* Team */}
-    <section className="section-padding">
-      <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Team</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 text-foreground">Meet the <span className="gradient-text">Creators</span></h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">15+ talented designers, strategists, and developers united by a passion for exceptional design.</p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((m, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="glass-card p-6 text-center hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center text-xl font-bold text-primary-foreground shadow-lg">
-                {m.initials}
-              </div>
-              <h3 className="font-heading font-bold text-foreground">{m.name}</h3>
-              <p className="text-sm text-primary font-medium mb-2">{m.role}</p>
-              <p className="text-xs text-muted-foreground leading-relaxed mb-4">{m.bio}</p>
-              <div className="flex justify-center gap-3">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={16} /></a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter size={16} /></a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Tools */}
-    <section className="section-padding gradient-bg-soft">
-      <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="font-heading text-4xl font-bold text-foreground">Tools We <span className="gradient-text">Use</span></h2>
-          <p className="text-muted-foreground mt-4">Industry-leading software powering our creative workflow.</p>
-        </motion.div>
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-          {tools.map((t, i) => (
-            <div key={i} className="glass-card p-5 text-center hover:shadow-lg transition-shadow">
-              <t.icon size={24} className="mx-auto mb-2 text-primary" />
-              <span className="text-xs text-muted-foreground font-medium">{t.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Stats */}
-    <section className="section-padding">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-        {[
-          { num: "500+", label: "Projects Completed" },
-          { num: "200+", label: "Happy Clients" },
-          { num: "50+", label: "Awards Won" },
-          { num: "20+", label: "Countries Served" },
-        ].map((s, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card p-8 text-center hover:shadow-xl transition-shadow">
-            <div className="font-heading text-4xl font-bold gradient-text">{s.num}</div>
-            <div className="text-sm text-muted-foreground mt-1 font-medium">{s.label}</div>
-          </motion.div>
-        ))}
       </div>
     </section>
 
     <Footer />
   </div>
-);
+);}
 
 export default About;

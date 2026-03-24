@@ -1,21 +1,42 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/logo-removebg-preview (1).png"
 
-const navLinks = [
+interface NavLinkItem {
+  label: string;
+  path: string;
+  children?: NavLinkItem[];
+}
+
+const navLinks: NavLinkItem[] = [
   { label: "Home", path: "/" },
   {
     label: "Services", path: "/services",
     children: [
-      { label: "All Services", path: "/services" },
-      { label: "Logo Design", path: "/services/logo-design" },
-      { label: "Brand Identity", path: "/services/brand-identity" },
-      { label: "Website UI", path: "/services/website-ui-design" },
-      { label: "Mobile App UI", path: "/services/mobile-app-ui" },
-      { label: "Packaging", path: "/services/packaging-design" },
-      { label: "Motion Graphics", path: "/services/motion-graphics" },
+      {
+        label: "E-Commerce",
+        path: "/services#ecommerce",
+        children: [
+          { label: "Product Hero Images", path: "/services#product-hero-images" },
+          { label: "Lifestyle & Scene", path: "/services#lifestyle-scene-images" },
+          { label: "A+ Content (EBC)", path: "/services#a-content-ebc-design" },
+          { label: "Infographics", path: "/services#infographics-listing-images" },
+          { label: "Cataloging & RPD", path: "/services#catalog-rpd-creation" },
+        ]
+      },
+      {
+        label: "Brand & Marketing",
+        path: "/services#brand",
+        children: [
+          { label: "Logo & Identity", path: "/services#logo-brand-identity" },
+          { label: "Packaging Design", path: "/services#packaging-design" },
+          { label: "Social Media", path: "/services#social-media-creatives" },
+          { label: "Ad Creatives", path: "/services#ad-creatives-meta-google" },
+          { label: "Pitch Decks", path: "/services#presentation-pitch-deck" },
+        ]
+      },
       { label: "Pricing", path: "/pricing" },
     ],
   },
@@ -31,21 +52,23 @@ const navLinks = [
     label: "Company", path: "/about",
     children: [
       { label: "About Us", path: "/about" },
-      { label: "Team", path: "/team" },
-      { label: "Careers", path: "/careers" },
-      { label: "Blog", path: "/blog" },
+      { label: "Founders", path: "/founders" },
+      { label: "Testimonials", path: "/testimonials" },
       { label: "FAQ", path: "/faq" },
     ],
   },
-  // { label: "Clients", path: "/clients" },
-  // { label: "Resources", path: "/tools" },
-  // { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [hoveredSubMenu, setHoveredSubMenu] = useState<string | null>(null);
+  const [openMobileSubMenus, setOpenMobileSubMenus] = useState<Record<string, boolean>>({});
   const location = useLocation();
+
+  const toggleMobileSubMenu = (label: string) => {
+    setOpenMobileSubMenus(prev => ({ ...prev, [label]: !prev[label] }));
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
@@ -62,10 +85,13 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center justify-between gap-12">
           {navLinks.map((link) => (
             <div
-              key={link.path}
+              key={link.path + link.label}
               className="relative"
               onMouseEnter={() => link.children && setHoveredMenu(link.label)}
-              onMouseLeave={() => setHoveredMenu(null)}
+              onMouseLeave={() => {
+                setHoveredMenu(null);
+                setHoveredSubMenu(null);
+              }}
             >
               <Link
                 to={link.path}
@@ -87,18 +113,48 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 w-56 glass-card p-3 shadow-xl rounded-2xl"
+                    className="absolute top-full left-0 mt-1 w-64 glass-card p-3 shadow-xl rounded-2xl"
                   >
                     {link.children.map((child) => (
-                      <Link
-                        key={child.path}
-                        to={child.path}
-                        className={`block px-4 py-2.5 rounded-xl text-sm transition-colors hover:bg-primary/10 hover:text-primary ${
-                          location.pathname === child.path ? "text-primary bg-primary/5 font-medium" : "text-muted-foreground"
-                        }`}
+                      <div 
+                        key={child.label} 
+                        className="relative group/sub"
+                        onMouseEnter={() => setHoveredSubMenu(child.label)}
+                        onMouseLeave={() => setHoveredSubMenu(null)}
                       >
-                        {child.label}
-                      </Link>
+                        <Link
+                          to={child.path}
+                          className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm transition-colors hover:bg-primary/10 hover:text-primary ${
+                            location.pathname === child.path ? "text-primary bg-primary/5 font-medium" : "text-muted-foreground"
+                          }`}
+                        >
+                          {child.label}
+                          {child.children && <ChevronRight size={14} className="opacity-50" />}
+                        </Link>
+                        
+                        {/* Second level dropdown */}
+                        <AnimatePresence>
+                          {child.children && hoveredSubMenu === child.label && (
+                            <motion.div
+                              initial={{ opacity: 0, x: 8 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: 8 }}
+                              transition={{ duration: 0.15 }}
+                              className="absolute left-full top-0 ml-1 w-64 glass-card p-3 shadow-xl rounded-2xl"
+                            >
+                              {child.children.map((subChild) => (
+                                <Link
+                                  key={subChild.label}
+                                  to={subChild.path}
+                                  className="block px-4 py-2.5 rounded-xl text-sm text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                                >
+                                  {subChild.label}
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     ))}
                   </motion.div>
                 )}
@@ -107,9 +163,6 @@ const Navbar = () => {
           ))}
           <Link to="/appointment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
             Book Appointment
-          </Link>
-          <Link to="/login" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            Login
           </Link>
           <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
             Free Consultation
@@ -133,31 +186,76 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-1 px-6 py-6">
               {navLinks.map((link) => (
-                <div key={link.path}>
-                  <Link
-                    to={link.path}
-                    onClick={() => !link.children && setOpen(false)}
-                    className={`block text-lg font-medium py-2 ${
-                      location.pathname === link.path ? "text-primary" : "text-muted-foreground"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                  {link.children && (
-                    <div className="pl-4 space-y-1 mb-2">
+                <div key={link.path + link.label}>
+                  <div className="flex items-center justify-between py-2">
+                    <Link
+                      to={link.path}
+                      onClick={() => !link.children && setOpen(false)}
+                      className={`text-lg font-medium ${
+                        location.pathname === link.path ? "text-primary" : "text-muted-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                    {link.children && (
+                      <button 
+                        onClick={() => toggleMobileSubMenu(link.label)}
+                        className="p-2 text-muted-foreground"
+                      >
+                        <ChevronDown size={20} className={`transition-transform ${openMobileSubMenus[link.label] ? "rotate-180" : ""}`} />
+                      </button>
+                    )}
+                  </div>
+                  
+                  {link.children && openMobileSubMenus[link.label] && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      className="pl-4 space-y-1 mb-2"
+                    >
                       {link.children.map((child) => (
-                        <Link
-                          key={child.path}
-                          to={child.path}
-                          onClick={() => setOpen(false)}
-                          className={`block text-sm py-1.5 ${
-                            location.pathname === child.path ? "text-primary" : "text-muted-foreground"
-                          }`}
-                        >
-                          {child.label}
-                        </Link>
+                        <div key={child.label}>
+                          <div className="flex items-center justify-between py-1.5">
+                            <Link
+                              to={child.path}
+                              onClick={() => !child.children && setOpen(false)}
+                              className={`text-sm ${
+                                location.pathname === child.path ? "text-primary" : "text-muted-foreground"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                            {child.children && (
+                              <button 
+                                onClick={() => toggleMobileSubMenu(child.label)}
+                                className="p-1.5 text-muted-foreground"
+                              >
+                                <ChevronDown size={16} className={`transition-transform ${openMobileSubMenus[child.label] ? "rotate-180" : ""}`} />
+                              </button>
+                            )}
+                          </div>
+                          
+                          {child.children && openMobileSubMenus[child.label] && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              className="pl-4 space-y-1 mb-2 border-l border-border/50"
+                            >
+                              {child.children.map((subChild) => (
+                                <Link
+                                  key={subChild.label}
+                                  to={subChild.path}
+                                  onClick={() => setOpen(false)}
+                                  className="block text-xs py-1.5 text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                  {subChild.label}
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </div>
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               ))}
@@ -167,9 +265,6 @@ const Navbar = () => {
                 </Link>
                 <Link to="/contact" onClick={() => setOpen(false)} className="flex-1 gradient-btn px-6 py-3 text-center text-sm font-bold">
                   Get a Quote
-                </Link>
-                <Link to="/login" onClick={() => setOpen(false)} className="text-center py-2 text-xs text-muted-foreground hover:text-primary">
-                  Login to Account
                 </Link>
               </div>
             </div>

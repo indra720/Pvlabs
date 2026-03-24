@@ -184,7 +184,7 @@ const Pricing = () => {
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-6 text-center text-sm font-medium text-slate-500 bg-white inline-block px-6 py-2 rounded-full border border-slate-100 shadow-sm mx-auto block w-fit">
+                <p className="mt-6 text-center text-sm font-medium text-slate-500 bg-white inline-block px-6 py-2 rounded-full border border-slate-100 shadow-sm mx-auto  w-fit">
                   🎉 "50+ SKUs saves you up to <span className="text-[#7B2FD9] font-bold">₹200 per SKU</span> vs single SKU pricing"
                 </p>
               </section>
@@ -240,7 +240,7 @@ const Pricing = () => {
               className="space-y-12"
             >
               <div className="text-center mb-16">
-                <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-md text-blue-600">BRAND & MARKETING DESIGN</span>
+                <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-md ">BRAND & MARKETING DESIGN</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4">Every brand project is different.</h2>
                 <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-lg">Pricing depends on scope, complexity, and timeline. Book a free consultation — we'll give you a clear quote within 24 hours.</p>
               </div>
@@ -301,7 +301,7 @@ const Pricing = () => {
               </div>
             ))}
           </div>
-          <p className="mt-16 text-center text-xs text-slate-500 font-medium uppercase tracking-widest bg-slate-50 inline-block px-4 py-2 rounded-full mx-auto block w-fit">Execution starts post advance payment</p>
+          <p className="mt-16 text-center text-xs text-slate-500 font-medium uppercase tracking-widest bg-slate-50 inline-block px-4 py-2 rounded-full mx-auto w-fit">Execution starts post advance payment</p>
         </div>
       </section>
 
