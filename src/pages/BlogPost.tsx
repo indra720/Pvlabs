@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, User, Calendar, Share2, Twitter, Linkedin, Facebook, Link as LinkIcon, ArrowRight } from "lucide-react";
 import serviceBranding from "@/assets/service-branding.jpg";
@@ -9,10 +9,22 @@ import serviceSocial from "@/assets/service-social.jpg";
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      
+      {/* Reading Progress Bar */}
+      <motion.div
+        className="fixed top-20 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent z-50 origin-left"
+        style={{ scaleX }}
+      />
 
       <article className="pt-32 pb-24 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">

@@ -82,91 +82,112 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center justify-between gap-12">
-          {navLinks.map((link) => (
-            <div
-              key={link.path + link.label}
-              className="relative"
-              onMouseEnter={() => link.children && setHoveredMenu(link.label)}
-              onMouseLeave={() => {
-                setHoveredMenu(null);
-                setHoveredSubMenu(null);
-              }}
-            >
-              <Link
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 py-2 ${
-                  location.pathname === link.path || location.pathname.startsWith(link.path + "/")
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+        <div className="hidden lg:flex items-center gap-8">
+          {/* Main Nav Links Container */}
+          <div className="flex items-center bg-secondary/50 p-1 rounded-full border border-border/40 shadow-sm">
+            {navLinks.map((link) => (
+              <div
+                key={link.path + link.label}
+                className="relative"
+                onMouseEnter={() => link.children && setHoveredMenu(link.label)}
+                onMouseLeave={() => {
+                  setHoveredMenu(null);
+                  setHoveredSubMenu(null);
+                }}
               >
-                {link.label}
-                {link.children && <ChevronDown size={14} className={`transition-transform ${hoveredMenu === link.label ? "rotate-180" : ""}`} />}
-              </Link>
+                <Link
+                  to={link.path}
+                  className={`relative text-xs font-semibold transition-colors flex items-center gap-1.5 px-5 py-2 z-10 rounded-full ${
+                    (link.path === "/" ? location.pathname === "/" : location.pathname.startsWith(link.path))
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                  {link.children && <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === link.label ? "rotate-180" : ""}`} />}
+                  
+                  {/* Active Pill Background - Floating Card Style */}
+                  {(link.path === "/" ? location.pathname === "/" : location.pathname.startsWith(link.path)) && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 bg-white shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)] rounded-full -z-10"
+                      transition={{ 
+                        type: "spring", 
+                        stiffness: 380, 
+                        damping: 30,
+                        mass: 1
+                      }}
+                    />
+                  )}
+                </Link>
 
-              {/* Mega menu dropdown */}
-              <AnimatePresence>
-                {link.children && hoveredMenu === link.label && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 w-64 glass-card p-3 shadow-xl rounded-2xl"
-                  >
-                    {link.children.map((child) => (
-                      <div 
-                        key={child.label} 
-                        className="relative group/sub"
-                        onMouseEnter={() => setHoveredSubMenu(child.label)}
-                        onMouseLeave={() => setHoveredSubMenu(null)}
-                      >
-                        <Link
-                          to={child.path}
-                          className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm transition-colors hover:bg-primary/10 hover:text-primary ${
-                            location.pathname === child.path ? "text-primary bg-primary/5 font-medium" : "text-muted-foreground"
-                          }`}
+                {/* Mega menu dropdown */}
+                <AnimatePresence>
+                  {link.children && hoveredMenu === link.label && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute top-full left-0 mt-3 w-64 glass-card p-3 shadow-xl rounded-2xl"
+                    >
+                      {link.children.map((child) => (
+                        <div 
+                          key={child.label} 
+                          className="relative group/sub"
+                          onMouseEnter={() => setHoveredSubMenu(child.label)}
+                          onMouseLeave={() => setHoveredSubMenu(null)}
                         >
-                          {child.label}
-                          {child.children && <ChevronRight size={14} className="opacity-50" />}
-                        </Link>
-                        
-                        {/* Second level dropdown */}
-                        <AnimatePresence>
-                          {child.children && hoveredSubMenu === child.label && (
-                            <motion.div
-                              initial={{ opacity: 0, x: 8 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              exit={{ opacity: 0, x: 8 }}
-                              transition={{ duration: 0.15 }}
-                              className="absolute left-full top-0 ml-1 w-64 glass-card p-3 shadow-xl rounded-2xl"
-                            >
-                              {child.children.map((subChild) => (
-                                <Link
-                                  key={subChild.label}
-                                  to={subChild.path}
-                                  className="block px-4 py-2.5 rounded-xl text-sm text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                                >
-                                  {subChild.label}
-                                </Link>
-                              ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-          <Link to="/appointment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            Book Appointment
-          </Link>
-          <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
-            Free Consultation
-          </Link>
+                          <Link
+                            to={child.path}
+                            className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm transition-colors hover:bg-primary/10 hover:text-primary ${
+                              location.pathname === child.path ? "text-primary bg-primary/5 font-medium" : "text-muted-foreground"
+                            }`}
+                          >
+                            {child.label}
+                            {child.children && <ChevronRight size={14} className="opacity-50" />}
+                          </Link>
+                          
+                          {/* Second level dropdown */}
+                          <AnimatePresence>
+                            {child.children && hoveredSubMenu === child.label && (
+                              <motion.div
+                                initial={{ opacity: 0, x: 8 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 8 }}
+                                transition={{ duration: 0.15 }}
+                                className="absolute left-full top-0 ml-1 w-64 glass-card p-3 shadow-xl rounded-2xl"
+                              >
+                                {child.children.map((subChild) => (
+                                  <Link
+                                    key={subChild.label}
+                                    to={subChild.path}
+                                    className="block px-4 py-2.5 rounded-xl text-sm text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                                  >
+                                    {subChild.label}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center gap-6">
+            <Link to="/appointment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Book Appointment
+            </Link>
+            <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
+              Free Consultation
+            </Link>
+          </div>
         </div>
 
         {/* Mobile toggle */}
