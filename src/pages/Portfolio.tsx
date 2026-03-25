@@ -2,7 +2,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ExternalLink, Eye } from "lucide-react";
+import { ExternalLink, Eye, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import serviceBranding from "@/assets/service-branding.jpg";
 import serviceAppdesign from "@/assets/service-appdesign.jpg";
 import servicePackaging from "@/assets/service-packaging.jpg";
@@ -12,26 +13,38 @@ import servicePrint from "@/assets/service-print.jpg";
 import serviceSocial from "@/assets/service-social.jpg";
 import portfolioShowcase from "@/assets/portfolio-showcase.jpg";
 
-const categories = ["All", "Branding", "Web", "Print", "Motion", "Marketing"];
+const categories = ["All", "Product Images", "A+ Content", "Packaging", "Branding", "Amazon", "Flipkart", "Myntra"];
 
 const projects = [
-  { title: "NovaTech Complete Rebrand", cat: "Branding", desc: "Full brand identity overhaul including logo, guidelines, stationery, and digital assets for a leading tech startup.", client: "NovaTech Inc.", result: "280% brand recognition increase", image: serviceBranding },
-  { title: "FitPulse Mobile App", cat: "Web", desc: "End-to-end mobile fitness app with gamification, social features, and personalized workout tracking.", client: "FitPulse", result: "300% user engagement boost", image: serviceAppdesign },
-  { title: "GreenLeaf Eco Packaging", cat: "Print", desc: "Sustainable, eco-friendly packaging line for 12 organic food products with premium unboxing experience.", client: "GreenLeaf Co.", result: "45% sales increase", image: servicePackaging },
-  { title: "CloudSync Analytics Dashboard", cat: "Web", desc: "Enterprise SaaS dashboard with real-time analytics, data visualization, and team collaboration features.", client: "CloudSync", result: "60% faster task completion", image: serviceWebdesign },
-  { title: "Luxe Fashion Campaign", cat: "Marketing", desc: "Multi-channel marketing campaign spanning social media, print, digital ads, and email for luxury brand launch.", client: "Luxe Fashion", result: "40% more foot traffic", image: serviceSocial },
-  { title: "UrbanEats Restaurant Platform", cat: "Web", desc: "Full restaurant marketplace website with online ordering, reviews, and loyalty program integration.", client: "UrbanEats", result: "Best industry conversion rate", image: serviceWebdesign },
-  { title: "Zenith Financial Brand System", cat: "Branding", desc: "Versatile logo system and 100+ brand templates for a major financial services firm.", client: "Zenith Capital", result: "Consistent across 50+ touchpoints", image: serviceBranding },
-  { title: "Apex Animated Explainer", cat: "Motion", desc: "2-minute cinematic animated explainer video for SaaS onboarding with custom illustrations.", client: "Apex Digital", result: "10M+ social media views", image: serviceMotion },
-  { title: "BlueHorizon Travel Brochure", cat: "Print", desc: "Premium bi-fold brochure with custom photography and illustrations for luxury travel agency.", client: "BlueHorizon Travel", result: "25% booking increase", image: servicePrint },
-  { title: "Vertex Social Campaign", cat: "Marketing", desc: "30-day integrated social media campaign with 60+ creatives across 5 platforms.", client: "Vertex Labs", result: "500K new followers", image: serviceSocial },
-  { title: "Prism Brand Motion Reel", cat: "Motion", desc: "Premium brand showreel with kinetic typography, 3D elements, and immersive transitions.", client: "Prism Co", result: "Featured at design awards", image: serviceMotion },
-  { title: "Orbit Complete Brand Ecosystem", cat: "Branding", desc: "Full brand guidelines system with 100+ asset templates, sub-brands, and partnership guidelines.", client: "Orbit Space", result: "Used by 500+ team members", image: serviceBranding },
+  { title: "SkinGlow Hero Image Redesign", cat: ["Product Images", "Amazon"], desc: "Complete hero image set for a skincare brand — white background, shadow work, skin-tone accurate product rendering.", client: "SkinGlow Naturals", result: "CTR increased 2.1x after listing update", image: serviceBranding },
+  { title: "NutriFuel A+ Content & EBC", cat: ["A+ Content", "Amazon"], desc: "Full A+ module — brand story banner, ingredient highlights, comparison chart, lifestyle imagery.", client: "NutriFuel", result: "Conversion rate up 38%", image: serviceWebdesign },
+  { title: "KitchenKraft Packaging Design", cat: ["Packaging", "Flipkart"], desc: "Complete packaging redesign for a cookware brand — label, box mockup, and Flipkart-ready listing visuals.", client: "KitchenKraft", result: "Return rate down 30%", image: servicePackaging },
+  { title: "BabyNest Listing Makeover", cat: ["Product Images", "Flipkart"], desc: "8-image listing set — hero, lifestyle, feature callouts, size chart. Flipkart compliant.", client: "BabyNest", result: "Sales up 55% in Week 1", image: serviceAppdesign },
+  { title: "GroomX Complete Brand Identity", cat: ["Branding", "Amazon"], desc: "Logo, color palette, typography system, and packaging — launched as a D2C men's grooming brand on Amazon.", client: "GroomX", result: "Perceived as premium brand from Day 1", image: serviceBranding },
+  { title: "GlowRitual Nykaa Brand Store", cat: ["A+ Content", "Nykaa"], desc: "Full Nykaa brand store setup — banner design, product listing visuals, lifestyle imagery, and ingredient highlight creatives.", client: "GlowRitual", result: "Featured in Nykaa Beauty Edit", image: serviceWebdesign },
+  { title: "PowerTool Pro Listing Set", cat: ["Product Images", "Amazon"], desc: "7-image hero + infographic set for a tools brand. Technical accuracy + clean white background shots.", client: "PowerTool Pro", result: "First-try listing approval", image: servicePrint },
+  { title: "PureLeaf Organic Packaging", cat: ["Packaging", "Amazon"], desc: "Eco-friendly packaging design for an organic food brand — label design, pouch mockup, Amazon listing visuals.", client: "PureLeaf Organics", result: "Best Seller tag within 3 weeks", image: servicePackaging },
+  { title: "FitFlex Activewear Catalog", cat: ["Product Images", "Myntra"], desc: "12 SKU catalog shoot — lifestyle imagery, flat lays, detail shots, Myntra size chart banners.", client: "FitFlex", result: "12 SKUs live in 5 days", image: serviceSocial },
+  { title: "UrbanThreads Ajio Catalog", cat: ["Branding", "Ajio"], desc: "Complete catalog shoot-style visuals for a fashion brand — flat lays, model mockups, detail shots, Ajio-compliant image set.", client: "UrbanThreads", result: "40+ SKUs live in 7 days", image: serviceSocial },
+  { title: "GlowUp Skincare A+ Redesign", cat: ["A+ Content", "Amazon"], desc: "Replaced basic listing with full A+ content — ingredient storytelling, before/after banners, dermatologist badge visuals.", client: "GlowUp Skincare", result: "80% cost saving vs studio shoot", image: serviceWebdesign },
+  { title: "JewelCraft Listing Visuals", cat: ["Product Images", "Flipkart"], desc: "Premium product photography-style renders for a jewellery brand — close-ups, lifestyle, and white background sets.", client: "JewelCraft", result: "ROI positive within 2 weeks", image: serviceBranding },
+];
+
+const beforeAfterData = [
+  { title: "SkinGlow Hero Image", tags: ["Amazon"], before: "Phone camera shot, yellow lighting, cluttered background", after: "Studio-quality white background render, shadow work, Amazon compliant", beforeImg: servicePrint, afterImg: serviceBranding },
+  { title: "KitchenKraft Packaging", tags: ["Flipkart"], before: "Generic white box, no branding, no product info", after: "Premium packaging, brand colors, shelf-ready label design", beforeImg: servicePackaging, afterImg: servicePackaging },
+  { title: "NutriFuel A+ Content", tags: ["Amazon"], before: "Plain text description, no banners, no visuals", after: "Full A+ module — brand story, ingredient highlights, comparison chart", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
+  { title: "UrbanThreads Catalog", tags: ["Ajio"], before: "Single front-facing image, plain white background", after: "Flat lay + model mockup + detail shot — Ajio full image set", beforeImg: serviceSocial, afterImg: serviceSocial },
+  { title: "GlowRitual Brand Store", tags: ["Nykaa"], before: "Default Nykaa seller page, no branding, no banners", after: "Custom Nykaa storefront — lifestyle banners, curated layout", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
+  { title: "JewelCraft Product Listing", tags: ["Flipkart"], before: "Low-res image, no lifestyle context, no size reference", after: "Premium render — close-up, lifestyle, white background set", beforeImg: serviceBranding, afterImg: serviceBranding },
+  { title: "EthnicRoots Storefront", tags: ["Myntra"], before: "Inconsistent images across SKUs, no brand identity", after: "Unified visual language — lifestyle + size guide banners across all SKUs", beforeImg: serviceSocial, afterImg: serviceSocial },
+  { title: "BloomSkin D2C Website", tags: ["Brand Website"], before: "No website, only marketplace presence", after: "Full mobile-first brand website with product pages + Nykaa integration", beforeImg: serviceAppdesign, afterImg: serviceAppdesign },
+  // Adding duplicates or similar for the remaining dummy placeholders if needed, but 8 provided
 ];
 
 const Portfolio = () => {
   const [active, setActive] = useState("All");
-  const filtered = active === "All" ? projects : projects.filter(p => p.cat === active);
+  const filtered = active === "All" ? projects : projects.filter(p => p.cat.includes(active));
 
   return (
     <div className="min-h-screen bg-background">
@@ -40,12 +53,12 @@ const Portfolio = () => {
       <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="text-primary text-sm font-semibold uppercase tracking-widest">Portfolio</span>
+            <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Work</span>
             <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
-              Our <span className="gradient-text">Work</span>
+              Catalog visuals, <span className="gradient-text">A+ content</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
-              500+ projects completed for 200+ clients worldwide. Browse our work across branding, web, print, motion, and marketing.
+              Helping Indian sellers look premium — one listing at a time.
             </p>
           </motion.div>
 
@@ -92,8 +105,10 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{p.cat}</span>
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  {p.cat.map(c => (
+                    <span key={c} className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{c}</span>
+                  ))}
                   <span className="text-xs text-muted-foreground">• {p.client}</span>
                 </div>
                 <h3 className="font-heading font-bold text-foreground mb-1">{p.title}</h3>
@@ -111,35 +126,51 @@ const Portfolio = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="text-primary text-sm font-semibold uppercase tracking-widest">Transformations</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 text-foreground">Before & <span className="gradient-text">After</span></h2>
-            <p className="text-muted-foreground mt-4 max-w-xl mx-auto">See how we've transformed brands with strategic design thinking and creative execution.</p>
+            <p className="text-muted-foreground mt-4 max-w-xl mx-auto">See what a listing looks like before and after PV Labs gets to work.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: "NovaTech Logo Evolution", before: "Generic outdated wordmark with poor scalability", after: "Modern geometric mark with dynamic color system", beforeImg: servicePrint, afterImg: serviceBranding },
-              { title: "UrbanEats Website Redesign", before: "Cluttered layout with low conversion rates", after: "Clean, conversion-focused with 3x better performance", beforeImg: serviceSocial, afterImg: serviceWebdesign },
-            ].map((item, i) => (
+            {beforeAfterData.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-card p-6">
-                <h3 className="font-heading font-bold text-foreground mb-4 text-lg">{item.title}</h3>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-heading font-bold text-foreground text-lg">{item.title}</h3>
+                  <div className="flex gap-1">
+                     {item.tags.map(t => (
+                       <span key={t} className="text-[10px] uppercase font-bold text-muted-foreground bg-secondary px-2 py-1 rounded">{t}</span>
+                     ))}
+                  </div>
+                </div>
+                
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <div className="aspect-square rounded-xl overflow-hidden mb-2">
-                      <img src={item.beforeImg} alt="Before" className="w-full h-full object-cover opacity-60" />
+                      <img src={item.beforeImg} alt="Before" className="w-full h-full object-cover opacity-60 grayscale" />
                     </div>
                     <span className="text-xs font-semibold text-destructive">Before</span>
-                    <p className="text-xs text-muted-foreground">{item.before}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.before}</p>
                   </div>
                   <div>
                     <div className="aspect-square rounded-xl overflow-hidden mb-2">
                       <img src={item.afterImg} alt="After" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-xs font-semibold text-primary">After</span>
-                    <p className="text-xs text-muted-foreground">{item.after}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.after}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="section-padding gradient-bg-vivid text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
+          <p className="text-primary-foreground/80 mb-8">Let's do the same for your brand.</p>
+          <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+            Get Free Sample for your Product → <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
 

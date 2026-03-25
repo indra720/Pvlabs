@@ -19,6 +19,7 @@ const posts = [
   { title: "Mastering Typography for Digital Products", category: "Design", readTime: "7 min", author: "Samira Khan", image: serviceWebdesign, excerpt: "Explore the principles of effective typography in UI design and how to choose fonts that enhance readability and brand identity." },
   { title: "The Future of Branding: AI and Personalization", category: "Trends", readTime: "5 min", author: "Ben Carter", image: serviceBranding, excerpt: "How artificial intelligence is revolutionizing brand identity creation and enabling hyper-personalized customer experiences." },
   { title: "Motion Design: Bringing Interfaces to Life", category: "UI Animation", readTime: "6 min", author: "Leo Zhang", image: serviceAppdesign, excerpt: "Why purposeful motion is the key to creating engaging, intuitive, and memorable digital experiences for modern users." },
+  { title: "Motion Design: Bringing Interfaces to Life", category: "UI Animation", readTime: "6 min", author: "Leo Zhang", image: serviceAppdesign, excerpt: "Why purposeful motion is the key to creating engaging, intuitive, and memorable digital experiences for modern users." },
 ];
 
 const BlogPreview = () => {
@@ -77,10 +78,10 @@ const BlogPreview = () => {
               disableOnInteraction: false,
             }}
             modules={[EffectCoverflow, Autoplay]}
-            className="w-full py-10 !overflow-visible"
+            className="w-full py-10 !overflow-visible "
           >
             {posts.map((p, i) => (
-              <SwiperSlide key={i} className="max-w-[320px] sm:max-w-[380px]">
+              <SwiperSlide key={i} className="sm:mx-10 max-w-[300px] sm:max-w-[380px]">
                 <motion.div
                   onMouseEnter={() => handleMouseEnter(i)}
                   onMouseLeave={handleMouseLeave}
@@ -98,7 +99,7 @@ const BlogPreview = () => {
                     <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3">{p.excerpt}</p>
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
                       <span className="text-xs text-muted-foreground flex items-center gap-1"><User size={12} /> {p.author}</span>
-                      <span className="text-sm text-primary flex items-center gap-1 font-medium">Read more <ArrowRight size={14} /></span>
+                      <span className="text-sm text-primary flex items-center gap-1 font-medium"><span className=" hidden sm:flex">Read more</span> <ArrowRight size={14} /></span>
                     </div>
                   </div>
                 </motion.div>
