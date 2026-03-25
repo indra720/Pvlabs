@@ -53,7 +53,7 @@ const navLinks: NavLinkItem[] = [
     children: [
       { label: "About Us", path: "/about" },
       { label: "Founders", path: "/founders" },
-      { label: "Testimonials", path: "/testimonials" },
+      
       { label: "FAQ", path: "/faq" },
     ],
   },

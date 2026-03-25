@@ -2,14 +2,12 @@ import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "What services does PV Labs offer?", a: "We offer 22+ specialized design services spanning branding & identity, digital design, social & marketing, print & packaging, motion & media, and creative illustration. This includes logo design, brand identity, UI/UX design, social media graphics, packaging, motion graphics, and much more." },
-  { q: "How long does a typical project take?", a: "Timelines depend on project scope. Logo design typically takes 5-7 business days, brand identity packages 2-4 weeks, website UI designs 2-3 weeks, and comprehensive brand overhauls 4-8 weeks. We also offer rush delivery for urgent needs." },
-  { q: "Do you offer unlimited revisions?", a: "Yes! All our projects include unlimited revisions. We work closely with you until you're 100% satisfied with the final result. Your feedback drives the design process." },
-  { q: "What is your pricing model?", a: "We offer three tiers: Starter ($499 for single projects), Professional ($1,499 for multi-service packages), and Enterprise (custom pricing for large-scale needs). All plans include source files, brand guidelines, and dedicated support." },
-  { q: "Can you handle large-scale enterprise projects?", a: "Absolutely. Our team of 15+ designers has worked with Fortune 500 companies and global brands. We can scale our team and resources to match any project size while maintaining our quality standards." },
-  { q: "Do you work with international clients?", a: "Yes! Over 40% of our 200+ clients are international, spanning 20+ countries. We work across time zones and use collaborative tools for seamless communication." },
-  { q: "What file formats do you deliver?", a: "We deliver all standard formats including AI, EPS, SVG, PDF, PNG, JPG, PSD, and Figma files. We also provide organized source files and brand guideline documents." },
-  { q: "What if I'm not satisfied with the designs?", a: "Your satisfaction is guaranteed. We offer unlimited revisions and a money-back guarantee if we can't meet your expectations. In our 8+ years, we've maintained a 98% client satisfaction rate." },
+  { q: "What is PV Labs?", a: "PV Labs is India's dedicated e-commerce visual studio. We create product hero images, A+ content, lifestyle visuals, infographics, packaging design, and brand identity — everything your listing needs to convert on Amazon, Flipkart, Myntra, and Meesho. No studio shoot required." },
+  { q: "Do I need to send my physical product?", a: "No. Just share clear reference images of your product + your brief. Our team handles everything from there. No shipping, no delays." },
+  { q: "Are your visuals Amazon and Flipkart compliant?", a: "Yes. All images are delivered in platform-specific dimensions and specifications — white background hero images for Amazon, Flipkart-ready formats, and A+ content as per Amazon's guidelines." },
+  { q: "How long does a typical project take?", a: "Most projects are delivered within 3–5 business days. Larger projects (10+ SKUs, full A+ content) may take 7–10 days. We always confirm the timeline before starting." },
+  { q: "What does your design process look like?", a: "Simple 4-step process: 1. You share your product details + brief. 2. Our design team creates initial concepts. 3. You review and share feedback. 4. We deliver final files, Amazon & Flipkart ready." },
+  { q: "How much does a project cost?", a: "Pricing depends on the number of SKUs and type of visuals needed. We offer per-SKU pricing as well as custom packages for brands. Get a free quote — no commitment required." },
 ];
 
 const FAQ = () => (
@@ -19,7 +17,7 @@ const FAQ = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-"
+        className="text-center mb-12"
       >
         <span className="text-primary text-sm font-semibold uppercase tracking-widest">FAQ</span>
         <h2 className="font-heading text-4xl md:text-5xl font-bold  mb-4 text-foreground">
