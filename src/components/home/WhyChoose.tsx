@@ -1,15 +1,42 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, Clock, Users, Award, HeartHandshake, Infinity, Headphones } from "lucide-react";
+import { Zap, Shield, Clock, Users, HeartHandshake, Infinity, Headphones } from "lucide-react";
 
 const reasons = [
-  { icon: Zap, title: "Lightning Fast", desc: "Average turnaround of 3-5 business days. Rush delivery available for urgent projects." },
-  { icon: Shield, title: "100% Original", desc: "Every design is crafted from scratch. No templates, no stock. Pure custom creativity." },
-  { icon: Clock, title: "Always On Time", desc: "98% on-time delivery rate. We respect deadlines because your time matters." },
-  { icon: Users, title: "Expert Team", desc: "15+ skilled designers with diverse specializations across branding, digital, print, and motion." },
-  { icon: Award, title: "Award Winning", desc: "50+ industry awards from Awwwards, Clutch, Design Awards Global, and more." },
-  { icon: HeartHandshake, title: "Client First", desc: "Unlimited revisions until you're 100% satisfied. Your vision is our mission." },
-  { icon: Infinity, title: "End-to-End", desc: "From strategy to delivery. We handle the entire creative process so you can focus on growth." },
-  { icon: Headphones, title: "24/7 Support", desc: "Dedicated project manager and always-available support for every project." },
+  { 
+    icon: Zap, 
+    title: "Lightning Fast", 
+    desc: "Average turnaround of 3–5 business days. Larger projects delivered in 7–10 days. Rush delivery available on request." 
+  },
+  { 
+    icon: Shield, 
+    title: "100% Original", 
+    desc: "Every design built from scratch for your product. No templates, no stock visuals. Your brand, your identity." 
+  },
+  { 
+    icon: Clock, 
+    title: "Always On Time", 
+    desc: "We confirm timelines before starting and deliver on the date we commit. No surprises, no delays." 
+  },
+  { 
+    icon: Users, 
+    title: "E-Commerce Specialists", 
+    desc: "Designers who understand Amazon, Flipkart, Myntra, Ajio & Nykaa — not just design tools. We think like sellers." 
+  },
+  { 
+    icon: HeartHandshake, 
+    title: "Client First", 
+    desc: "2 revision rounds included in every project. Direct WhatsApp access to your project manager throughout — no bots, no tickets." 
+  },
+  { 
+    icon: Infinity, 
+    title: "End-to-End", 
+    desc: "From brief to final files — we handle everything. Hero images, A+ content, packaging, branding. One team, all your visual needs." 
+  },
+  { 
+    icon: Headphones, 
+    title: "Dedicated Support", 
+    desc: "Mon–Sat, 10AM–7PM IST. Response within 2–4 hours on WhatsApp. Real people, real answers." 
+  },
 ];
 
 const WhyChoose = () => (

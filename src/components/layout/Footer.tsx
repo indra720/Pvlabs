@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, Clock, Heart, ArrowRight } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { socialLinks } from "@/lib/social-links";
 import logo from "../../assets/logo-removebg-preview (1).png"
 
 const Footer = () => {
-  // Filter social links to only include requested ones
-  const filteredSocial = socialLinks.filter(s => 
-    ["Instagram", "Facebook", "LinkedIn", "YouTube", "Twitter", "X"].includes(s.label)
-  );
-
   return (
     <footer className="bg-foreground text-background">
       <div className="w-full px-6 md:px-12 py-16">
@@ -27,8 +22,8 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap gap-2">
-                {filteredSocial.map(({ icon: Icon, label, href }, i) => (
-                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center text-background/60 hover:bg-primary hover:text-primary-foreground transition-all">
+                {socialLinks.map(({ icon: Icon, label, href, hoverColor }, i) => (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={`group w-10 h-10 rounded-full bg-background/10 flex items-center justify-center text-background/60 transition-all ${hoverColor}`}>
                     <Icon size={16} />
                   </a>
                 ))}
@@ -62,7 +57,7 @@ const Footer = () => {
               {[
                 { label: "About Us", path: "/about" },
                 { label: "Our Work", path: "/portfolio" },
-                { label: "Testimonials", path: "/testimonials" },
+                // { label: "Testimonials", path: "/testimonials" },
                 { label: "FAQ", path: "/faq" },
                 { label: "Contact", path: "/contact" },
               ].map((l) => (

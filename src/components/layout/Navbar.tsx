@@ -181,9 +181,9 @@ const Navbar = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center gap-6">
-            <Link to="/appointment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            {/* <Link to="/appointment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Book Appointment
-            </Link>
+            </Link> */}
             <Link to="/contact" className="gradient-btn px-6 py-2.5 text-sm">
               Free Consultation
             </Link>
@@ -281,9 +281,9 @@ const Navbar = () => {
                 </div>
               ))}
               <div className="flex flex-col gap-2 mt-4">
-                <Link to="/appointment" onClick={() => setOpen(false)} className="flex-1 text-center py-3 rounded-full border border-border text-sm font-medium hover:bg-secondary transition-all">
+                {/* <Link to="/appointment" onClick={() => setOpen(false)} className="flex-1 text-center py-3 rounded-full border border-border text-sm font-medium hover:bg-secondary transition-all">
                   Book Appointment
-                </Link>
+                </Link> */}
                 <Link to="/contact" onClick={() => setOpen(false)} className="flex-1 gradient-btn px-6 py-3 text-center text-sm font-bold">
                   Get a Quote
                 </Link>

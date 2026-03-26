@@ -32,7 +32,7 @@ const TestimonialsPage = () => (
     <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Testimonials</span>
+          
           <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
             What our clients <span className="gradient-text">say</span>
           </h1>

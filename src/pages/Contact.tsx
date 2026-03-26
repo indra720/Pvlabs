@@ -1,15 +1,9 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { Mail, Phone, Clock, Send, CheckCircle, MessageSquare } from "lucide-react";
+import { Mail, Phone, Clock, Send, CheckCircle, MessageSquare, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { 
-  Instagram, 
-  Facebook, 
-  Linkedin, 
-  Twitter, 
-  MessageCircle 
-} from "lucide-react";
+import { socialLinks } from "@/lib/social-links";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", service: "", budget: "", message: "" });
@@ -19,14 +13,6 @@ const Contact = () => {
     alert("Thank you! We'll be in touch within 24 hours.");
     setForm({ name: "", email: "", service: "", budget: "", message: "" });
   };
-
-  const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: MessageSquare, label: "Threads", href: "#" }, // Using MessageSquare as placeholder for Threads
-    { icon: Facebook, label: "Facebook", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Twitter, label: "X", href: "#" },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -131,8 +117,8 @@ const Contact = () => {
             <div className="glass-card p-5">
               <h3 className="text-sm font-semibold text-foreground mb-3">Follow Us</h3>
               <div className="flex flex-wrap gap-3">
-                {socialLinks.map(({ icon: Icon, label, href }, i) => (
-                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all">
+                {socialLinks.map(({ icon: Icon, label, href, hoverColor }, i) => (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={`group w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground transition-all ${hoverColor}`}>
                     <Icon size={16} />
                   </a>
                 ))}

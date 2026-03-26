@@ -85,9 +85,7 @@ const Team = () => (
                 <a href="#" className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-gray-600 hover:bg-green-400 hover:text-white transition-all duration-300">
                   <FaWhatsappSquare size={18}/>
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center hover:scale-110 transition-all duration-300">
-                  <Phone size={18} />
-                </a>
+              
               </div>
             </div>
           </motion.div>

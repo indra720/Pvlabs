@@ -58,7 +58,7 @@ const Portfolio = () => {
               Catalog visuals, <span className="gradient-text">A+ content</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
-              Helping Indian sellers look premium — one listing at a time.
+              Helping Indian sellers look premium
             </p>
           </motion.div>
 
@@ -67,9 +67,8 @@ const Portfolio = () => {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                  active === c ? "gradient-btn" : "bg-secondary text-muted-foreground hover:bg-secondary/80"
-                }`}
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${active === c ? "gradient-btn" : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+                  }`}
               >
                 {c}
               </button>
@@ -135,12 +134,12 @@ const Portfolio = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-heading font-bold text-foreground text-lg">{item.title}</h3>
                   <div className="flex gap-1">
-                     {item.tags.map(t => (
-                       <span key={t} className="text-[10px] uppercase font-bold text-muted-foreground bg-secondary px-2 py-1 rounded">{t}</span>
-                     ))}
+                    {item.tags.map(t => (
+                      <span key={t} className="text-[10px] uppercase font-bold text-muted-foreground bg-secondary px-2 py-1 rounded">{t}</span>
+                    ))}
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <div className="aspect-square rounded-xl overflow-hidden mb-2">
@@ -161,18 +160,19 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
+        <div className="section-padding gradient-bg-vivid text-center mt-5 rounded-md max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
+            <p className="text-primary-foreground/80 mb-8">Let's do the same for your brand.</p>
+            <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+              Get Free Sample for your Product <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+
       </section>
 
       {/* Bottom CTA */}
-      <section className="section-padding gradient-bg-vivid text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
-          <p className="text-primary-foreground/80 mb-8">Let's do the same for your brand.</p>
-          <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
-            Get Free Sample for your Product → <ArrowRight size={18} />
-          </Link>
-        </div>
-      </section>
 
       <Footer />
     </div>
