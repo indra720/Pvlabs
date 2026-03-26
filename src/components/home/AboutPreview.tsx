@@ -21,12 +21,12 @@ const AboutPreview = () => (
            Most sellers lose sales not because of their product,<span className="bg-gradient-to-b from-[#7B2FD9] to-[#60B8F0] text-transparent bg-clip-text">but because of bad visuals</span>
           </h2>
           <span className="text-gray-600 leading-relaxed mb-4 text-[1rem]  text-justify  max-w-[480px] block">
-           We started PV Labs with one mission — help Indian e-commerce sellers compete with the best. Your product is great. Your listing shouldn't be the reason it doesn't sell. We create studio-quality visuals using AI + human expertise, specifically built for Amazon, Flipkart, Myntra & Etsy — at a fraction of traditional studio cost.
+           We started PV Labs with one mission — help Indian e-commerce sellers compete with the best. Your product is great. Your listing shouldn't be the reason it doesn't sell. We create studio-quality visuals  human expertise, specifically built for Amazon, Flipkart, Myntra  — at a fraction of traditional studio cost.
           </span>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 mx-6 gap-4 mb-8">
             {[
-              { icon: TrendingUp, label: "✦ AI-powered + Human refined" },
+              
               { icon: Globe, label: "✦ Amazon & Flipkart compliant outputs" },
               { icon: Palette, label: "✦ Every file delivered production-ready" },
               

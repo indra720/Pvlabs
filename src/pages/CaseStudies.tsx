@@ -158,16 +158,16 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-card">
     <Navbar />
 
     {/* Hero */}
     <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Case Studies</span>
+          
           <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
-            Real results, <span className="gradient-text">real impact</span>
+            Real results, <span className="gradient-text">Real impact</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Deep dives into our most transformative projects. See how strategic design drives measurable business outcomes for brands worldwide.
@@ -179,7 +179,7 @@ const CaseStudies = () => (
           {[
             { icon: TrendingUp, num: "2x", label: "Avg. CTR Improvement" },
             { icon: Target, num: "60%", label: "Avg. Cost Saving" },
-            { icon: Users, num: "6", label: "Platforms" },
+            { icon: Users, num: "6+", label: "Platforms" },
             { icon: BarChart3, num: "96%", label: "Client Satisfaction" },
           ].map((s, i) => (
             <div key={i} className="glass-card p-4 text-center">
@@ -268,7 +268,7 @@ const CaseStudies = () => (
     ))}
 
     {/* CTA */}
-    <section className="section-padding gradient-bg-vivid text-center">
+    <section className="section-padding gradient-bg-vivid text-center max-w-5xl mx-auto m-10 rounded-md">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
           Want Results Like These?
@@ -277,7 +277,7 @@ const CaseStudies = () => (
           Let's build your success story — one listing at a time.
         </p>
         <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
-          Get Free Sample for your product → <ArrowRight size={18} />
+          Get Free Sample for your product <ArrowRight size={18} />
         </Link>
       </div>
     </section>

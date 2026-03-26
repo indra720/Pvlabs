@@ -64,9 +64,9 @@ const Hero = () => (
           <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-4">
             <Link
               to="/contact"
-              className="gradient-btn px-8 py-4 text-base flex items-center justify-center gap-2 shadow-2xl"
+              className="gradient-btn px-4 text-base flex items-center justify-center gap-2 shadow-xl"
             >
-              Free 1-SKU Makeover<ArrowRight size={18} />
+             get free sample for your product<ArrowRight size={18} />
             </Link>
             <Link
               to="/portfolio"
