@@ -60,7 +60,7 @@ const FAQ = () => {
         </div>
         </Accordion>
 
-        {/* 🔥 Show More Button */}
+        {/*  Show More Button */}
        
       </div>
     </section>

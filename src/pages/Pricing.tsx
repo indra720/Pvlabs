@@ -2,8 +2,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { 
-  Check, ArrowRight, ShoppingCart, Palette, Zap, 
+import {
+  Check, ArrowRight, ShoppingCart, Palette, Zap,
   FileText, Star, MessageSquare, Shield, Clock, Phone, Linkedin, Instagram,
   Package,
   Share2,
@@ -28,26 +28,26 @@ const Pricing = () => {
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="inline-block px-3 rounded-full bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm tracking-[3px] mb-6 shadow-sm">
+            <span className="inline-block px-3 rounded-full bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm tracking-[3px]  shadow-sm">
               Pricing
             </span>
             <h1 className="font-heading text-5xl md:text-7xl font-extrabold mb-6 text-slate-900 tracking-tight">
-              Invest in visuals that <br/>
-              <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm">pay you back.</span>
+              Invest in visuals that <br />
+              <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm">Pay you back.</span>
             </h1>
             <p className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Per-SKU pricing for e-commerce sellers. Custom quotes for brand projects. <br className="hidden md:block"/> No hidden fees. Final scope confirmed after consultation.
+              Per-SKU pricing for e-commerce sellers. <br /> Custom quotes for brand projects. <br className="hidden md:block" /> No hidden fees. Final scope confirmed after consultation.
             </p>
 
             {/* Tab Switcher */}
             <div className="flex flex-wrap justify-center gap-4 mt-12">
-              <button 
+              <button
                 onClick={() => setActiveTab("ecommerce")}
                 className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 shadow-lg ${activeTab === "ecommerce" ? "bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white scale-105 shadow-purple-500/30" : "bg-white text-slate-500 hover:text-[#7B2FD9] hover:bg-purple-50"}`}
               >
                 <ShoppingCart size={20} /> 🛒 E-Commerce Visuals
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab("brand")}
                 className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 shadow-lg ${activeTab === "brand" ? "bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white scale-105 shadow-blue-500/30" : "bg-white text-slate-500 hover:text-[#60B8F0] hover:bg-blue-50"}`}
               >
@@ -63,7 +63,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-6 pb-24 relative z-10">
         <AnimatePresence mode="wait">
           {activeTab === "ecommerce" ? (
-            <motion.div 
+            <motion.div
               key="ecommerce"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,13 +93,13 @@ const Pricing = () => {
                         <li key={i} className="flex items-center gap-3 text-sm text-slate-700 font-medium">
                           <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
                             <Check size={12} className="text-[#7B2FD9]" />
-                          </div> 
+                          </div>
                           {f}
                         </li>
                       ))}
                     </ul>
                     <div className="bg-slate-50 p-4 rounded-xl text-xs text-slate-500 mb-8 border border-slate-100 italic flex gap-2 items-center">
-                      <MessageSquare size={16} className="text-purple-400 shrink-0"/> "My product gets traffic but doesn't convert"
+                      <MessageSquare size={16} className="text-purple-400 shrink-0" /> My product gets traffic but doesn't convert
                     </div>
                     <Link to="/contact" className="block text-center py-4 rounded-full font-bold border-2 border-slate-200 text-slate-700 hover:border-[#7B2FD9] hover:text-[#7B2FD9] hover:bg-purple-50 transition-all">
                       → Get Started
@@ -123,13 +123,13 @@ const Pricing = () => {
                         <li key={i} className="flex items-center gap-3 text-sm text-slate-700 font-bold">
                           <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] flex items-center justify-center flex-shrink-0 shadow-sm">
                             <Check size={12} className="text-white" />
-                          </div> 
+                          </div>
                           {f}
                         </li>
                       ))}
                     </ul>
                     <div className="bg-slate-50 p-4 rounded-xl text-xs text-slate-500 mb-8 border border-slate-100 italic flex gap-2 items-center">
-                      <MessageSquare size={16} className="text-blue-400 shrink-0"/> "I want my listing to explain, convince & convert"
+                      <MessageSquare size={16} className="text-blue-400 shrink-0" /> I want my listing to explain, convince & convert
                     </div>
                     <Link to="/contact" className="block text-center py-4 rounded-full font-bold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] transition-all">
                       → Get Started Now
@@ -161,20 +161,20 @@ const Pricing = () => {
                     </thead>
                     <tbody>
                       <tr className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                        <td className="p-6 text-slate-900 font-bold text-sm">Listing Image Upgrade<br/><span className="text-slate-400 font-medium text-xs">(5 images per SKU)</span></td>
+                        <td className="p-6 text-slate-900 font-bold text-sm">Listing Image Upgrade<br /><span className="text-slate-400 font-medium text-xs">(5 images per SKU)</span></td>
                         <td className="p-6 text-center text-slate-600 font-medium text-sm">₹399/SKU</td>
                         <td className="p-6 text-center text-slate-600 font-medium text-sm">₹349/SKU</td>
                         <td className="p-6 text-center text-slate-900 font-bold text-lg bg-purple-50/30">₹299<span className="text-xs font-normal text-slate-500">/SKU</span></td>
                       </tr>
                       <tr className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                        <td className="p-6 text-slate-900 font-bold text-sm">RPD / A+ Content Only<br/><span className="text-slate-400 font-medium text-xs">(5 images per SKU)</span></td>
+                        <td className="p-6 text-slate-900 font-bold text-sm">RPD / A+ Content Only<br /><span className="text-slate-400 font-medium text-xs">(5 images per SKU)</span></td>
                         <td className="p-6 text-center text-slate-600 font-medium text-sm">₹649/SKU</td>
                         <td className="p-6 text-center text-slate-600 font-medium text-sm">₹599/SKU</td>
                         <td className="p-6 text-center text-slate-900 font-bold text-lg bg-purple-50/30">₹449<span className="text-xs font-normal text-slate-500">/SKU</span></td>
                       </tr>
                       <tr className="bg-gradient-to-r from-white to-purple-50 border-l-[6px] border-[#7B2FD9]">
                         <td className="p-6 text-slate-900 font-bold text-sm flex items-center gap-3">
-                          Listing Images + RPD/A+ Combined 
+                          Listing Images + RPD/A+ Combined
                           <span className="text-[10px] bg-[#7B2FD9] text-white px-2 py-0.5 rounded-full font-bold shadow-sm">RECOMMENDED</span>
                         </td>
                         <td className="p-6 text-center text-[#7B2FD9] font-bold text-sm">₹699/SKU</td>
@@ -185,12 +185,12 @@ const Pricing = () => {
                   </table>
                 </div>
                 <p className="mt-6 text-center text-sm font-medium text-slate-500 bg-white inline-block px-6 py-2 rounded-full border border-slate-100 shadow-sm mx-auto  w-fit">
-                  🎉 "50+ SKUs saves you up to <span className="text-[#7B2FD9] font-bold">₹200 per SKU</span> vs single SKU pricing"
+                  🎉 50+ SKUs saves you up to <span className="text-[#7B2FD9] font-bold">₹200 per SKU</span> vs single SKU pricing
                 </p>
               </section>
 
               {/* How to Choose */}
-              <section className="grid md:grid-cols-3 gap-6">
+              {/* <section className="grid md:grid-cols-3 gap-6">
                 {[
                   { icon: "🖼️", title: "Choose Listing Image Upgrade if...", text: "Your product gets traffic but visuals look inconsistent or outdated." },
                   { icon: "📄", title: "Choose RPD / A+ Only if...", text: "Your listing images already perform well but below-the-fold content is missing." },
@@ -202,12 +202,12 @@ const Pricing = () => {
                     <p className="text-slate-600 text-sm leading-relaxed">{item.text}</p>
                   </div>
                 ))}
-              </section>
+              </section> */}
 
               {/* Ongoing Support Strip */}
               <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-12 rounded-[32px] shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#7B2FD9]/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-                
+
                 <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-3">Support Beyond the First Upgrade</h3>
@@ -215,24 +215,26 @@ const Pricing = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-6 text-sm text-slate-200">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]"/> New product launches</div>
-                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]"/> Seasonal campaigns</div>
+                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> New product launches</div>
+                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> Seasonal campaigns</div>
                     </div>
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]"/> Faster turnaround</div>
-                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]"/> Dedicated creative team</div>
+                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> Faster turnaround</div>
+                      <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> Dedicated creative team</div>
                     </div>
                   </div>
                 </div>
+
+                
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-slate-900 p-2 rounded-sm font-bold hover:bg-purple-50 transition-colors">
-                    Talk to us about a monthly retainer <ArrowRight size={18}/>
+                    Talk to us about a monthly retainer <ArrowRight size={18} />
                   </Link>
                 </div>
               </div>
             </motion.div>
           ) : (
-            <motion.div 
+            <motion.div
               key="brand"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -282,12 +284,12 @@ const Pricing = () => {
 
       {/* Shared Bottom Sections */}
       <section className="bg-white py-24 px-6 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 text-center mb-20">How work moves at PV Labs</h2>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto ">
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-10">How work moves at PV Labs</h2>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative max-w-4xl mx-auto">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-slate-100 hidden md:block rounded-full" />
             <div className="absolute top-1/2 left-0 w-1/2 h-1 bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] hidden md:block rounded-full" />
-            
+
             {[
               { step: 1, title: "Requirement confirmation & asset collection" },
               { step: 2, title: "Visual structure alignment before execution" },
@@ -300,12 +302,17 @@ const Pricing = () => {
                 <p className="text-slate-900 text-sm font-bold max-w-[200px]">{s.title}</p>
               </div>
             ))}
+
           </div>
-          <p className="mt-16 text-center text-xs text-slate-500 font-medium uppercase tracking-widest bg-slate-50 inline-block px-4 py-2 rounded-full mx-auto w-fit">Execution starts post advance payment</p>
+          <div className="text-center mt-16">
+            <p className="text-xs text-slate-500 font-medium uppercase tracking-widest bg-slate-50 inline-block px-4 py-2 rounded-full">
+              Execution starts post advance payment
+            </p>
+          </div>
         </div>
       </section>
 
-    
+
 
       {/* Final Risk Reversal */}
       <section className="pb-24 px-6 text-center bg-white">
@@ -314,7 +321,7 @@ const Pricing = () => {
           <p className="text-slate-600 font-medium">💬 Still confused? WhatsApp us — we'll help you pick the right plan.</p>
           <div className="mt-12">
             <Link to="/contact" className="gradient-btn px-12 py-5 font-bold text-lg inline-flex items-center gap-3 shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 transition-all text-white">
-              → Book Free Consultation <ArrowRight size={20} />
+              Book Free Consultation <ArrowRight size={20} />
             </Link>
             <div className="mt-8 space-y-2 text-slate-500 text-xs font-medium">
               <p>📞 We respond within 2 hours · Mon–Sat 10am–7pm IST</p>

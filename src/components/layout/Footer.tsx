@@ -94,7 +94,7 @@ const Footer = () => {
           <div className="flex gap-6 items-center">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <a href="https://pvlabs.ai" className="hover:text-primary transition-colors font-medium">pvlabs.ai</a>
+            {/* <a href="https://pvlabs.ai" className="hover:text-primary transition-colors font-medium">pvlabs.ai</a> */}
           </div>
         </div>
       </div>

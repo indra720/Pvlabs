@@ -13,38 +13,38 @@ import serviceMotion from "@/assets/service-motion.jpg";
 const caseStudies = [
   {
     id: "skinglow-redesign",
-    title: "SkinGlow Hero Image Redesign",
+    title: "This skincare brand was getting traffic. Zero clicks. Here's what we found.",
     client: "SkinGlow Naturals",
     category: "Amazon",
     duration: "7 Days",
     heroImage: serviceBranding,
-    problem: "SkinGlow was getting traffic on Amazon but CTR was poor. Their listing images were shot on a phone — inconsistent lighting, cluttered background, no brand identity. Customers were scrolling past without clicking.",
-    solution: "We created a full 7-image listing set — white background hero, shadow render, 3 infographic slides highlighting key ingredients, 1 lifestyle image, and 1 size/variant comparison. Every image built for Amazon's algorithm and the buyer's eye.",
+    problem: "SkinGlow had decent reviews and was running ads — but their images looked like someone photographed the product on a kitchen counter. Buyers saw the listing and kept scrolling. They weren't losing on price. They were losing on trust.",
+    solution: "We rebuilt the entire visual identity for Amazon — studio hero, lifestyle context, ingredient callouts, size comparison. Every image designed to stop the scroll and answer a buyer objection before they could ask it.",
     results: [
-      { metric: "2.1x", label: "CTR Increase" },
-      { metric: "38%", label: "Conversion Uplift" },
-      { metric: "7 Days", label: "Turnaround" },
-      { metric: "Zero", label: "Revisions Needed" },
+      { metric: "2.1x", label: "More clicks, same ad spend" },
+      { metric: "38%", label: "More buyers who clicked, actually bought" },
+      { metric: "7 Days", label: "Start to live" },
+      { metric: "Zero", label: "Back-and-forth revisions" },
     ],
-    testimonial: { text: "We were getting visitors but no clicks. PV Labs fixed that in one week. Best investment we made for our listing.", author: "Rahul M.", role: "Amazon Seller, Personal Care" },
+    testimonial: { text: "We were invisible on Amazon. PV Labs made us look like a brand that deserved to be there. CTR doubled in the first week.", author: "Rahul M.", role: "Amazon Seller" },
     beforeAfter: { before: "Phone camera shot, yellow lighting, cluttered background, no brand identity", after: "Studio-quality white background render, shadow work, Amazon compliant" },
   },
   {
     id: "kitchenkraft-packaging",
-    title: "KitchenKraft Packaging & Listing Overhaul",
+    title: "Their product was good. Their packaging was killing sales.",
     client: "KitchenKraft",
     category: "Flipkart",
     duration: "5 Days",
     heroImage: servicePackaging,
-    problem: "KitchenKraft had a quality product but their packaging looked generic — plain white box, no branding, no visual hierarchy. Flipkart return rate was high because customers didn't know what they were getting.",
-    solution: "We redesigned the full packaging — label, box structure, and brand color system. Then built a matching Flipkart listing set: hero image, unboxing lifestyle shot, feature callout cards, and a size reference graphic.",
+    problem: "KitchenKraft was losing customers at the moment of delivery — not before. Generic packaging meant buyers couldn't tell what was premium and what wasn't. Return rates were high. Not because of the product. Because of perception.",
+    solution: "Full packaging redesign — label, box structure, color system — built to match what the product actually is. Then a Flipkart listing to match: lifestyle imagery, callout cards, size reference. Now the unboxing matches the promise.",
     results: [
-      { metric: "30%", label: "Drop in Returns" },
-      { metric: "55%", label: "Sales Increase Week 1" },
-      { metric: "Full", label: "Packaging + Listing" },
-      { metric: "5 Day", label: "Delivery" },
+      { metric: "30%", label: "Fewer returns in 30 days" },
+      { metric: "55%", label: "Sales jump, Week 1" },
+      { metric: "Full", label: "Packaging + listing, one team" },
+      { metric: "5 Days", label: "Delivered" },
     ],
-    testimonial: { text: "Customers now know exactly what they're buying. Returns dropped, ratings improved. PV Labs understood our product better than we expected.", author: "Kavya M.", role: "Flipkart Brand, Home & Kitchen" },
+    testimonial: { text: "Returns dropped the week it went live. Customers finally understood what they were buying. That's all we needed.", author: "Kavya M.", role: "Flipkart Brand" },
     beforeAfter: { before: "Generic white box, no branding, no visual hierarchy", after: "Premium packaging, brand colors, shelf-ready label design" },
   },
   {
@@ -167,20 +167,20 @@ const CaseStudies = () => (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           
           <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
-            Real results, <span className="gradient-text">Real impact</span>
+            Before PV Labs. <span className="gradient-text">After PV Labs.</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Deep dives into our most transformative projects. See how strategic design drives measurable business outcomes for brands worldwide.
+            Real sellers. Real numbers. No stock photos, no made-up metrics.
           </p>
         </motion.div>
 
         {/* Summary stats */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
           {[
-            { icon: TrendingUp, num: "2x", label: "Avg. CTR Improvement" },
-            { icon: Target, num: "60%", label: "Avg. Cost Saving" },
-            { icon: Users, num: "6+", label: "Platforms" },
-            { icon: BarChart3, num: "96%", label: "Client Satisfaction" },
+            { icon: TrendingUp, num: "2x", label: "Listings clicked twice as often" },
+            { icon: Target, num: "60%", label: "Saved vs. hiring in-house" },
+            { icon: Users, num: "6+", label: "Marketplaces we've dominated" },
+            { icon: BarChart3, num: "96%", label: "Clients who came back for more" },
           ].map((s, i) => (
             <div key={i} className="glass-card p-4 text-center">
               <s.icon size={18} className="text-primary mx-auto mb-1" />
@@ -194,81 +194,97 @@ const CaseStudies = () => (
 
     {/* Case Study Cards */}
     {caseStudies.map((cs, i) => (
-      <section key={cs.id} className={`section-padding ${i % 2 === 1 ? "gradient-bg-soft" : ""}`}>
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {/* Header */}
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{cs.category}</span>
-              <span className="text-xs text-muted-foreground">• {cs.client}</span>
-              <span className="text-xs text-muted-foreground">• {cs.duration}</span>
-            </div>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-8">{cs.title}</h2>
+      <div key={cs.id}>
+        <section className={`section-padding ${i % 2 === 1 ? "gradient-bg-soft" : ""}`}>
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              {/* Header */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{cs.category}</span>
+                <span className="text-xs text-muted-foreground">• {cs.client}</span>
+                <span className="text-xs text-muted-foreground">• {cs.duration}</span>
+              </div>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-8">{cs.title}</h2>
 
-            {/* Hero image */}
-            <div className="rounded-[24px] overflow-hidden shadow-lg mb-12">
-              <img src={cs.heroImage} alt={cs.title} className="w-full aspect-[21/9] object-cover" />
-            </div>
+              {/* Hero image */}
+              <div className="rounded-[24px] overflow-hidden shadow-lg mb-12">
+                <img src={cs.heroImage} alt={cs.title} className="w-full aspect-[21/9] object-cover" />
+              </div>
 
-            {/* Problem → Solution */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="glass-card p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-destructive" />
-                  <h3 className="font-heading text-lg font-bold text-foreground">The Problem</h3>
+              {/* Problem → Solution */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="glass-card p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-3 h-3 rounded-full bg-destructive" />
+                    <h3 className="font-heading text-lg font-bold text-foreground">The Problem</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{cs.problem}</p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{cs.problem}</p>
-              </div>
-              <div className="glass-card p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-primary" />
-                  <h3 className="font-heading text-lg font-bold text-foreground">Our Approach</h3>
+                <div className="glass-card p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-3 h-3 rounded-full bg-primary" />
+                    <h3 className="font-heading text-lg font-bold text-foreground">Our Approach</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{cs.solution}</p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{cs.solution}</p>
               </div>
-            </div>
 
-            {/* Results */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              {cs.results.map((r, j) => (
-                <div key={j} className="glass-card p-6 text-center hover:shadow-xl transition-shadow">
-                  <div className="font-heading text-xl md:text-3xl font-bold gradient-text">{r.metric}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{r.label}</div>
+              {/* Results */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                {cs.results.map((r, j) => (
+                  <div key={j} className="glass-card p-6 text-center hover:shadow-xl transition-shadow">
+                    <div className="font-heading text-xl md:text-3xl font-bold gradient-text">{r.metric}</div>
+                    <div className="text-sm text-muted-foreground mt-1">{r.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Before/After */}
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                <div className="glass-card p-6 border-l-4 border-destructive/30">
+                  <span className="text-xs font-bold text-destructive uppercase tracking-wider">Before</span>
+                  <p className="text-muted-foreground mt-2">{cs.beforeAfter.before}</p>
                 </div>
-              ))}
-            </div>
+                <div className="glass-card p-6 border-l-4 border-primary/50">
+                  <span className="text-xs font-bold text-primary uppercase tracking-wider">After</span>
+                  <p className="text-muted-foreground mt-2">{cs.beforeAfter.after}</p>
+                </div>
+              </div>
 
-            {/* Before/After */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="glass-card p-6 border-l-4 border-destructive/30">
-                <span className="text-xs font-bold text-destructive uppercase tracking-wider">Before</span>
-                <p className="text-muted-foreground mt-2">{cs.beforeAfter.before}</p>
+              {/* Testimonial */}
+              <div className="glass-card p-8 bg-primary/5 border-primary/20">
+                <p className="text-lg text-foreground italic leading-relaxed mb-4">"{cs.testimonial.text}"</p>
+                <div>
+                  <span className="font-heading font-bold text-foreground">{cs.testimonial.author}</span>
+                  <span className="text-sm text-muted-foreground ml-2">— {cs.testimonial.role}</span>
+                </div>
               </div>
-              <div className="glass-card p-6 border-l-4 border-primary/50">
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">After</span>
-                <p className="text-muted-foreground mt-2">{cs.beforeAfter.after}</p>
-              </div>
-            </div>
+            </motion.div>
+          </div>
+        </section>
 
-            {/* Testimonial */}
-            <div className="glass-card p-8 bg-primary/5 border-primary/20">
-              <p className="text-lg text-foreground italic leading-relaxed mb-4">"{cs.testimonial.text}"</p>
-              <div>
-                <span className="font-heading font-bold text-foreground">{cs.testimonial.author}</span>
-                <span className="text-sm text-muted-foreground ml-2">— {cs.testimonial.role}</span>
-              </div>
+        {i === 1 && (
+          <section className="py-20 px-6 text-center bg-card border-y border-border">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+                Every brand above was losing sales not because of their product — <span className="gradient-text">but because of how it looked online.</span>
+              </h3>
+              <p className="text-xl text-muted-foreground mb-10">Sound familiar?</p>
+              <Link to="/contact" className="bg-primary text-primary-foreground px-10 py-5 rounded-full font-bold inline-flex items-center gap-3 hover:shadow-2xl transition-all hover:scale-105">
+                Show us your listing <ArrowRight size={22} />
+              </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </section>
+        )}
+      </div>
     ))}
 
     {/* CTA */}
-    <section className="section-padding gradient-bg-vivid text-center max-w-5xl mx-auto m-10 rounded-md">
+    <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center max-w-5xl mx-auto m-10 rounded-md">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
           Want Results Like These?

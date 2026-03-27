@@ -32,7 +32,7 @@ const TestimonialsPage = () => (
     <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          
+
           <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
             What our clients <span className="gradient-text">say</span>
           </h1>
@@ -131,17 +131,18 @@ const TestimonialsPage = () => (
           ))}
         </div>
       </div>
+      <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center mx-auto max-w-4xl mt-5 rounded-md shadow-sm">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Join 200+ happy clients</h2>
+          <p className="text-primary-foreground/80 mb-8">Start your project today and see why brands love working with us.</p>
+          <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+            Start Your Project <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
     </section>
 
-    <section className="section-padding gradient-bg-vivid text-center">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Join 200+ happy clients</h2>
-        <p className="text-primary-foreground/80 mb-8">Start your project today and see why brands love working with us.</p>
-        <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
-          Start Your Project <ArrowRight size={18} />
-        </Link>
-      </div>
-    </section>
+s
 
     <Footer />
   </div>
