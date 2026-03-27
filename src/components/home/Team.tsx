@@ -77,16 +77,7 @@ const Team = () => (
                 {m.bio}
               </p>
 
-              {/* Social Actions */}
-              <div className="flex items-center gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition-all duration-300">
-                  <Linkedin size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-gray-600 hover:bg-green-400 hover:text-white transition-all duration-300">
-                  <FaWhatsappSquare size={18}/>
-                </a>
               
-              </div>
             </div>
           </motion.div>
         ))}
@@ -99,7 +90,7 @@ const Team = () => (
         transition={{ delay: 0.5 }}
         className="mt-20 text-center text-gray-600 italic text-sm font-medium tracking-wide"
       >
-        "Two founders. One mission — make Indian brands look world-class."
+      Two founders. One mission — make Indian brands look world-class
       </motion.p>
     </div>
   </section>

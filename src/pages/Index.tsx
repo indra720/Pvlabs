@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import AboutPreview from "@/components/home/AboutPreview";
 import ServicesGrid from "@/components/home/ServicesGrid";
+import StatsCards from "@/components/home/StatsCards";
 import FeaturedWork from "@/components/home/FeaturedWork";
 import DesignProcess from "@/components/home/DesignProcess";
 import Testimonials from "@/components/home/Testimonials";
@@ -22,6 +23,7 @@ const Index = () => (
     <ClientLogos />
     <AboutPreview />
     <ServicesGrid />
+    <StatsCards />
     <FeaturedWork />
     {/*    */}
     {/* <Testimonials /> */}

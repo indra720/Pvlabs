@@ -111,7 +111,7 @@ const ServicesGrid = () => (
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">FOR BRANDS</h3>
-                  <p className="text-[#60B8F0] text-xs font-bold uppercase tracking-wider">Brand & Marketing</p>
+                  <p className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-xs font-bold uppercase tracking-wider">Brand & Marketing</p>
                 </div>
               </div>
               <p className="text-xs text-gray-500">Look premium, sound consistent, and grow faster in any market.</p>

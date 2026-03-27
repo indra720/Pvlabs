@@ -66,8 +66,8 @@ const FAQPage = () => {
           ))}
           {filtered.length === 0 && <p className="text-center text-muted-foreground py-12">No questions found matching your search.</p>}
         </div>
-        <div className="section-padding gradient-bg-vivid text-center m-5 max-w-4xl mx-auto rounded-md">
-          <div className="max-w-3xl mx-auto">
+        <div className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center m-5 max-w-4xl mx-auto rounded-md">
+          <div className="max-w-3xl mx-auto ">
             <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Still have questions?</h2>
             <p className="text-primary-foreground/80 mb-8">Our team is here to help. Get in touch and we'll respond within 24 hours.</p>
             <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">

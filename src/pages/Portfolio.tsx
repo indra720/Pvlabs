@@ -13,38 +13,45 @@ import servicePrint from "@/assets/service-print.jpg";
 import serviceSocial from "@/assets/service-social.jpg";
 import portfolioShowcase from "@/assets/portfolio-showcase.jpg";
 
-const categories = ["All", "Product Images", "A+ Content", "Packaging", "Branding", "Amazon", "Flipkart", "Myntra"];
+const categories = ["All", "Product Images", "A+ Content", "Packaging", "Branding", "Logo", "Infographics", "Ads-Creatives"];
 
 const projects = [
-  { title: "SkinGlow Hero Image Redesign", cat: ["Product Images", "Amazon"], desc: "Complete hero image set for a skincare brand — white background, shadow work, skin-tone accurate product rendering.", client: "SkinGlow Naturals", result: "CTR increased 2.1x after listing update", image: serviceBranding },
-  { title: "NutriFuel A+ Content & EBC", cat: ["A+ Content", "Amazon"], desc: "Full A+ module — brand story banner, ingredient highlights, comparison chart, lifestyle imagery.", client: "NutriFuel", result: "Conversion rate up 38%", image: serviceWebdesign },
-  { title: "KitchenKraft Packaging Design", cat: ["Packaging", "Flipkart"], desc: "Complete packaging redesign for a cookware brand — label, box mockup, and Flipkart-ready listing visuals.", client: "KitchenKraft", result: "Return rate down 30%", image: servicePackaging },
-  { title: "BabyNest Listing Makeover", cat: ["Product Images", "Flipkart"], desc: "8-image listing set — hero, lifestyle, feature callouts, size chart. Flipkart compliant.", client: "BabyNest", result: "Sales up 55% in Week 1", image: serviceAppdesign },
-  { title: "GroomX Complete Brand Identity", cat: ["Branding", "Amazon"], desc: "Logo, color palette, typography system, and packaging — launched as a D2C men's grooming brand on Amazon.", client: "GroomX", result: "Perceived as premium brand from Day 1", image: serviceBranding },
-  { title: "GlowRitual Nykaa Brand Store", cat: ["A+ Content", "Nykaa"], desc: "Full Nykaa brand store setup — banner design, product listing visuals, lifestyle imagery, and ingredient highlight creatives.", client: "GlowRitual", result: "Featured in Nykaa Beauty Edit", image: serviceWebdesign },
-  { title: "PowerTool Pro Listing Set", cat: ["Product Images", "Amazon"], desc: "7-image hero + infographic set for a tools brand. Technical accuracy + clean white background shots.", client: "PowerTool Pro", result: "First-try listing approval", image: servicePrint },
-  { title: "PureLeaf Organic Packaging", cat: ["Packaging", "Amazon"], desc: "Eco-friendly packaging design for an organic food brand — label design, pouch mockup, Amazon listing visuals.", client: "PureLeaf Organics", result: "Best Seller tag within 3 weeks", image: servicePackaging },
-  { title: "FitFlex Activewear Catalog", cat: ["Product Images", "Myntra"], desc: "12 SKU catalog shoot — lifestyle imagery, flat lays, detail shots, Myntra size chart banners.", client: "FitFlex", result: "12 SKUs live in 5 days", image: serviceSocial },
-  { title: "UrbanThreads Ajio Catalog", cat: ["Branding", "Ajio"], desc: "Complete catalog shoot-style visuals for a fashion brand — flat lays, model mockups, detail shots, Ajio-compliant image set.", client: "UrbanThreads", result: "40+ SKUs live in 7 days", image: serviceSocial },
-  { title: "GlowUp Skincare A+ Redesign", cat: ["A+ Content", "Amazon"], desc: "Replaced basic listing with full A+ content — ingredient storytelling, before/after banners, dermatologist badge visuals.", client: "GlowUp Skincare", result: "80% cost saving vs studio shoot", image: serviceWebdesign },
-  { title: "JewelCraft Listing Visuals", cat: ["Product Images", "Flipkart"], desc: "Premium product photography-style renders for a jewellery brand — close-ups, lifestyle, and white background sets.", client: "JewelCraft", result: "ROI positive within 2 weeks", image: serviceBranding },
+  { title: "SkinGlow Hero Image Redesign", cat: ["Product Images", "Ads-Creatives"], desc: "Complete hero image set for a skincare brand — white background, shadow work, skin-tone accurate product rendering.", client: "SkinGlow Naturals", result: "CTR increased 2.1x after listing update", image: serviceBranding },
+  { title: "NutriFuel A+ Content & EBC", cat: ["A+ Content", "Infographics"], desc: "Full A+ module — brand story banner, ingredient highlights, comparison chart, lifestyle imagery.", client: "NutriFuel", result: "Conversion rate up 38%", image: serviceWebdesign },
+  { title: "KitchenKraft Packaging Design", cat: ["Packaging"], desc: "Complete packaging redesign for a cookware brand — label, box mockup, and Flipkart-ready listing visuals.", client: "KitchenKraft", result: "Return rate down 30%", image: servicePackaging },
+  { title: "BabyNest Listing Makeover", cat: ["Product Images"], desc: "8-image listing set — hero, lifestyle, feature callouts, size chart. Flipkart compliant.", client: "BabyNest", result: "Sales up 55% in Week 1", image: serviceAppdesign },
+  { title: "GroomX Complete Brand Identity", cat: ["Branding", "Logo"], desc: "Logo, color palette, typography system, and packaging — launched as a D2C men's grooming brand on Amazon.", client: "GroomX", result: "Perceived as premium brand from Day 1", image: serviceBranding },
+  { title: "GlowRitual Nykaa Brand Store", cat: ["A+ Content", "Ads-Creatives"], desc: "Full Nykaa brand store setup — banner design, product listing visuals, lifestyle imagery, and ingredient highlight creatives.", client: "GlowRitual", result: "Featured in Nykaa Beauty Edit", image: serviceWebdesign },
+  { title: "PowerTool Pro Listing Set", cat: ["Product Images", "Infographics"], desc: "7-image hero + infographic set for a tools brand. Technical accuracy + clean white background shots.", client: "PowerTool Pro", result: "First-try listing approval", image: servicePrint },
+  { title: "PureLeaf Organic Packaging", cat: ["Packaging"], desc: "Eco-friendly packaging design for an organic food brand — label design, pouch mockup, Amazon listing visuals.", client: "PureLeaf Organics", result: "Best Seller tag within 3 weeks", image: servicePackaging },
+  { title: "FitFlex Activewear Catalog", cat: ["Product Images"], desc: "12 SKU catalog shoot — lifestyle imagery, flat lays, detail shots, Myntra size chart banners.", client: "FitFlex", result: "12 SKUs live in 5 days", image: serviceSocial },
+  { title: "UrbanThreads Ajio Catalog", cat: ["Branding", "Product Images"], desc: "Complete catalog shoot-style visuals for a fashion brand — flat lays, model mockups, detail shots, Ajio-compliant image set.", client: "UrbanThreads", result: "40+ SKUs live in 7 days", image: serviceSocial },
+  { title: "GlowUp Skincare A+ Redesign", cat: ["A+ Content"], desc: "Replaced basic listing with full A+ content — ingredient storytelling, before/after banners, dermatologist badge visuals.", client: "GlowUp Skincare", result: "80% cost saving vs studio shoot", image: serviceWebdesign },
+  { title: "JewelCraft Listing Visuals", cat: ["Product Images"], desc: "Premium product photography-style renders for a jewellery brand — close-ups, lifestyle, and white background sets.", client: "JewelCraft", result: "ROI positive within 2 weeks", image: serviceBranding },
 ];
 
 const beforeAfterData = [
-  { title: "SkinGlow Hero Image", tags: ["Amazon"], before: "Phone camera shot, yellow lighting, cluttered background", after: "Studio-quality white background render, shadow work, Amazon compliant", beforeImg: servicePrint, afterImg: serviceBranding },
-  { title: "KitchenKraft Packaging", tags: ["Flipkart"], before: "Generic white box, no branding, no product info", after: "Premium packaging, brand colors, shelf-ready label design", beforeImg: servicePackaging, afterImg: servicePackaging },
-  { title: "NutriFuel A+ Content", tags: ["Amazon"], before: "Plain text description, no banners, no visuals", after: "Full A+ module — brand story, ingredient highlights, comparison chart", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
-  { title: "UrbanThreads Catalog", tags: ["Ajio"], before: "Single front-facing image, plain white background", after: "Flat lay + model mockup + detail shot — Ajio full image set", beforeImg: serviceSocial, afterImg: serviceSocial },
-  { title: "GlowRitual Brand Store", tags: ["Nykaa"], before: "Default Nykaa seller page, no branding, no banners", after: "Custom Nykaa storefront — lifestyle banners, curated layout", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
-  { title: "JewelCraft Product Listing", tags: ["Flipkart"], before: "Low-res image, no lifestyle context, no size reference", after: "Premium render — close-up, lifestyle, white background set", beforeImg: serviceBranding, afterImg: serviceBranding },
-  { title: "EthnicRoots Storefront", tags: ["Myntra"], before: "Inconsistent images across SKUs, no brand identity", after: "Unified visual language — lifestyle + size guide banners across all SKUs", beforeImg: serviceSocial, afterImg: serviceSocial },
+  { title: "SkinGlow Hero Image", tags: ["Ads-Creatives"], before: "Phone camera shot, yellow lighting, cluttered background", after: "Studio-quality white background render, shadow work, Amazon compliant", beforeImg: servicePrint, afterImg: serviceBranding },
+  { title: "KitchenKraft Packaging", tags: ["Packaging"], before: "Generic white box, no branding, no product info", after: "Premium packaging, brand colors, shelf-ready label design", beforeImg: servicePackaging, afterImg: servicePackaging },
+  { title: "NutriFuel A+ Content", tags: ["A+ Content", "Infographics"], before: "Plain text description, no banners, no visuals", after: "Full A+ module — brand story, ingredient highlights, comparison chart", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
+  { title: "UrbanThreads Catalog", tags: ["Branding", "Product Images"], before: "Single front-facing image, plain white background", after: "Flat lay + model mockup + detail shot — Ajio full image set", beforeImg: serviceSocial, afterImg: serviceSocial },
+  { title: "GlowRitual Brand Store", tags: ["A+ Content", "Ads-Creatives"], before: "Default Nykaa seller page, no branding, no banners", after: "Custom Nykaa storefront — lifestyle banners, curated layout", beforeImg: serviceWebdesign, afterImg: serviceWebdesign },
+  { title: "JewelCraft Product Listing", tags: ["Product Images"], before: "Low-res image, no lifestyle context, no size reference", after: "Premium render — close-up, lifestyle, white background set", beforeImg: serviceBranding, afterImg: serviceBranding },
+  { title: "EthnicRoots Storefront", tags: ["Branding", "Product Images"], before: "Inconsistent images across SKUs, no brand identity", after: "Unified visual language — lifestyle + size guide banners across all SKUs", beforeImg: serviceSocial, afterImg: serviceSocial },
   { title: "BloomSkin D2C Website", tags: ["Brand Website"], before: "No website, only marketplace presence", after: "Full mobile-first brand website with product pages + Nykaa integration", beforeImg: serviceAppdesign, afterImg: serviceAppdesign },
   // Adding duplicates or similar for the remaining dummy placeholders if needed, but 8 provided
 ];
 
 const Portfolio = () => {
   const [active, setActive] = useState("All");
-  const filtered = active === "All" ? projects : projects.filter(p => p.cat.includes(active));
+
+  const filteredProjects = active === "All"
+    ? projects
+    : projects.filter(p => p.cat.includes(active));
+
+  const filteredBeforeAfterData = active === "All"
+    ? beforeAfterData
+    : beforeAfterData.filter(item => item.tags.includes(active));
 
   return (
     <div className="min-h-screen bg-background">
@@ -89,7 +96,7 @@ const Portfolio = () => {
       {/* Grid */}
       <section className="px-6 md:px-12 pb-24 pt-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((p, i) => (
+          {filteredProjects.map((p, i) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 20 }}
@@ -129,7 +136,7 @@ const Portfolio = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {beforeAfterData.map((item, i) => (
+            {filteredBeforeAfterData.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-card p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-heading font-bold text-foreground text-lg">{item.title}</h3>
@@ -160,11 +167,12 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-        <div className="section-padding gradient-bg-vivid text-center mt-5 rounded-md max-w-4xl mx-auto">
+        <div className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center mt-5 rounded-md max-w-4xl mx-auto">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#7B2FD9]/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
             <p className="text-primary-foreground/80 mb-8">Let's do the same for your brand.</p>
-            <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+            <Link to="/contact" className="bg-background text-foreground px-4 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
               Get Free Sample for your Product <ArrowRight size={18} />
             </Link>
           </div>

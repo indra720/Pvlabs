@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useFetcher } from "react-router-dom";
 
 const logos = [
-  "Campus", "mamaearth", "Y|xy|xx", "Derma", "sparx", "kapiva",
+  "Campus", "mamaearth", "XYXX", "Derma", "sparx", "kapiva",
   "noise", "MB muscleBlaze"
 ];
 
