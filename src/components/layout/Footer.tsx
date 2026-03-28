@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, Clock } from "lucide-react";
 import { socialLinks } from "@/lib/social-links";
 import logo from "../../assets/logo-removebg-preview (1).png"
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -81,9 +82,9 @@ const Footer = () => {
               </div>
               <a 
                 href="https://wa.me/917417791003" 
-                className="mt-2 gradient-bg-vivid text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
+                className="mt-2 bg-green-300 text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
               >
-                💬 WhatsApp Us
+                <FaWhatsapp/> WhatsApp Us
               </a>
             </div>
           </div>

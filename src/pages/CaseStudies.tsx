@@ -286,7 +286,7 @@ const CaseStudies = () => (
     {/* CTA */}
     <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center max-w-5xl mx-auto m-10 rounded-md">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
           Want Results Like These?
         </h2>
         <p className="text-primary-foreground/80 text-lg mb-8">

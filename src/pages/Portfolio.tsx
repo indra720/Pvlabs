@@ -57,7 +57,7 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-24 pb-16 px-6 md:px-12 gradient-bg-soft">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-primary text-sm font-semibold uppercase tracking-widest">Our Work</span>
@@ -135,44 +135,44 @@ const Portfolio = () => {
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">See what a listing looks like before and after PV Labs gets to work.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {filteredBeforeAfterData.map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-card p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-heading font-bold text-foreground text-lg">{item.title}</h3>
-                  <div className="flex gap-1">
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass-card p-4 md:p-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+                  <h3 className="font-heading font-bold text-foreground text-base md:text-lg leading-tight">{item.title}</h3>
+                  <div className="flex flex-wrap gap-1">
                     {item.tags.map(t => (
-                      <span key={t} className="text-[10px] uppercase font-bold text-muted-foreground bg-secondary px-2 py-1 rounded">{t}</span>
+                      <span key={t} className="text-[9px] md:text-[10px] uppercase font-bold text-muted-foreground bg-secondary px-2 py-1 rounded whitespace-nowrap">{t}</span>
                     ))}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <div className="aspect-square rounded-xl overflow-hidden mb-2">
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  <div className="min-w-0">
+                    <div className="aspect-square rounded-lg md:rounded-xl overflow-hidden mb-2">
                       <img src={item.beforeImg} alt="Before" className="w-full h-full object-cover opacity-60 grayscale" />
                     </div>
-                    <span className="text-xs font-semibold text-destructive">Before</span>
-                    <p className="text-xs text-muted-foreground mt-1">{item.before}</p>
+                    <span className="text-[10px] md:text-xs font-semibold text-destructive">Before</span>
+                    <p className="text-[9px] md:text-xs text-muted-foreground mt-1 break-words leading-tight">{item.before}</p>
                   </div>
-                  <div>
-                    <div className="aspect-square rounded-xl overflow-hidden mb-2">
+                  <div className="min-w-0">
+                    <div className="aspect-square rounded-lg md:rounded-xl overflow-hidden mb-2">
                       <img src={item.afterImg} alt="After" className="w-full h-full object-cover" />
                     </div>
-                    <span className="text-xs font-semibold text-primary">After</span>
-                    <p className="text-xs text-muted-foreground mt-1">{item.after}</p>
+                    <span className="text-[10px] md:text-xs font-semibold text-primary">After</span>
+                    <p className="text-[9px] md:text-xs text-muted-foreground mt-1 break-words leading-tight">{item.after}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-        <div className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center mt-5 rounded-md max-w-4xl mx-auto">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#7B2FD9]/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
+        <div className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center mt-12 rounded-[24px] max-w-4xl mx-auto relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[#7B2FD9]/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Like What You See?</h2>
             <p className="text-primary-foreground/80 mb-8">Let's do the same for your brand.</p>
-            <Link to="/contact" className="bg-background text-foreground px-4 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+            <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
               Get Free Sample for your Product <ArrowRight size={18} />
             </Link>
           </div>

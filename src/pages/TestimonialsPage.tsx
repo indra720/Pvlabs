@@ -17,6 +17,7 @@ const testimonials = [
   { name: "Carlos Rodriguez", role: "CEO", company: "TechFlow", text: "PV Labs designed our entire product suite — website, app, marketing materials. The consistency across everything is remarkable. They truly understand scalable design.", rating: 5, result: "4.9★ average client rating" },
   { name: "Priya Sharma", role: "Co-founder", company: "EduLearn", text: "The landing page design PV Labs created converts at 3x our industry average. Their understanding of conversion psychology is as strong as their design skills.", rating: 5, result: "3x conversion rate" },
   { name: "Mark Thompson", role: "Creative Director", company: "Studio Nine", text: "I've worked with dozens of agencies. PV Labs is the only one that consistently exceeds expectations. Their attention to detail is unmatched in the industry.", rating: 5, result: "5 repeat engagements" },
+  { name: "Mark Thompson", role: "Creative Director", company: "Studio Nine", text: "I've worked with dozens of agencies. PV Labs is the only one that consistently exceeds expectations. Their attention to detail is unmatched in the industry.", rating: 5, result: "5 repeat engagements" },
 ];
 
 const videoTestimonials = [
@@ -29,7 +30,7 @@ const TestimonialsPage = () => (
   <div className="min-h-screen bg-background">
     <Navbar />
 
-    <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
+    <section className="pt-24 pb-16 px-6 md:px-12 gradient-bg-soft">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
 
@@ -65,11 +66,11 @@ const TestimonialsPage = () => (
               {Array.from({ length: t.rating }).map((_, j) => <Star key={j} size={16} className="text-primary fill-primary" />)}
             </div>
             <Quote size={24} className="text-primary/30 mb-2" />
-            <p className="text-foreground text-lg leading-relaxed mb-6 italic">"{t.text}"</p>
-            <div className="flex items-center justify-between">
+            <p className="text-foreground text-lg leading-relaxed mb-6 italic ">"{t.text}"</p>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold">{t.name.split(" ").map(n => n[0]).join("")}</div>
-                <div>
+                <div className="flex flex-col md:flex-row">
                   <div className="font-heading font-bold text-foreground">{t.name}</div>
                   <div className="text-sm text-muted-foreground">{t.role}, {t.company}</div>
                 </div>
@@ -132,8 +133,8 @@ const TestimonialsPage = () => (
         </div>
       </div>
       <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center mx-auto max-w-4xl mt-5 rounded-md shadow-sm">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Join 200+ happy clients</h2>
+        <div className="max-w-x4l mx-auto">
+          <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Join 200+ happy clients</h2>
           <p className="text-primary-foreground/80 mb-8">Start your project today and see why brands love working with us.</p>
           <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
             Start Your Project <ArrowRight size={18} />
@@ -142,7 +143,7 @@ const TestimonialsPage = () => (
       </section>
     </section>
 
-s
+
 
     <Footer />
   </div>

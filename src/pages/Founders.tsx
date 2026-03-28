@@ -12,19 +12,25 @@ const founders = [
     name: "Tankaar Sharma",
     role: "Founder & Creative Director",
     image: tankaarImg,
-    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good."
+    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good.",
+    linkedin: "https://linkedin.com/company/pvlabs",
+    whatsapp: "https://wa.me/917417791003",
+    phone: "tel:+917417791003"
   },
   {
     name: "Rudra Sharma",
     role: "Founder & Growth Lead",
     image: rudraImg,
-    bio: "Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell."
+    bio: "Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell.",
+    linkedin: "https://linkedin.com/company/pvlabs",
+    whatsapp: "https://wa.me/917417791003",
+    phone: "tel:+917417791003"
   }
 ];
-const Founders = () => {
+const Founders = ({ showLayout = true }: { showLayout?: boolean }) => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <div className={showLayout ? "min-h-screen bg-white" : ""}>
+      {showLayout && <Navbar />}
 
       <section className="section-padding gradient-bg-soft ">
         <div className="w-full max-w-7xl mx-auto ">
@@ -83,7 +89,31 @@ const Founders = () => {
                     {m.bio}
                   </p>
 
-                  
+                  {/* Social Links */}
+                  <div className="flex items-center gap-4 pt-6 border-t border-gray-100 w-full justify-center">
+                    <a
+                      href={m.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full bg-gray-50 text-gray-600 hover:text-[#0077B5] hover:bg-[#0077B5]/10 transition-all duration-300"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={m.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full bg-gray-50 text-gray-600 hover:text-[#25D366] hover:bg-[#25D366]/10 transition-all duration-300"
+                    >
+                      <FaWhatsappSquare className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={m.phone}
+                      className="p-2 rounded-full bg-gray-50 text-gray-600 hover:text-[#7B2FD9] hover:bg-[#7B2FD9]/10 transition-all duration-300"
+                    >
+                      <Phone className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -101,7 +131,7 @@ const Founders = () => {
         </div>
       </section>
 
-      <Footer />
+      {showLayout && <Footer />}
     </div>
   );
 };

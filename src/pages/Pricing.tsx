@@ -21,16 +21,14 @@ const Pricing = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-36 pb-20 px-6 md:px-12 relative overflow-hidden bg-white">
+      <section className="pt-24 pb-20 px-6 md:px-12 relative overflow-hidden bg-white">
         {/* Background decorative blobs */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-purple-200/50 rounded-full blur-[100px] -z-10 mix-blend-multiply opacity-70 animate-blob" />
         <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-blue-200/50 rounded-full blur-[100px] -z-10 mix-blend-multiply opacity-70 animate-blob animation-delay-2000" />
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="inline-block px-3 rounded-full bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm tracking-[3px]  shadow-sm">
-              Pricing
-            </span>
+            {/* <span className="text-primary text-sm font-semibold uppercase tracking-widest">Pricing</span> */}
             <h1 className="font-heading text-5xl md:text-7xl font-extrabold mb-6 text-slate-900 tracking-tight">
               Invest in visuals that <br />
               <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent drop-shadow-sm">Pay you back.</span>
@@ -45,13 +43,13 @@ const Pricing = () => {
                 onClick={() => setActiveTab("ecommerce")}
                 className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 shadow-lg ${activeTab === "ecommerce" ? "bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white scale-105 shadow-purple-500/30" : "bg-white text-slate-500 hover:text-[#7B2FD9] hover:bg-purple-50"}`}
               >
-                <ShoppingCart size={20} /> 🛒 E-Commerce Visuals
+                <ShoppingCart size={20} />  E-Commerce Visuals
               </button>
               <button
                 onClick={() => setActiveTab("brand")}
                 className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 shadow-lg ${activeTab === "brand" ? "bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white scale-105 shadow-blue-500/30" : "bg-white text-slate-500 hover:text-[#60B8F0] hover:bg-blue-50"}`}
               >
-                <Palette size={20} /> 🎨 Brand & Marketing
+                <Palette size={20} />  Brand & Marketing
               </button>
             </div>
           </motion.div>
@@ -225,7 +223,7 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                
+
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-slate-900 p-2 rounded-sm font-bold hover:bg-purple-50 transition-colors">
                     Talk to us about a monthly retainer <ArrowRight size={18} />

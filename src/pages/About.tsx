@@ -5,6 +5,7 @@ import { Target, Eye, Linkedin, Globe } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { socialLinks } from "@/lib/social-links";
+import Founders from "./Founders";
 // Professional studio/workspace image
 const heroImage = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2070";
 
@@ -35,11 +36,11 @@ const About = () => {
       <Navbar />
 
       {/* 1. Hero Intro (Story) */}
-      <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-24 pb-16 px-6 md:px-12 gradient-bg-soft">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-primary text-sm font-semibold uppercase tracking-widest">ABOUT US</span>
+              {/* <span className="text-primary text-sm font-semibold uppercase tracking-widest">ABOUT US</span> */}
               <h1 className="font-heading text-5xl md:text-6xl font-extrabold mt-3 mb-6 text-foreground">
                 The story behind <span className="gradient-text">PV Labs</span>
               </h1>
@@ -105,92 +106,7 @@ const About = () => {
       </section>
 
       {/* 3. Founders Section */}
-      <section id="founders" className="section-padding bg-secondary/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <span className="text-primary text-sm font-semibold uppercase tracking-widest">THE FOUNDERS</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 text-foreground">Meet the Minds Behind <span className="gradient-text">PV Labs</span></h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Tankaar Sharma */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="glass-card overflow-hidden group hover:shadow-2xl transition-all"
-            >
-              <div className="p-8 md:p-12">
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-xl">
-                  TS
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-1">Tankaar Sharma</h3>
-                <p className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent">Founder & Head of Technology</p>
-
-                <p className="text-foreground font-medium mb-4 text-lg">
-                  When your product visuals cost you a sale - Tankaar built the solution.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good.
-
-                </p>
-
-                <p className="text-muted-foreground italic mb-8 border-l-2 border-primary/30 pl-4">
-                  3-day delivery. Zero compromise on quality. Built by someone who treats
-                  your business like a data problem worth solving.
-                </p>
-
-                <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
-                    <Linkedin size={18} />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
-                    <Globe size={18} />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Rudra Sharma */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="glass-card overflow-hidden group hover:shadow-2xl transition-all"
-            >
-              <div className="p-8 md:p-12">
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#60B8F0] to-[#7B2FD9] mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-xl">
-                  RS
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-1">Rudra Sharma</h3>
-                <p className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent">Founder & Head of Growth</p>
-
-                <p className="text-foreground font-medium mb-4 text-lg">
-                  He built e-commerce brands before he built PV Labs.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell.
-                </p>
-
-                <p className="text-muted-foreground italic mb-8 border-l-2 border-[#60B8F0]/30 pl-4">
-                  Not a salesman. An entrepreneur who became the solution.
-                </p>
-
-                <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
-                    <Linkedin size={18} />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-[#60B8F0] hover:text-white transition-all">
-                    <Globe size={18} />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+     <Founders showLayout={false}/>
 
       {/* 4. Social Presence Section */}
       <section className="py-24 bg-background border-y border-border/50">
