@@ -22,7 +22,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          
+
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Common <span className="gradient-text">Questions</span>
           </h2>
@@ -46,20 +46,20 @@ const FAQ = () => {
                 {f.a}
               </AccordionContent>
             </AccordionItem>
-            
+
           ))}
-           <div className="text-center  rounded-md flex items-center justify-start">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-primary font-semibold"
-          >
-            {showAll ? "Show Less" : "+ More"}
-          </button>
-        </div>
+          <div className="text-center  rounded-md flex items-center justify-start">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="text-primary font-semibold"
+            >
+              {showAll ? "Show Less" : "+ More"}
+            </button>
+          </div>
         </Accordion>
 
         {/*  Show More Button */}
-       
+
       </div>
     </section>
   );

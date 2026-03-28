@@ -52,13 +52,13 @@ const BlogPost = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="prose max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed">
               <p className="text-lg text-muted-foreground">
-                Building a strong brand identity is no longer optional — it's the foundation of business success. In this comprehensive guide, 
+                Building a strong brand identity is no longer optional - it's the foundation of business success. In this comprehensive guide, 
                 we'll walk you through everything you need to know about creating a brand identity that resonates, converts, and endures.
               </p>
 
               <h2 className="font-heading text-3xl font-bold text-foreground mt-12 mb-4">What is Brand Identity?</h2>
               <p className="text-muted-foreground">
-                Brand identity is the collection of visual elements that represent your company — your logo, colors, typography, imagery style, 
+                Brand identity is the collection of visual elements that represent your company - your logo, colors, typography, imagery style, 
                 and design language. It's how your brand looks, feels, and communicates visually. Think of it as your brand's visual DNA.
               </p>
               <p className="text-muted-foreground">
@@ -68,7 +68,7 @@ const BlogPost = () => {
 
               <div className="glass-card p-6 my-8 border-l-4 border-primary/50">
                 <p className="text-foreground italic text-lg">"Your brand is what other people say about you when you're not in the room."</p>
-                <p className="text-sm text-primary font-semibold mt-2">— Jeff Bezos</p>
+                <p className="text-sm text-primary font-semibold mt-2">- Jeff Bezos</p>
               </div>
 
               <h2 className="font-heading text-3xl font-bold text-foreground mt-12 mb-4">The 7 Core Elements</h2>
@@ -79,7 +79,7 @@ const BlogPost = () => {
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">1. Logo System</h3>
               <p className="text-muted-foreground">
-                Your logo isn't just one mark — it's a system. A modern brand needs a primary logo, a horizontal variant, an icon/mark, 
+                Your logo isn't just one mark - it's a system. A modern brand needs a primary logo, a horizontal variant, an icon/mark, 
                 a favicon, and clear spacing rules. Each version should work at any size, from a billboard to a 16px favicon.
               </p>
 
@@ -92,19 +92,19 @@ const BlogPost = () => {
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">3. Typography</h3>
               <p className="text-muted-foreground">
                 Choose a heading font for personality and a body font for readability. Define a type scale with consistent sizes, 
-                weights, and line heights. Consider accessibility — body text should be at least 16px with 1.5 line height.
+                weights, and line heights. Consider accessibility - body text should be at least 16px with 1.5 line height.
               </p>
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">4. Imagery Style</h3>
               <p className="text-muted-foreground">
-                Whether you use photography, illustration, or a mix — define a consistent style. Specify lighting, color treatment, 
+                Whether you use photography, illustration, or a mix - define a consistent style. Specify lighting, color treatment, 
                 composition rules, and subject guidelines. This ensures visual consistency across all touchpoints.
               </p>
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">5. Iconography</h3>
               <p className="text-muted-foreground">
                 Custom icons reinforce your brand's unique personality. Define stroke weight, corner radius, grid size, and style 
-                (outlined, filled, duo-tone). Consistency is key — every icon should look like it belongs to the same family.
+                (outlined, filled, duo-tone). Consistency is key - every icon should look like it belongs to the same family.
               </p>
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">6. Layout & Grid</h3>
@@ -141,7 +141,7 @@ const BlogPost = () => {
 
               <div className="glass-card p-6 my-8 border-l-4 border-accent/50">
                 <p className="text-foreground italic text-lg">"Design is the silent ambassador of your brand."</p>
-                <p className="text-sm text-accent font-semibold mt-2">— Paul Rand</p>
+                <p className="text-sm text-accent font-semibold mt-2">- Paul Rand</p>
               </div>
 
               <h2 className="font-heading text-3xl font-bold text-foreground mt-12 mb-4">Conclusion</h2>

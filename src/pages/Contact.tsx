@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Clock, Send, CheckCircle, MessageSquare, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { socialLinks } from "@/lib/social-links";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", service: "", budget: "", message: "" });
@@ -127,7 +128,7 @@ const Contact = () => {
 
             <div className="glass-card p-6 bg-green-50/50 border-green-100 flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white mb-4 shadow-lg shadow-green-200">
-                <MessageCircle size={32} />
+                <FaWhatsapp size={32}/>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp Us</h3>
               <p className="text-sm text-gray-600 mb-6">Prefer a quick chat? Message us on WhatsApp for instant support.</p>

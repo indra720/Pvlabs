@@ -82,7 +82,7 @@ const Careers = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: "Craft Over Speed", desc: "We value thoughtful, well-crafted work. Quality is never sacrificed for speed. Every pixel matters." },
-              { title: "Radical Transparency", desc: "We share everything openly — from financials to feedback. No politics, no ego, just honest collaboration." },
+              { title: "Radical Transparency", desc: "We share everything openly - from financials to feedback. No politics, no ego, just honest collaboration." },
               { title: "Growth Mindset", desc: "We invest in our people. Monthly learning sessions, annual conference budget, and mentorship programs." },
             ].map((v, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card p-8">

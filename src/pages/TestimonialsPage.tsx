@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Star, ArrowRight, Play, Quote } from "lucide-react";
 
 const testimonials = [
-  { name: "Sarah Chen", role: "CEO", company: "NovaTech Inc.", text: "PV Labs didn't just redesign our brand — they redefined how we see ourselves. The new identity has transformed every customer interaction and helped us raise our Series B.", rating: 5, result: "280% brand recognition increase", featured: true },
+  { name: "Sarah Chen", role: "CEO", company: "NovaTech Inc.", text: "PV Labs didn't just redesign our brand - they redefined how we see ourselves. The new identity has transformed every customer interaction and helped us raise our Series B.", rating: 5, result: "280% brand recognition increase", featured: true },
   { name: "Mike Torres", role: "Product Lead", company: "FitPulse", text: "The new design turned our app from 'meh' to 'must-have.' Users actually enjoy working out with FitPulse now. Our retention metrics have never been better.", rating: 5, result: "300% user engagement boost", featured: true },
   { name: "Lisa Park", role: "Founder", company: "GreenLeaf Co.", text: "Our products finally look as good as they taste. Customers now pick us up just because the packaging catches their eye. Sales are up 45% since the redesign.", rating: 5, result: "45% sales increase" },
   { name: "David Kim", role: "VP Product", company: "CloudSync", text: "Our enterprise clients went from complaining about the UI to bragging about it. That's the PV Labs effect. Support tickets dropped 80% after the redesign.", rating: 5, result: "$2M ARR increase" },
@@ -14,7 +14,7 @@ const testimonials = [
   { name: "Rachel Green", role: "CMO", company: "Bloom Skincare", text: "PV Labs understood our brand better than we did. The identity system they created is elegant, cohesive, and instantly recognizable. We get compliments daily.", rating: 5, result: "120% social following growth" },
   { name: "Tom Bradley", role: "Founder", company: "UrbanEats", text: "The new website design increased our online orders by 200% in the first month. The UX is intuitive, beautiful, and fast. Best investment we've made.", rating: 5, result: "200% order increase" },
   { name: "Yuki Tanaka", role: "Head of Design", company: "Zenith Capital", text: "Working with PV Labs was a masterclass in professional design execution. They delivered 100+ brand templates that our team of 500 uses daily.", rating: 5, result: "Consistent across 50+ touchpoints" },
-  { name: "Carlos Rodriguez", role: "CEO", company: "TechFlow", text: "PV Labs designed our entire product suite — website, app, marketing materials. The consistency across everything is remarkable. They truly understand scalable design.", rating: 5, result: "4.9★ average client rating" },
+  { name: "Carlos Rodriguez", role: "CEO", company: "TechFlow", text: "PV Labs designed our entire product suite - website, app, marketing materials. The consistency across everything is remarkable. They truly understand scalable design.", rating: 5, result: "4.9★ average client rating" },
   { name: "Priya Sharma", role: "Co-founder", company: "EduLearn", text: "The landing page design PV Labs created converts at 3x our industry average. Their understanding of conversion psychology is as strong as their design skills.", rating: 5, result: "3x conversion rate" },
   { name: "Mark Thompson", role: "Creative Director", company: "Studio Nine", text: "I've worked with dozens of agencies. PV Labs is the only one that consistently exceeds expectations. Their attention to detail is unmatched in the industry.", rating: 5, result: "5 repeat engagements" },
   { name: "Mark Thompson", role: "Creative Director", company: "Studio Nine", text: "I've worked with dozens of agencies. PV Labs is the only one that consistently exceeds expectations. Their attention to detail is unmatched in the industry.", rating: 5, result: "5 repeat engagements" },
@@ -137,7 +137,7 @@ const TestimonialsPage = () => (
           <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Join 200+ happy clients</h2>
           <p className="text-primary-foreground/80 mb-8">Start your project today and see why brands love working with us.</p>
           <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
-            Start Your Project <ArrowRight size={18} />
+            Start Your Project 
           </Link>
         </div>
       </section>

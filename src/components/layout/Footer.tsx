@@ -19,7 +19,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed mb-6 max-w-[280px]">
-              PV Labs helps Indian sellers and brands create studio-quality visuals — without a studio. Amazon, Flipkart & Myntra ready.
+              PV Labs helps Indian sellers and brands create studio-quality visuals - without a studio. Amazon, Flipkart & Myntra ready.
             </p>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap gap-2">
@@ -82,7 +82,7 @@ const Footer = () => {
               </div>
               <a 
                 href="https://wa.me/917417791003" 
-                className="mt-2 bg-green-300 text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
+                className="mt-2 bg-black hover:bg-green-300 border-white text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
               >
                 <FaWhatsapp/> WhatsApp Us
               </a>

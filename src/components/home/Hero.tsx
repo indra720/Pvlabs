@@ -56,7 +56,7 @@ const Hero = () => (
           </h1>
 
           <p className="text-base md:text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
-            Product visuals, A+ content, packaging & logo — Amazon & Flipkart ready in <b className="text-white">3–5 days</b> at <b className="text-white">80%</b> less cost than a traditional studio shoot. No camera. No shipping. No delays.
+            Product visuals, A+ content, packaging & logo - Amazon & Flipkart ready in <b className="text-white">3–5 days</b> at <b className="text-white">80%</b> less cost than a traditional studio shoot. No camera. No shipping. No delays.
           </p>
           <br />
           <span className="text-[#60B8F0] font-bold bottom-2 text-sm">⚡ Sellers who switched saved ₹15,000–₹50,000 per shoot</span>
@@ -66,7 +66,7 @@ const Hero = () => (
               to="/contact"
               className="gradient-btn px-4 text-base flex items-center justify-center gap-2 shadow-xl"
             >
-             Try free sample for your product<ArrowRight size={18} />
+             Try Free Sample<ArrowRight size={18} />
             </Link>
             <Link
               to="/portfolio"
@@ -76,7 +76,7 @@ const Hero = () => (
             </Link>
           </div>
 
-          <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month — only 4 remaining</span>
+          <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month - only 4 remaining</span>
           {/* <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
             {["500+ Projects Delivered", "200+ Global Clients", "50+ Awards Won"].map((t, i) => (
               <motion.span
@@ -92,7 +92,7 @@ const Hero = () => (
           </div> */}
         </motion.div>
 
-        {/* Right — floating stat cards */}
+        {/* Right - floating stat cards */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -121,7 +121,7 @@ const Hero = () => (
         </motion.div>
       </div>
 
-      {/* Bottom stats bar — mobile */}
+      {/* Bottom stats bar - mobile */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

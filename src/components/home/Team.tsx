@@ -9,13 +9,13 @@ const founders = [
     name: "Tankaar Sharma",
     role: "Founder & Creative Director",
     image: tankaarImg,
-    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good."
+    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief - that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good."
   },
   {
     name: "Rudra Sharma",
     role: "Founder & Growth Lead",
     image: rudraImg,
-    bio: "Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell."
+    bio: "Rudra drives the business side of PV Labs - client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell."
   }
 ];
 
@@ -35,7 +35,7 @@ const Team = () => (
           Built by people who understand <br className="hidden md:block" /> both design and business.
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto font-medium">
-          PV Labs was founded by two brothers — one obsessed with visuals, one obsessed with growth.
+          PV Labs was founded by two brothers - one obsessed with visuals, one obsessed with growth.
         </p>
       </motion.div>
 
@@ -90,7 +90,7 @@ const Team = () => (
         transition={{ delay: 0.5 }}
         className="mt-20 text-center text-gray-600 italic text-sm font-medium tracking-wide"
       >
-      Two founders. One mission — make Indian brands look world-class
+      Two founders. One mission - make Indian brands look world-class
       </motion.p>
     </div>
   </section>

@@ -100,14 +100,14 @@ const Pricing = () => {
                       <MessageSquare size={16} className="text-purple-400 shrink-0" /> My product gets traffic but doesn't convert
                     </div>
                     <Link to="/contact" className="block text-center py-4 rounded-full font-bold border-2 border-slate-200 text-slate-700 hover:border-[#7B2FD9] hover:text-[#7B2FD9] hover:bg-purple-50 transition-all">
-                      → Get Started
+                      Get Started
                     </Link>
                   </div>
 
                   {/* Card 2 - Highlighted */}
                   <div className="bg-white p-10 rounded-[32px] border-2 border-[#7B2FD9] flex flex-col h-full relative shadow-2xl shadow-purple-500/20 transform md:-translate-y-4">
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-2">
-                      <Star size={12} fill="currentColor" /> Most Popular
+                      <Star size={12} fill="currentColor " /> Most Popular
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">Full Listing Upgrade</h3>
                     <p className="text-slate-500 text-sm mb-8 font-medium">Make the entire listing work as one system</p>
@@ -130,7 +130,7 @@ const Pricing = () => {
                       <MessageSquare size={16} className="text-blue-400 shrink-0" /> I want my listing to explain, convince & convert
                     </div>
                     <Link to="/contact" className="block text-center py-4 rounded-full font-bold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] text-white hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] transition-all">
-                      → Get Started Now
+                      Get Started Now
                     </Link>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const Pricing = () => {
                     <h3 className="text-3xl font-bold text-white mb-3">Support Beyond the First Upgrade</h3>
                     <p className="text-slate-300 text-lg">For brands that keep launching and updating.</p>
                   </div>
-                  <div className="grid grid-cols-2 gap-6 text-sm text-slate-200">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-slate-200">
                     <div className="space-y-3">
                       <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> New product launches</div>
                       <div className="flex items-center gap-2"><Check size={16} className="text-[#7B2FD9]" /> Seasonal campaigns</div>
@@ -242,14 +242,14 @@ const Pricing = () => {
               <div className="text-center mb-16">
                 <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-md ">BRAND & MARKETING DESIGN</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4">Every brand project is different.</h2>
-                <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-lg">Pricing depends on scope, complexity, and timeline. Book a free consultation — we'll give you a clear quote within 24 hours.</p>
+                <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-lg">Pricing depends on scope, complexity, and timeline. Book a free consultation - we'll give you a clear quote within 24 hours.</p>
               </div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   { icon: Palette, title: "Logo & Brand Identity", text: "Logo design, brand color system, typography kit & complete brand guidelines." },
                   { icon: Package, title: "Packaging Design", text: "Box, label, pouch & insert design. Print-ready CMYK files delivered." },
-                  { icon: Share2, title: "Social Media Creatives", text: "Posts, carousels, stories & reel covers — on-brand, platform-optimized." },
+                  { icon: Share2, title: "Social Media Creatives", text: "Posts, carousels, stories & reel covers - on-brand, platform-optimized." },
                   { icon: Zap, title: "Ad Creatives", text: "High-converting Meta & Google ad creatives. Multiple sizes. A/B test versions." },
                   { icon: Layout, title: "Presentation & Pitch Deck", text: "Investor decks, sales presentations & company profiles. PowerPoint + Google Slides." }
                 ].map((item, i) => (
@@ -260,7 +260,7 @@ const Pricing = () => {
                     <h3 className="text-slate-900 font-bold text-xl mb-3">{item.title}</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-6">{item.text}</p>
                     <Link to="/contact" className="inline-flex items-center gap-2 text-[#7B2FD9] font-bold hover:gap-3 transition-all">
-                      Get a Quote <ArrowRight size={16} />
+                      Get a Quote 
                     </Link>
                   </div>
                 ))}
@@ -269,7 +269,7 @@ const Pricing = () => {
               <div className="bg-white rounded-[32px] p-12 border border-purple-100 text-center mt-12 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0]" />
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Not sure what your project needs?</h2>
-                <p className="text-slate-600 mb-8 max-w-xl mx-auto">Tell us about your brand. We'll scope it out and send you a clear quote — free, within 24 hours.</p>
+                <p className="text-slate-600 mb-8 max-w-xl mx-auto">Tell us about your brand. We'll scope it out and send you a clear quote - free, within 24 hours.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="gradient-btn px-10 py-4 font-bold text-white shadow-lg hover:shadow-purple-500/20 transition-all">→ Book Free Consultation</Link>
                   <a href="https://wa.me/917417791003" className="px-10 py-4 rounded-full border-2 border-slate-200 text-slate-700 font-bold hover:border-[#7B2FD9] hover:text-[#7B2FD9] transition-all">💬 WhatsApp Us</a>
@@ -315,11 +315,11 @@ const Pricing = () => {
       {/* Final Risk Reversal */}
       <section className="pb-24 px-6 text-center bg-white">
         <div className="max-w-3xl mx-auto border-t border-slate-100 pt-12">
-          <p className="text-slate-600 mb-4 font-medium">🛡️ Not happy with the result? We redo it free — no questions asked.</p>
-          <p className="text-slate-600 font-medium">💬 Still confused? WhatsApp us — we'll help you pick the right plan.</p>
+          <p className="text-slate-600 mb-4 font-medium">🛡️ Not happy with the result? We redo it free - no questions asked.</p>
+          <p className="text-slate-600 font-medium">💬 Still confused? WhatsApp us - we'll help you pick the right plan.</p>
           <div className="mt-12">
             <Link to="/contact" className="gradient-btn px-12 py-5 font-bold text-lg inline-flex items-center gap-3 shadow-xl hover:shadow-purple-500/30 hover:-translate-y-1 transition-all text-white">
-              Book Free Consultation <ArrowRight size={20} />
+              Book Free Consultation 
             </Link>
             <div className="mt-8 space-y-2 text-slate-500 text-xs font-medium">
               <p>📞 We respond within 2 hours · Mon–Sat 10am–7pm IST</p>

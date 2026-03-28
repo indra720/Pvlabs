@@ -2,8 +2,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Phone } from "lucide-react";
-import tankaarImg from "@/assets/about-team.jpg";
-import rudraImg from "@/assets/teamcreativity.jpg";
+import tankaarImg from "../assets/Tankar.jpeg";
+import rudraImg from "../assets/rudra.jpeg";
 import { Link } from "react-router-dom";
 import { FaWhatsappSquare } from "react-icons/fa";
 
@@ -12,7 +12,7 @@ const founders = [
     name: "Tankaar Sharma",
     role: "Founder & Creative Director",
     image: tankaarImg,
-    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief — that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good.",
+    bio: "Tankaar leads the creative vision at PV Labs. A data scientist by training and a visual thinker by instinct, he built PV Labs around one belief - that great design is not just aesthetic, it's a business tool. He oversees every visual output to ensure it performs, not just looks good.",
     linkedin: "https://linkedin.com/company/pvlabs",
     whatsapp: "https://wa.me/917417791003",
     phone: "tel:+917417791003"
@@ -21,7 +21,7 @@ const founders = [
     name: "Rudra Sharma",
     role: "Founder & Growth Lead",
     image: rudraImg,
-    bio: "Rudra drives the business side of PV Labs — client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell.",
+    bio: "Rudra drives the business side of PV Labs - client acquisition, partnerships, and scaling operations. He brings a seller's perspective to every brief, having run his own e-commerce operations across Flipkart and Amazon. When he takes on a client, he already understands what it means to want your product to sell.",
     linkedin: "https://linkedin.com/company/pvlabs",
     whatsapp: "https://wa.me/917417791003",
     phone: "tel:+917417791003"
@@ -33,21 +33,21 @@ const Founders = ({ showLayout = true }: { showLayout?: boolean }) => {
       {showLayout && <Navbar />}
 
       <section className="section-padding gradient-bg-soft ">
-        <div className="w-full max-w-7xl mx-auto ">
+        <div className="w-full max-w-7xl mx-auto mt-5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-14"
           >
             <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
               THE TEAM BEHIND PV LABS
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-16 mb-4  text-gray-900">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-4  text-gray-900">
               Built by people who understand <br className="hidden md:block" /> both design and business.
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-medium">
-              PV Labs was founded by two brothers — one obsessed with visuals, one obsessed with growth.
+              PV Labs was founded by two brothers - one obsessed with visuals, one obsessed with growth.
             </p>
           </motion.div>
 
@@ -124,9 +124,9 @@ const Founders = ({ showLayout = true }: { showLayout?: boolean }) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="mt-20 text-center text-gray-600 italic text-sm font-medium tracking-wide"
+            className="mt-10 text-center text-gray-600 italic text-sm font-medium tracking-wide"
           >
-            Two founders. One mission — make Indian brands look world-class.
+            Two founders. One mission - make Indian brands look world-class.
           </motion.p>
         </div>
       </section>

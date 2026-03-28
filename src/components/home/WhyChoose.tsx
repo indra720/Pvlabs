@@ -20,17 +20,17 @@ const reasons = [
   { 
     icon: Users, 
     title: "E-Commerce Specialists", 
-    desc: "Designers who understand Amazon, Flipkart, Myntra, Ajio & Nykaa — not just design tools. We think like sellers." 
+    desc: "Designers who understand Amazon, Flipkart, Myntra, Ajio & Nykaa - not just design tools. We think like sellers." 
   },
   { 
     icon: HeartHandshake, 
     title: "Client First", 
-    desc: "2 revision rounds included in every project. Direct WhatsApp access to your project manager throughout — no bots, no tickets." 
+    desc: "2 revision rounds included in every project. Direct WhatsApp access to your project manager throughout - no bots, no tickets." 
   },
   { 
     icon: Infinity, 
     title: "End-to-End", 
-    desc: "From brief to final files — we handle everything. Hero images, A+ content, packaging, branding. One team, all your visual needs." 
+    desc: "From brief to final files - we handle everything. Hero images, A+ content, packaging, branding. One team, all your visual needs." 
   },
   { 
     icon: Headphones, 
@@ -53,7 +53,7 @@ const WhyChoose = () => (
           Why leading brands <span className="gradient-text">choose us</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          We're not just designers — we're strategic partners committed to your brand's success.
+          We're not just designers - we're strategic partners committed to your brand's success.
         </p>
       </motion.div>
 

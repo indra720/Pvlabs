@@ -18,7 +18,7 @@ const FAQPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-24 pb-16 px-6 md:px-12 gradient-bg-soft">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             {/* <span className="text-primary text-sm font-semibold uppercase tracking-widest">FAQ</span> */}

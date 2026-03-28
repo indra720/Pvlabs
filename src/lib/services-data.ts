@@ -48,7 +48,7 @@ export const ecommerceServices = [
     badge: "🔥 Most Ordered",
     badgeType: "hot",
     title: "Product Hero Images",
-    desc: "Your main listing image is the single most important factor in getting a click. We create hero images that stop the scroll — clean, sharp, marketplace-compliant, and built to convert.",
+    desc: "Your main listing image is the single most important factor in getting a click. We create hero images that stop the scroll - clean, sharp, marketplace-compliant, and built to convert.",
     checklist: [
       "White background (marketplace compliant)",
       "Gradient & colored backgrounds",
@@ -63,7 +63,7 @@ export const ecommerceServices = [
   {
     id: "lifestyle-scene-images",
     title: "Lifestyle & Scene Images",
-    desc: "Show your product in real life. Build emotional desire. Increase 'Add to Cart.' We create AI-powered lifestyle scenes — home, kitchen, outdoor, festive.",
+    desc: "Show your product in real life. Build emotional desire. Increase 'Add to Cart.' We create AI-powered lifestyle scenes - home, kitchen, outdoor, festive.",
     checklist: [
       "Home & kitchen scenes",
       "Festive & seasonal themes",
@@ -80,7 +80,7 @@ export const ecommerceServices = [
     badge: "Amazon Exclusive",
     badgeType: "amazon",
     title: "A+ Content & EBC Design",
-    desc: "Amazon sellers with A+ content see up to 10% more sales. We design scroll-stopping A+ modules — brand story, feature banners, comparison charts.",
+    desc: "Amazon sellers with A+ content see up to 10% more sales. We design scroll-stopping A+ modules - brand story, feature banners, comparison charts.",
     checklist: [
       "Brand story module",
       "Feature highlight banners",
@@ -112,7 +112,7 @@ export const ecommerceServices = [
     badge: "Flipkart Specialist",
     badgeType: "flipkart",
     title: "Catalog & RPD Creation",
-    desc: "Launching on Flipkart or Meesho? We handle complete catalog creation — product listings, RPD sheets, image uploads.",
+    desc: "Launching on Flipkart or Meesho? We handle complete catalog creation - product listings, RPD sheets, image uploads.",
     checklist: [
       "Flipkart catalog creation",
       "RPD sheet preparation",
@@ -145,7 +145,7 @@ export const brandServices = [
   {
     id: "packaging-design",
     title: "Packaging Design",
-    desc: "Packaging is your first physical brand moment. We design shelf-worthy packaging — boxes, labels, pouches, inserts.",
+    desc: "Packaging is your first physical brand moment. We design shelf-worthy packaging - boxes, labels, pouches, inserts.",
     checklist: [
       "Box & carton design",
       "Product label & sticker",
@@ -160,7 +160,7 @@ export const brandServices = [
   {
     id: "social-media-creatives",
     title: "Social Media Creatives",
-    desc: "Your Instagram and Facebook feed is your brand's shop window. We design scroll-stopping social creatives — posts, reels covers, stories, carousels.",
+    desc: "Your Instagram and Facebook feed is your brand's shop window. We design scroll-stopping social creatives - posts, reels covers, stories, carousels.",
     checklist: [
       "Instagram posts & carousels",
       "Story & reel cover designs",
