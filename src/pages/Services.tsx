@@ -68,6 +68,7 @@ const Services = () => {
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
+          padding:2px;
         }
         .swiper-button-next:hover, .swiper-button-prev:hover {
           background-color: rgba(255, 255, 255, 0.55);

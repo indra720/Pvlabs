@@ -31,19 +31,19 @@ const Founders = ({ showLayout = true }: { showLayout?: boolean }) => {
   return (
     <div className={showLayout ? "min-h-screen bg-white" : ""}>
       {showLayout && <Navbar />}
-
-      <section className="section-padding gradient-bg-soft ">
-        <div className="w-full max-w-7xl mx-auto mt-5">
+      {/* git code */}
+      <section className={`section-padding gradient-bg-soft ${showLayout ? "pt-24" : ""}`}>
+        <div className="w-full max-w-7xl mx-auto ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="text-center mb-14 "
           >
             <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
               THE TEAM BEHIND PV LABS
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-4  text-gray-900">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold   text-gray-900">
               Built by people who understand <br className="hidden md:block" /> both design and business.
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-medium">
