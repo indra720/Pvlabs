@@ -31,7 +31,7 @@ const Founders = ({ showLayout = true }: { showLayout?: boolean }) => {
   return (
     <div className={showLayout ? "min-h-screen bg-white" : ""}>
       {showLayout && <Navbar />}
-
+      {/* git code */}
       <section className={`section-padding gradient-bg-soft ${showLayout ? "pt-24" : ""}`}>
         <div className="w-full max-w-7xl mx-auto ">
           <motion.div
