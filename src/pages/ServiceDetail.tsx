@@ -27,10 +27,10 @@ interface ServiceData {
 const serviceData: Record<string, ServiceData> = {
   "logo-design": {
     title: "Logo Design", tagline: "Logos that last a lifetime", image: serviceBranding,
-    desc: "Your logo is the cornerstone of your brand. We create timeless, versatile marks that capture your essence and build instant recognition across every medium — from business cards to billboards to favicons.",
+    desc: "Your logo is the cornerstone of your brand. We create timeless, versatile marks that capture your essence and build instant recognition across every medium - from business cards to billboards to favicons.",
     process: [
       { step: "Discovery", desc: "Deep dive into your brand values, audience, competitors, and aspirations through structured workshops." },
-      { step: "Concept Exploration", desc: "We explore 20+ directions across different styles — wordmarks, lettermarks, symbols, combination marks." },
+      { step: "Concept Exploration", desc: "We explore 20+ directions across different styles - wordmarks, lettermarks, symbols, combination marks." },
       { step: "Refinement", desc: "Your top 3 concepts are refined with precise typography, spacing, and color application." },
       { step: "Finalization", desc: "The chosen logo is perfected across all sizes and applications with a mini brand guideline." },
       { step: "Delivery", desc: "Full vector files (AI, EPS, SVG, PDF), raster files (PNG, JPG), and a logo usage guide." },
@@ -51,7 +51,7 @@ const serviceData: Record<string, ServiceData> = {
   },
   "brand-identity": {
     title: "Brand Identity Design", tagline: "Complete visual systems that scale", image: serviceBranding,
-    desc: "A logo alone isn't a brand. We build comprehensive identity systems that ensure consistency, recognition, and trust across every touchpoint — from your website to your storefront to your social feeds.",
+    desc: "A logo alone isn't a brand. We build comprehensive identity systems that ensure consistency, recognition, and trust across every touchpoint - from your website to your storefront to your social feeds.",
     process: [
       { step: "Brand Audit", desc: "We analyze your current brand assets, market position, competitor landscape, and target audience perception." },
       { step: "Strategy", desc: "Define your brand's personality, voice, positioning, and visual direction through collaborative workshops." },
@@ -123,7 +123,7 @@ const serviceData: Record<string, ServiceData> = {
   },
   "social-media-graphics": {
     title: "Social Media Graphics", tagline: "Scroll-stopping content that converts", image: serviceSocial,
-    desc: "We create thumb-stopping social media content optimized for every platform. From feed posts to stories to carousels — designed to engage, share, and convert.",
+    desc: "We create thumb-stopping social media content optimized for every platform. From feed posts to stories to carousels - designed to engage, share, and convert.",
     process: [
       { step: "Content Strategy", desc: "Analyze your audience, define content pillars, and plan visual themes." },
       { step: "Template Creation", desc: "Design reusable templates for different content types and platforms." },
@@ -139,7 +139,7 @@ const serviceData: Record<string, ServiceData> = {
       { tier: "Scale", price: "$1,999/mo", features: ["50+ posts/month", "All platforms", "All formats", "Video thumbnails", "Content calendar", "Dedicated designer"] },
     ],
     faqs: [
-      { q: "Which platforms do you design for?", a: "Instagram, Facebook, LinkedIn, Twitter/X, TikTok, Pinterest, YouTube — we cover all major platforms with optimized sizes." },
+      { q: "Which platforms do you design for?", a: "Instagram, Facebook, LinkedIn, Twitter/X, TikTok, Pinterest, YouTube - we cover all major platforms with optimized sizes." },
       { q: "Can I edit the templates myself?", a: "Yes! We deliver editable templates in Canva or Figma so your team can create on-brand content independently." },
       { q: "Do you create video content?", a: "We create motion graphics, animated posts, and story templates. For full video production, see our Motion Graphics service." },
       { q: "Can you match our existing brand?", a: "Absolutely. We use your brand guidelines to ensure every piece of content is perfectly on-brand." },
@@ -171,7 +171,7 @@ const serviceData: Record<string, ServiceData> = {
   },
   "motion-graphics": {
     title: "Motion Graphics", tagline: "Bringing your brand to life", image: serviceMotion,
-    desc: "Dynamic animations that captivate, explain, and convert. From logo reveals to explainer videos to UI micro-animations — we make your brand move.",
+    desc: "Dynamic animations that captivate, explain, and convert. From logo reveals to explainer videos to UI micro-animations - we make your brand move.",
     process: [
       { step: "Briefing", desc: "Define objectives, audience, tone, duration, and distribution channels." },
       { step: "Scripting & Storyboard", desc: "Write the narrative and create frame-by-frame visual storyboards." },

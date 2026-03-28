@@ -7,13 +7,13 @@ const testimonials = [
   { name: "Priya S.", role: "Flipkart Brand, Home & Kitchen", text: "Finally a team that understands what Flipkart listings actually need. Fast delivery, zero back and forth. Will definitely order again.", rating: 5, metric: "3-Day Delivery" },
   { name: "Arjun K.", role: "D2C Brand, Skincare", text: "We were spending ₹40,000 per shoot. PV Labs gave us better results at a fraction of the cost. Game changer for our brand.", rating: 5, metric: "80% Cost Saving" },
   { name: "Neha R.", role: "Amazon Brand, Fashion & Apparel", text: "The A+ content they designed increased our conversion rate significantly. Our competitors still don't know what hit them.", rating: 5, metric: "Conversion Rate Up 38%" },
-  { name: "Vikram T.", role: "Myntra Seller, Sports & Fitness", text: "Sent them my product reference and brief — got back catalog-ready visuals in 4 days. No studio, no hassle. Impressive.", rating: 5, metric: "Listed & Live in 5 Days" },
-  { name: "Sana A.", role: "Meesho Brand, Ethnic Wear", text: "Professional, fast, and they actually understand e-commerce. Not just designers — they think like sellers.", rating: 5, metric: "First Order Within 48hrs of Listing" },
-  { name: "Amit D.", role: "Amazon Seller, Personal Care", text: "I was skeptical at first — no studio shoot, no physical sample sent. But the final visuals looked more premium than anything we'd shot before. Truly remarkable work.", rating: 5, metric: "Best Seller Tag Within 3 Weeks" },
+  { name: "Vikram T.", role: "Myntra Seller, Sports & Fitness", text: "Sent them my product reference and brief - got back catalog-ready visuals in 4 days. No studio, no hassle. Impressive.", rating: 5, metric: "Listed & Live in 5 Days" },
+  { name: "Sana A.", role: "Meesho Brand, Ethnic Wear", text: "Professional, fast, and they actually understand e-commerce. Not just designers - they think like sellers.", rating: 5, metric: "First Order Within 48hrs of Listing" },
+  { name: "Amit D.", role: "Amazon Seller, Personal Care", text: "I was skeptical at first - no studio shoot, no physical sample sent. But the final visuals looked more premium than anything we'd shot before. Truly remarkable work.", rating: 5, metric: "Best Seller Tag Within 3 Weeks" },
   { name: "Kavya M.", role: "Flipkart Brand, Home Decor", text: "Our Flipkart return rate dropped after we updated our listing images. Customers now know exactly what they're getting. PV Labs understood our product better than we expected.", rating: 5, metric: "Returns Reduced by 30%" },
-  { name: "Rohit B.", role: "Amazon Brand, Kitchen Appliances", text: "Launched 12 SKUs in one go. PV Labs handled every single visual — hero images, infographics, A+ banners. Delivered everything in 8 days. Unbelievable turnaround.", rating: 5, metric: "12 SKUs Live in 8 Days" },
+  { name: "Rohit B.", role: "Amazon Brand, Kitchen Appliances", text: "Launched 12 SKUs in one go. PV Labs handled every single visual - hero images, infographics, A+ banners. Delivered everything in 8 days. Unbelievable turnaround.", rating: 5, metric: "12 SKUs Live in 8 Days" },
   { name: "Deepak S.", role: "Flipkart Seller, Baby Products", text: "Our old images were clicked on a phone camera. PV Labs transformed our listing overnight. Sales jumped the very next week. I wish I had found them sooner.", rating: 5, metric: "Sales Up 55% Week 1" },
-  { name: "Ananya G.", role: "Myntra Brand, Women's Fashion", text: "What impressed me most was how well they understood our target customer. The visuals don't just look good — they speak directly to the buyer. That's rare.", rating: 5, metric: "Wishlist Adds Up 70%" },
+  { name: "Ananya G.", role: "Myntra Brand, Women's Fashion", text: "What impressed me most was how well they understood our target customer. The visuals don't just look good - they speak directly to the buyer. That's rare.", rating: 5, metric: "Wishlist Adds Up 70%" },
   { name: "Suresh P.", role: "Amazon Seller, Tools & Hardware", text: "Three agencies before PV Labs. None of them got it right. PV Labs nailed it on the first revision. That's the difference between designers and e-commerce specialists.", rating: 5, metric: "First-Try Approval" },
   { name: "Ritu K.", role: "Meesho Seller, Jewellery", text: "Budget was tight, expectations were high. PV Labs delivered on both. Premium quality at a price that actually makes sense for a growing brand like ours.", rating: 5, metric: "ROI Positive Within 2 Weeks" },
   { name: "Manish T.", role: "Amazon Brand, Supplements", text: "Sent a brief on Monday. Had final files by Thursday. Everything Amazon-compliant, pixel perfect. This is how every agency should operate.", rating: 5, metric: "Zero Revision Needed" },
@@ -34,7 +34,7 @@ const Testimonials = () => (
           Trusted by <span className="gradient-text">500+ sellers</span> worldwide
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Don't just take our word for it — hear what our clients have to say about working with PV Labs.
+          Don't just take our word for it - hear what our clients have to say about working with PV Labs.
         </p>
       </motion.div>
 

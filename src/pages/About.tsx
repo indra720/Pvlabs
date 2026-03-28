@@ -45,17 +45,17 @@ const About = () => {
                 The story behind <span className="gradient-text">PV Labs</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                PV Labs was born from a simple frustration — great products on Amazon and
+                PV Labs was born from a simple frustration - great products on Amazon and
                 Flipkart were losing sales because of bad visuals. Not bad products. Bad visuals.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                We're a team of two brothers — a data scientist and a business strategist —
+                We're a team of two brothers - a data scientist and a business strategist -
                 who built a studio that replaces expensive photoshoots with world-class
                 product visuals. No camera. No shipping. No delays.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Today, PV Labs serves sellers and brands across Amazon India, Flipkart,
-                Myntra, and Meesho — delivering catalog-ready visuals that convert.
+                Myntra, and Meesho - delivering catalog-ready visuals that convert.
               </p>
             </div>
             <div className="rounded-[24px] overflow-hidden shadow-2xl border border-white/20">
@@ -80,7 +80,7 @@ const About = () => {
             <h2 className="font-heading text-2xl font-bold mb-4 text-foreground">Our Mission</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               To make premium product visuals accessible to every Indian e-commerce
-              seller — not just big brands. We believe great design shouldn't require
+              seller - not just big brands. We believe great design shouldn't require
               a ₹50,000 studio shoot.
             </p>
           </motion.div>
@@ -97,7 +97,7 @@ const About = () => {
             </div>
             <h2 className="font-heading text-2xl font-bold mb-4 text-foreground">Our Vision</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              To become India's most trusted visual studio for e-commerce — where every
+              To become India's most trusted visual studio for e-commerce - where every
               seller, from first-time Flipkart lister to established Amazon brand, gets
               visuals that actually sell.
             </p>

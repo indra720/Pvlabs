@@ -90,7 +90,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Header */}
-      <section className="pt-32 pb-12 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-24 pb-12 px-6 md:px-12 gradient-bg-soft">
         <div className="w-full text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
@@ -103,7 +103,7 @@ const Services = () => {
               For Sellers. For Brands. For Growth.
             </h2>
             <p className="text-[#888] text-lg max-w-3xl mx-auto leading-relaxed">
-              From your first product listing to your complete brand identity — PV Labs creates visuals that make Indian businesses look world-class.
+              From your first product listing to your complete brand identity - PV Labs creates visuals that make Indian businesses look world-class.
             </p>
 
             {/* Category Switcher */}
@@ -151,7 +151,7 @@ const Services = () => {
             <div className="mb-12 sticky top-0 bg-white z-20 k py-4   shadow-xl px-6 text-center">
               <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest">FOR BRANDS</span>
               <h2 className="text-2xl md:text-3xl font-bold text-black mt-4">Look Premium. Sound Consistent. Grow Faster.</h2>
-              <p className="text-[#888] mt-4 w-auto">Complete brand and marketing design for Indian companies who want to stand out — online and offline.</p>
+              <p className="text-[#888] mt-4 w-auto">Complete brand and marketing design for Indian companies who want to stand out - online and offline.</p>
             </div>
 
             <div className="space-y-20">
@@ -170,11 +170,11 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[#7B2FD9]/5 to-[#60B8F0]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative z-10">Not sure which service fits your brand?</h2>
             <p className="text-[#888] text-lg mb-4 max-w-xl mx-auto relative z-10">
-              Tell us about your business. We'll recommend exactly what you need — free.
+              Tell us about your business. We'll recommend exactly what you need - free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10 ">
               <Link to="/contact" className="gradient-btn px-4  py-4 font-bold flex items-center justify-center gap-2">
-                Get Free Recommendation <ArrowRight size={18} />
+                Get Free Recommendation
               </Link>
               <a href="https://wa.me/917417791003" className="px-4 py-4 rounded-full border border-white text-white font-bold hover:bg-green-300 hover:text-white  transition-all flex items-center justify-center gap-2">
                <FaWhatsapp/> WhatsApp Us

@@ -21,18 +21,18 @@
 //             Your competitor's listing looks better than yours.
 //           </h2>
 //           <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-//             Every day without great visuals is a day your product gets scrolled past. Let's fix that — starting with one SKU, free.
+//             Every day without great visuals is a day your product gets scrolled past. Let's fix that - starting with one SKU, free.
 //           </p>
 //           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
 //             <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold text-base hover:shadow-xl transition-all w-full sm:w-auto">
-//               get free sample for your product<ArrowRight size={18} />
+//               Try a Free Sample<ArrowRight size={18} />
 //             </Link>
 //             <Link to="/pricing" className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/20 transition-all w-full sm:w-auto">
 //               View Pricing
 //             </Link>
 //           </div>
 //           <p className="text-white text-xs italic opacity-90">
-//              Limited free slots this month — 4 remaining
+//              Limited free slots this month - 4 remaining
 //           </p>
 //         </div>
 //       </motion.div>
@@ -85,25 +85,14 @@ const ContactCTA = () => {
           {/* Premium Gradient Background */}
           <div
             className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"
-            // style={{
-            //   background:
-            //     "linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #1a1a2e 75%, #0f3460 100%)",
-            //   opacity: 1,
-            // }}
+            
           />
 
-          {/* Animated Accent Gradients */}
-          {/* <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/15 to-transparent rounded-full blur-3xl" />
-          // <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-cyan-500/10 to-transparent rounded-full blur-3xl" /> */}
-
+          
           {/* Overlay Grid Pattern */}
           <div
             className="absolute inset-0 opacity-10 gradient-btn"
-            // style={{
-            //   backgroundImage:
-            //     "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-            //   backgroundSize: "50px 50px",
-            // }}
+         
           />
 
           {/* Content Container */}
@@ -120,8 +109,8 @@ const ContactCTA = () => {
                 variants={itemVariants}
                 className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 py-2 rounded-full bg-emerald-500/15 border border-emerald-500/30 backdrop-blur-sm"
               >
-                <Sparkles size={16} className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent" />
-                <span className="text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent tracking-wide">
+                {/* <Sparkles size={16} className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent" /> */}
+                <span className="text-xs sm:text-sm text-center font-semibold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent tracking-wide">
                   TRANSFORM YOUR LISTINGS
                 </span>
               </motion.div>
@@ -144,7 +133,7 @@ const ContactCTA = () => {
                 className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 md:mb-12 max-w-2xl leading-relaxed"
               >
                 Every day without stunning visuals is a day your products get scrolled past. Let's
-                change that — start with one SKU, completely{" "}
+                change that - start with one SKU, completely{" "}
                 <span className="text-[#60B8F0] font-semibold">free</span>.
               </motion.p>
 
@@ -189,7 +178,7 @@ const ContactCTA = () => {
                 variants={itemVariants}
                 className="text-xs sm:text-sm text-cyan-300 font-medium tracking-wide"
               >
-                🔥 <span className="font-bold text-emerald-400">Limited free slots</span> this month —{" "}
+                🔥 <span className="font-bold text-emerald-400">Limited free slots</span> this month -{" "}
                 <span className="font-bold">4 remaining</span>
               </motion.p>
             </motion.div>

@@ -8,7 +8,7 @@ import noise from "@/assets/marquelogo/noise.jpeg";
 import mbmuscle from "@/assets/marquelogo/mbmuscle.jpeg";
 import boat from "@/assets/marquelogo/boat2.jpeg";
 import snitch from "@/assets/marquelogo/snitch.jpeg";
-import hrx from "@/assets/marquelogo/hrx.jpeg";
+import hrx from "@/assets/marquelogo/hrx2.png";
 import bewkoof from "@/assets/marquelogo/Bewkoof.jpeg";
 import wakefit from "@/assets/marquelogo/wakefit.jpeg";
 import healtkart from "@/assets/marquelogo/health.jpeg";

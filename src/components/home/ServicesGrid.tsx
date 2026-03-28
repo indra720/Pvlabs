@@ -58,9 +58,9 @@ const ServicesGrid = () => (
       <div className="w-full sm:max-w-7xl mx-auto ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}s
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
             WHAT WE CREATE
@@ -69,7 +69,7 @@ const ServicesGrid = () => (
             Everything your brand <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent">needs to grow.</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto font-medium">
-            We've split our expertise to serve your specific goals — whether you're selling on marketplaces or building a global brand.
+            We've split our expertise to serve your specific goals - whether you're selling on marketplaces or building a global brand.
           </p>
         </motion.div>
 

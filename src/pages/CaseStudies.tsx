@@ -18,8 +18,8 @@ const caseStudies = [
     category: "Amazon",
     duration: "7 Days",
     heroImage: serviceBranding,
-    problem: "SkinGlow had decent reviews and was running ads — but their images looked like someone photographed the product on a kitchen counter. Buyers saw the listing and kept scrolling. They weren't losing on price. They were losing on trust.",
-    solution: "We rebuilt the entire visual identity for Amazon — studio hero, lifestyle context, ingredient callouts, size comparison. Every image designed to stop the scroll and answer a buyer objection before they could ask it.",
+    problem: "SkinGlow had decent reviews and was running ads - but their images looked like someone photographed the product on a kitchen counter. Buyers saw the listing and kept scrolling. They weren't losing on price. They were losing on trust.",
+    solution: "We rebuilt the entire visual identity for Amazon - studio hero, lifestyle context, ingredient callouts, size comparison. Every image designed to stop the scroll and answer a buyer objection before they could ask it.",
     results: [
       { metric: "2.1x", label: "More clicks, same ad spend" },
       { metric: "38%", label: "More buyers who clicked, actually bought" },
@@ -36,8 +36,8 @@ const caseStudies = [
     category: "Flipkart",
     duration: "5 Days",
     heroImage: servicePackaging,
-    problem: "KitchenKraft was losing customers at the moment of delivery — not before. Generic packaging meant buyers couldn't tell what was premium and what wasn't. Return rates were high. Not because of the product. Because of perception.",
-    solution: "Full packaging redesign — label, box structure, color system — built to match what the product actually is. Then a Flipkart listing to match: lifestyle imagery, callout cards, size reference. Now the unboxing matches the promise.",
+    problem: "KitchenKraft was losing customers at the moment of delivery - not before. Generic packaging meant buyers couldn't tell what was premium and what wasn't. Return rates were high. Not because of the product. Because of perception.",
+    solution: "Full packaging redesign - label, box structure, color system - built to match what the product actually is. Then a Flipkart listing to match: lifestyle imagery, callout cards, size reference. Now the unboxing matches the promise.",
     results: [
       { metric: "30%", label: "Fewer returns in 30 days" },
       { metric: "55%", label: "Sales jump, Week 1" },
@@ -54,8 +54,8 @@ const caseStudies = [
     category: "Amazon",
     duration: "6 Days",
     heroImage: serviceWebdesign,
-    problem: "NutriFuel had decent sales but no A+ content. Their product page was plain text — no banners, no visuals, no brand story. Competitors with A+ content were outranking them despite an inferior product.",
-    solution: "We built a complete A+ module from scratch — brand story banner, ingredient highlight section, clinical badge visuals, product comparison chart, and a lifestyle section showing the customer journey. All within Amazon's EBC guidelines.",
+    problem: "NutriFuel had decent sales but no A+ content. Their product page was plain text - no banners, no visuals, no brand story. Competitors with A+ content were outranking them despite an inferior product.",
+    solution: "We built a complete A+ module from scratch - brand story banner, ingredient highlight section, clinical badge visuals, product comparison chart, and a lifestyle section showing the customer journey. All within Amazon's EBC guidelines.",
     results: [
       { metric: "38%", label: "Conversion Rate Up" },
       { metric: "6 Days", label: "A+ Live in" },
@@ -63,7 +63,7 @@ const caseStudies = [
       { metric: "Week 3", label: "Best Seller Tag" },
     ],
     testimonial: { text: "Our product was always better. Now our listing finally shows it. The A+ content PV Labs built is the reason we hit Best Seller.", author: "Manish T.", role: "Amazon Brand, Health & Supplements" },
-    beforeAfter: { before: "Plain text description, no banners, no visuals, no brand story", after: "Full A+ module — brand story, ingredient highlights, clinical badge visuals" },
+    beforeAfter: { before: "Plain text description, no banners, no visuals, no brand story", after: "Full A+ module - brand story, ingredient highlights, clinical badge visuals" },
   },
   {
     id: "glowritual-nykaa",
@@ -72,8 +72,8 @@ const caseStudies = [
     category: "Nykaa",
     duration: "7 Days",
     heroImage: serviceWebdesign,
-    problem: "GlowRitual was live on Nykaa but had a default seller page — no banners, no storefront, no visual identity. In a category dominated by premium-looking brands, they were invisible.",
-    solution: "We designed a full Nykaa brand store — hero banner, category banners, lifestyle imagery for each product line, ingredient storytelling creatives, and a unified color language across all touchpoints.",
+    problem: "GlowRitual was live on Nykaa but had a default seller page - no banners, no storefront, no visual identity. In a category dominated by premium-looking brands, they were invisible.",
+    solution: "We designed a full Nykaa brand store - hero banner, category banners, lifestyle imagery for each product line, ingredient storytelling creatives, and a unified color language across all touchpoints.",
     results: [
       { metric: "Featured", label: "in Nykaa Beauty Edit" },
       { metric: "70%", label: "Wishlist Adds Up" },
@@ -81,7 +81,7 @@ const caseStudies = [
       { metric: "80%", label: "Cost Saving vs Studio" },
     ],
     testimonial: { text: "We looked like a ₹10 crore brand overnight. PV Labs made our Nykaa store something we're actually proud to share.", author: "Ananya G.", role: "Nykaa Brand, Organic Skincare" },
-    beforeAfter: { before: "Default Nykaa seller page, no banners, no storefront", after: "Custom Nykaa storefront — hero banner, lifestyle imagery, unified color language" },
+    beforeAfter: { before: "Default Nykaa seller page, no banners, no storefront", after: "Custom Nykaa storefront - hero banner, lifestyle imagery, unified color language" },
   },
   {
     id: "urbanthreads-ajio",
@@ -90,8 +90,8 @@ const caseStudies = [
     category: "Ajio",
     duration: "7 Days",
     heroImage: serviceSocial,
-    problem: "UrbanThreads had 40+ SKUs to list on Ajio but only had basic front-facing images. Ajio's catalog standards require multiple angles, lifestyle context, and detail shots — their listings kept getting rejected.",
-    solution: "We created a complete catalog set for all 40 SKUs — flat lay, model mockup, detail shot, and size guide banner per SKU. Standardized visual language across the entire range so the brand looked cohesive on Ajio's grid.",
+    problem: "UrbanThreads had 40+ SKUs to list on Ajio but only had basic front-facing images. Ajio's catalog standards require multiple angles, lifestyle context, and detail shots - their listings kept getting rejected.",
+    solution: "We created a complete catalog set for all 40 SKUs - flat lay, model mockup, detail shot, and size guide banner per SKU. Standardized visual language across the entire range so the brand looked cohesive on Ajio's grid.",
     results: [
       { metric: "40", label: "SKUs Live in 7 Days" },
       { metric: "Zero", label: "Listing Rejections" },
@@ -99,7 +99,7 @@ const caseStudies = [
       { metric: "First-Try", label: "Approval" },
     ],
     testimonial: { text: "Three rejections before PV Labs. They got every single SKU approved on the first try. That's the difference between designers and e-commerce specialists.", author: "Vikram T.", role: "Ajio Brand, Men's Casual Wear" },
-    beforeAfter: { before: "Basic front-facing images, rejected listings", after: "Complete catalog set — flat lay, model mockup, detail shot, size guide" },
+    beforeAfter: { before: "Basic front-facing images, rejected listings", after: "Complete catalog set - flat lay, model mockup, detail shot, size guide" },
   },
   {
     id: "bloomskin-d2c",
@@ -108,8 +108,8 @@ const caseStudies = [
     category: "Brand Website",
     duration: "4 Weeks",
     heroImage: serviceAppdesign,
-    problem: "BloomSkin was entirely dependent on Myntra for sales — no website, no direct customer relationship, no brand equity outside the marketplace. They wanted to build a D2C presence without losing Myntra momentum.",
-    solution: "We built a full mobile-first brand website — homepage with hero section, individual product pages, brand story, founder note, and trust badges. Integrated Myntra buy links on every product page so customers could purchase directly from their preferred platform.",
+    problem: "BloomSkin was entirely dependent on Myntra for sales - no website, no direct customer relationship, no brand equity outside the marketplace. They wanted to build a D2C presence without losing Myntra momentum.",
+    solution: "We built a full mobile-first brand website - homepage with hero section, individual product pages, brand story, founder note, and trust badges. Integrated Myntra buy links on every product page so customers could purchase directly from their preferred platform.",
     results: [
       { metric: "3x", label: "Direct Traffic Up" },
       { metric: "60%", label: "Mobile Visitors" },
@@ -126,43 +126,43 @@ const caseStudies = [
     category: "Branding",
     duration: "10 Days",
     heroImage: serviceBranding,
-    problem: "GroomX had a great men's grooming product but zero brand identity — no logo, no packaging, no visual language. They were selling on Amazon with a supplier's generic label and losing to branded competitors despite better quality.",
-    solution: "We built the entire brand from scratch — logo design with multiple lockups, color palette, typography system, packaging label design, box structure, and Amazon listing visuals. Every element designed to communicate premium quality to the modern Indian male consumer.",
+    problem: "GroomX had a great men's grooming product but zero brand identity - no logo, no packaging, no visual language. They were selling on Amazon with a supplier's generic label and losing to branded competitors despite better quality.",
+    solution: "We built the entire brand from scratch - logo design with multiple lockups, color palette, typography system, packaging label design, box structure, and Amazon listing visuals. Every element designed to communicate premium quality to the modern Indian male consumer.",
     results: [
       { metric: "10 Days", label: "Brand Live in" },
       { metric: "Premium", label: "Perceived as D2C Brand" },
       { metric: "Full", label: "Identity System" },
       { metric: "Packaging", label: "+ Listing in 1 Project" },
     ],
-    testimonial: { text: "We went from a generic supplier label to a brand people actually recognize. PV Labs didn't just design a logo — they built our entire identity.", author: "Deepak S.", role: "D2C Brand, Men's Grooming" },
-    beforeAfter: { before: "Generic supplier label, no logo, no visual language", after: "Full brand identity — logo, color palette, packaging, Amazon listing visuals" },
+    testimonial: { text: "We went from a generic supplier label to a brand people actually recognize. PV Labs didn't just design a logo - they built our entire identity.", author: "Deepak S.", role: "D2C Brand, Men's Grooming" },
+    beforeAfter: { before: "Generic supplier label, no logo, no visual language", after: "Full brand identity - logo, color palette, packaging, Amazon listing visuals" },
   },
   {
     id: "pureleaf-organic",
-    title: "PureLeaf Organic — Packaging & Brand System",
+    title: "PureLeaf Organic - Packaging & Brand System",
     client: "PureLeaf Organics",
     category: "Branding",
     duration: "8 Days",
     heroImage: servicePackaging,
     problem: "PureLeaf was an organic food brand with a loyal customer base but outdated packaging. Their label looked homemade, didn't communicate the organic positioning, and was getting ignored on both Flipkart and Nykaa shelves where premium organic competitors dominated.",
-    solution: "We redesigned the complete packaging system — logo refinement, earthy premium color palette, pouch label, box design, and tamper-seal sticker. Then extended it to Flipkart listing visuals and a Nykaa brand banner set so every touchpoint told the same clean, organic story.",
+    solution: "We redesigned the complete packaging system - logo refinement, earthy premium color palette, pouch label, box design, and tamper-seal sticker. Then extended it to Flipkart listing visuals and a Nykaa brand banner set so every touchpoint told the same clean, organic story.",
     results: [
       { metric: "2", label: "Platforms + Packaging" },
       { metric: "8 Day", label: "Turnaround" },
       { metric: "40%", label: "Sales Increase Month 1" },
       { metric: "Featured", label: "on Nykaa Organic Edit" },
     ],
-    testimonial: { text: "Our product was always organic and clean. Now our packaging finally says that. Sales jumped the month we relaunched — same product, new identity.", author: "Ritu K.", role: "D2C Brand, Organic Food & Beverages" },
-    beforeAfter: { before: "Outdated packaging, homemade look, ignored on shelves", after: "Complete packaging system — logo, premium color palette, box design" },
+    testimonial: { text: "Our product was always organic and clean. Now our packaging finally says that. Sales jumped the month we relaunched - same product, new identity.", author: "Ritu K.", role: "D2C Brand, Organic Food & Beverages" },
+    beforeAfter: { before: "Outdated packaging, homemade look, ignored on shelves", after: "Complete packaging system - logo, premium color palette, box design" },
   },
 ];
 
 const CaseStudies = () => (
-  <div className="min-h-screen bg-card">
+  <div className="min-h-screen gradient-bg-soft">
     <Navbar />
 
     {/* Hero */}
-    <section className="pt-32 pb-16 px-6 md:px-12 gradient-bg-soft">
+    <section className="pt-24 pb-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           
@@ -195,7 +195,7 @@ const CaseStudies = () => (
     {/* Case Study Cards */}
     {caseStudies.map((cs, i) => (
       <div key={cs.id}>
-        <section className={`section-padding ${i % 2 === 1 ? "gradient-bg-soft" : ""}`}>
+        <section className="section-padding">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -208,7 +208,7 @@ const CaseStudies = () => (
                 <span className="text-xs text-muted-foreground">• {cs.client}</span>
                 <span className="text-xs text-muted-foreground">• {cs.duration}</span>
               </div>
-              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-8">{cs.title}</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8">{cs.title}</h2>
 
               {/* Hero image */}
               <div className="rounded-[24px] overflow-hidden shadow-lg mb-12">
@@ -260,7 +260,7 @@ const CaseStudies = () => (
                 <p className="text-lg text-foreground italic leading-relaxed mb-4">"{cs.testimonial.text}"</p>
                 <div>
                   <span className="font-heading font-bold text-foreground">{cs.testimonial.author}</span>
-                  <span className="text-sm text-muted-foreground ml-2">— {cs.testimonial.role}</span>
+                  <span className="text-sm text-muted-foreground ml-2">- {cs.testimonial.role}</span>
                 </div>
               </div>
             </motion.div>
@@ -268,10 +268,10 @@ const CaseStudies = () => (
         </section>
 
         {i === 1 && (
-          <section className="py-20 px-6 text-center bg-card border-y border-border">
+          <section className="py-20 px-6 text-center border-y border-border/50">
             <div className="max-w-4xl mx-auto">
               <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                Every brand above was losing sales not because of their product — <span className="gradient-text">but because of how it looked online.</span>
+                Every brand above was losing sales not because of their product - <span className="gradient-text">but because of how it looked online.</span>
               </h3>
               <p className="text-xl text-muted-foreground mb-10">Sound familiar?</p>
               <Link to="/contact" className="bg-primary text-primary-foreground px-10 py-5 rounded-full font-bold inline-flex items-center gap-3 hover:shadow-2xl transition-all hover:scale-105">
@@ -284,16 +284,16 @@ const CaseStudies = () => (
     ))}
 
     {/* CTA */}
-    <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center max-w-5xl mx-auto m-10 rounded-md">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+    <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center max-w-4xl mx-auto my-12 w-[calc(100%-3rem)] rounded-[32px] shadow-2xl">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
           Want Results Like These?
         </h2>
-        <p className="text-primary-foreground/80 text-lg mb-8">
-          Let's build your success story — one listing at a time.
+        <p className="text-white/80 text-lg mb-8">
+          Let's build your success story - one listing at a time.
         </p>
-        <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
-          Get Free Sample for your product <ArrowRight size={18} />
+        <Link to="/contact" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 hover:shadow-xl transition-all hover:scale-105">
+          Try a Free Sample
         </Link>
       </div>
     </section>
