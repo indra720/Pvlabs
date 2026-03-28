@@ -48,7 +48,7 @@ const WhyChoose = () => (
         viewport={{ once: true }}
         className="text-center mb-5"
       >
-        <span className="text-primary text-sm font-semibold uppercase tracking-widest">Why PV Labs</span>
+       
         <h2 className="font-heading text-4xl md:text-5xl font-bold mb-3 text-foreground">
           Why leading brands <span className="gradient-text">choose us</span>
         </h2>

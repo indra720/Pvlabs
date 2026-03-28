@@ -15,6 +15,7 @@ import Awards from "@/components/home/Awards";
 import BlogPreview from "@/components/home/BlogPreview";
 import FAQ from "@/components/home/FAQ";
 import ContactCTA from "@/components/home/ContactCTA";
+import Founders from "./Founders";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -29,7 +30,7 @@ const Index = () => (
     {/* <Testimonials /> */}
     <WhyChoose />
     {/* <Industries /> */}
-    <Team />
+    <Founders showLayout={false} />
     {/* <Awards /> */}
     <BlogPreview />
     <FAQ />

@@ -22,9 +22,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">
-            FAQ
-          </span>
+          
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Common <span className="gradient-text">Questions</span>
           </h2>

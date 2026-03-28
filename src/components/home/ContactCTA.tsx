@@ -84,7 +84,7 @@ const ContactCTA = () => {
         >
           {/* Premium Gradient Background */}
           <div
-            className="absolute inset-0 bg-gradient-to-r from-[#7B2FD9] to-[#407ff5] "
+            className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"
             // style={{
             //   background:
             //     "linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #1a1a2e 75%, #0f3460 100%)",

@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { brandImages, brandServices, ecommerceImages, ecommerceServices } from "@/lib/services-data";
+import { FaWhatsapp } from "react-icons/fa6";
 
 
 // Split Image Collections
@@ -145,11 +146,11 @@ const Services = () => {
         </section>
 
         {/* Category 2: Brand & Marketing */}
-        <section id="brand" className="bg-white border-r border-[#1a1a1a] pb-20 lg:overflow-y-auto custom-scrollbar">
+        <section id="brand" className="bg-white border-r  pb-20 lg:overflow-y-auto custom-scrollbar">
           <div className="px-6 md:px-12 m-6 pt-16 bg-white rounded-md shadow-2xl">
-            <div className="mb-12 sticky top-0 bg-white z-20 border-black py-4   shadow-xl px-6 text-center">
+            <div className="mb-12 sticky top-0 bg-white z-20 k py-4   shadow-xl px-6 text-center">
               <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest">FOR BRANDS</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-black mt-4">Look premium. Sound consistent. Grow faster.</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-black mt-4">Look Premium. Sound Consistent. Grow Faster.</h2>
               <p className="text-[#888] mt-4 w-auto">Complete brand and marketing design for Indian companies who want to stand out — online and offline.</p>
             </div>
 
@@ -164,19 +165,19 @@ const Services = () => {
 
       {/* Bottom CTA Section */}
       <section className="bg-white section-padding ">
-        <div className="max-w-5xl mx-auto px-6 bg-gradient-to-r from-slate-900 to-slate-800  shadow-sm rounded-md">
-          <div className="bg-whiterounded-[24px] p-12 border border-[#1a1a1a] text-center relative overflow-hidden group">
+        <div className="max-w-5xl mx-auto px-6 bg-gradient-to-r from-slate-900 to-slate-800  rounded-md">
+          <div className="bg-whiterounded-[24px] p-6 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#7B2FD9]/5 to-[#60B8F0]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative z-10">Not sure which service fits your brand?</h2>
-            <p className="text-[#888] text-lg mb-8 max-w-xl mx-auto relative z-10">
+            <p className="text-[#888] text-lg mb-4 max-w-xl mx-auto relative z-10">
               Tell us about your business. We'll recommend exactly what you need — free.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-              <Link to="/contact" className="gradient-btn px-8 py-4 font-bold flex items-center justify-center gap-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10 ">
+              <Link to="/contact" className="gradient-btn px-4  py-4 font-bold flex items-center justify-center gap-2">
                 Get Free Recommendation <ArrowRight size={18} />
               </Link>
-              <a href="https://wa.me/917417791003" className="px-8 py-4 rounded-full border border-white text-white font-bold hover:bg-green-300 hover:text-white  transition-all flex items-center justify-center gap-2">
-                WhatsApp Us
+              <a href="https://wa.me/917417791003" className="px-4 py-4 rounded-full border border-white text-white font-bold hover:bg-green-300 hover:text-white  transition-all flex items-center justify-center gap-2">
+               <FaWhatsapp/> WhatsApp Us
               </a>
             </div>
           </div>
@@ -243,7 +244,7 @@ const ServiceCard = ({ service, index, category }: { service: any, index: number
       </div>
 
       <div className="flex flex-col">
-        <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+        <h3 className="text-2xl font-bold text-black mb-4">{service.title}</h3>
         <p className="text-[#888] leading-relaxed mb-6 text-sm md:text-base">
           {service.desc}
         </p>
@@ -261,7 +262,7 @@ const ServiceCard = ({ service, index, category }: { service: any, index: number
 
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 text-white font-bold hover:text-[#7B2FD9] transition-colors group underline underline-offset-8 decoration-[#7B2FD9]/30 hover:decoration-[#7B2FD9]"
+          className="inline-flex items-center gap-2  font-bold text-[#7B2FD9] transition-colors group underline underline-offset-8 decoration-[#7B2FD9]/30 hover:decoration-[#7B2FD9]"
         >
           {service.cta} <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
         </Link>

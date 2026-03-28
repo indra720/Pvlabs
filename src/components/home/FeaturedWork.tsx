@@ -28,7 +28,7 @@ const FeaturedWork = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="text-primary text-sm font-semibold uppercase tracking-widest">Portfolio</span>
+       
         <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
           Featured <span className="gradient-text">Work</span>
         </h2>
