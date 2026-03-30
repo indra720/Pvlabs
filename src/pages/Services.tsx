@@ -11,22 +11,11 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { brandImages, brandServices, ecommerceImages, ecommerceServices } from "@/lib/services-data";
+import { brandServices, ecommerceServices } from "@/lib/services-data";
 import { FaWhatsapp } from "react-icons/fa6";
 
 
 // Split Image Collections
-
-
-const getEcommerceImages = (mainImage: string) => {
-  const otherImages = ecommerceImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
-
-const getBrandImages = (mainImage: string) => {
-  const otherImages = brandImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
 
 
 
@@ -58,23 +47,26 @@ const Services = () => {
     <div className="min-h-screen bg-[#0a0a0a]">
       <style>{`
         .swiper-button-next, .swiper-button-prev {
-          background-color: rgba(255, 255, 255, 0.35);
-          backdrop-filter: blur(4px);
-          width: 24px !important;
-          height: 24px !important;
+          background-color: rgba(255, 255, 255, 0.45);
+          backdrop-filter: blur(8px);
+          width: 32px !important;
+          height: 32px !important;
           border-radius: 50%;
-          color: #ffffff !important;
+          color: #000000 !important;
           transition: all 0.3s ease;
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
-          padding:2px;
+          padding: 2px;
+          z-index: 20;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .swiper-button-next:hover, .swiper-button-prev:hover {
-          background-color: rgba(255, 255, 255, 0.55);
+          background-color: rgba(255, 255, 255, 0.8);
+          transform: scale(1.1);
         }
         .swiper-button-next:after, .swiper-button-prev:after {
-          font-size: 8px !important;
+          font-size: 12px !important;
           font-weight: 900 !important;
         }
         .swiper-pagination-bullet {
@@ -91,7 +83,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Header */}
-      <section className="pt-24 pb-12 px-6 md:px-12 gradient-bg-soft">
+      <section className="pt-24 pb-10 px-6 md:px-12 gradient-bg-soft">
         <div className="w-full text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
@@ -130,15 +122,15 @@ const Services = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[calc(100vh-80px)] overflow-hidden">
 
         {/* Category 1: E-Commerce Visuals */}
-        <section id="ecommerce" className="bg-white border-r  pb-20 lg:overflow-y-auto custom-scrollbar">
-          <div className="px-6 md:px-12 m-6 pt-16 bg-white rounded-md shadow-2xl">
-            <div className="mb-12 sticky top-0 bg-white z-20 border-black py-4   shadow-xl px-2 text-center">
+        <section id="ecommerce" className="gradient-bg-soft border-r  pb-20 lg:overflow-y-auto custom-scrollbar">
+          <div className=" m-6  rounded-md shadow-2xl">
+            <div className="mb-12 sticky top-0 gradient-bg-soft z-20 border-black py-4 shadow-sm   px-6 text-center">
               <span className="text-[#7B2FD9] text-sm font-bold uppercase tracking-widest text-center">FOR SELLERS</span>
               <h2 className="text-2xl md:text-3xl font-bold text-black mt-4">Visuals that convert browsers into buyers.</h2>
               <p className="text-[#888] mt-4 w-auto">Built for Amazon, Flipkart, Myntra & Meesho sellers who want more clicks, more carts, more sales.</p>
             </div>
 
-            <div className="space-y-20">
+            <div className="space-y-20 px-6">
               {ecommerceServices.map((s, i) => (
                 <ServiceCard key={i} service={s} index={i} category="ecommerce" />
               ))}
@@ -147,15 +139,15 @@ const Services = () => {
         </section>
 
         {/* Category 2: Brand & Marketing */}
-        <section id="brand" className="bg-white border-r  pb-20 lg:overflow-y-auto custom-scrollbar">
-          <div className="px-6 md:px-12 m-6 pt-16 bg-white rounded-md shadow-2xl">
-            <div className="mb-12 sticky top-0 bg-white z-20 k py-4   shadow-xl px-6 text-center">
+        <section id="brand" className="gradient-bg-soft  border-r  pb-20 lg:overflow-y-auto custom-scrollbar">
+          <div className=" m-6  rounded-md shadow-2xl">
+            <div className="mb-12 sticky top-0 gradient-bg-soft z-20 border-black py-4  shadow-sm   px-6 text-center">
               <span className="text-[#60B8F0] text-sm font-bold uppercase tracking-widest">FOR BRANDS</span>
               <h2 className="text-2xl md:text-3xl font-bold text-black mt-4">Look Premium. Sound Consistent. Grow Faster.</h2>
               <p className="text-[#888] mt-4 w-auto">Complete brand and marketing design for Indian companies who want to stand out - online and offline.</p>
             </div>
 
-            <div className="space-y-20">
+            <div className="space-y-20 px-6">
               {brandServices.map((s, i) => (
                 <ServiceCard key={i} service={s} index={i} category="brand" />
               ))}
@@ -209,8 +201,8 @@ const ServiceCard = ({ service, index, category }: { service: any, index: number
             delay: 3000,
             disableOnInteraction: false,
           }}
-          navigation={true}
-          pagination={{ clickable: true }}
+          // navigation={true}
+          // pagination={{ clickable: true }}
           loop={true}
           className="w-full h-full"
         >

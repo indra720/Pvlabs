@@ -5,26 +5,10 @@ import { ArrowRight, Sparkles, CheckCircle, Play } from "lucide-react";
 import herosection from "../../assets/hero-1.jpeg"
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center overflow-hidden">
-    {/* Background Video */}
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover"
-      poster={herosection}
-    >
-      <source
-        src="https://cdn.coverr.co/videos/coverr-a-team-working-on-computers-in-an-office-1080p/1080p.mp4"
-        type="video/mp4"
-      />
-    </video>
+  <section className="relative min-h-screen flex items-center overflow-hidden bg-white"> {/* Changed background to white */}
+    {/* Removed Background Video and Dark overlay with gradient */}
 
-    {/* Dark overlay with gradient */}
-    <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/60 to-foreground/80" />
-
-    {/* Animated accent blobs */}
+    {/* Animated accent blobs - assuming these still make sense on white background */}
     <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
     <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px]" />
 
@@ -40,13 +24,13 @@ const Hero = () => (
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2.5 mb-8"
+            className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2.5 mb-8" // Adjusted bg/border for white bg
           >
             <Sparkles size={14} className="text-primary" />
-            <span className="text-xs font-semibold text-primary-foreground">India's E-Commerce Visual Studio</span>
+            <span className="text-xs font-semibold text-foreground">India's E-Commerce Visual Studio</span> {/* Adjusted text color */}
           </motion.div>
 
-          <h1 className="font-heading text-3xl sm:text-4xl  lg:text-5xl font-extrabold leading-[1.05] mb-6 tracking-tight text-primary-foreground">
+          <h1 className="font-heading text-3xl sm:text-4xl  lg:text-5xl font-extrabold leading-[1.05] mb-6 tracking-tight text-foreground"> {/* Adjusted text color */}
             Your Competitor Just Launched.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary text-5xl">
@@ -55,41 +39,28 @@ const Hero = () => (
 
           </h1>
 
-          <p className="text-base md:text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
-            Product visuals, A+ content, packaging & logo - Amazon & Flipkart ready in <b className="text-white">3–5 days</b> at <b className="text-white">80%</b> less cost than a traditional studio shoot. No camera. No shipping. No delays.
+          <p className="text-base md:text-lg text-gray-600 max-w-lg mb-10 leading-relaxed"> {/* Adjusted text color */}
+            Product visuals, A+ content, packaging & logo - Amazon & Flipkart ready in <b className="text-foreground">3–5 days</b> at <b className="text-foreground">80%</b> less cost than a traditional studio shoot. No camera. No shipping. No delays. {/* Adjusted bold text color */}
           </p>
           <br />
-          <span className="text-[#60B8F0] font-bold bottom-2 text-sm">⚡ Sellers who switched saved ₹15,000–₹50,000 per shoot</span>
+          <span className="text-primary font-bold bottom-2 text-sm">⚡ Sellers who switched saved ₹15,000–₹50,000 per shoot</span> {/* Adjusted text color */}
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-4">
             <Link
               to="/contact"
-              className="gradient-btn px-4 text-base flex items-center justify-center gap-2 shadow-xl"
+              className="gradient-btn px-4 py-4 text-base flex items-center justify-center gap-2 shadow-xl"
             >
              Try Free Sample<ArrowRight size={18} />
             </Link>
             <Link
               to="/portfolio"
-              className="px-8 py-4 text-base font-semibold text-primary-foreground border border-primary-foreground/30 rounded-full hover:bg-primary-foreground/10 backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2"
+              className="px-8 py-4 text-base font-semibold text-foreground border border-gray-300 rounded-full hover:bg-gray-100 backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2" // Adjusted text/border/hover bg color
             >
               <Play size={16} /> See Real Results
             </Link>
           </div>
 
-          <span className="text-[#C84FD8] text-[11px]">🔥 Limited free slots this month - only 4 remaining</span>
-          {/* <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-primary-foreground/60">
-            {["500+ Projects Delivered", "200+ Global Clients", "50+ Awards Won"].map((t, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + i * 0.15 }}
-                className="flex items-center gap-1.5"
-              >
-                <CheckCircle size={14} className="text-primary" /> {t}
-              </motion.span>
-            ))}
-          </div> */}
+          <span className="text-accent text-[11px]">🔥 Limited free slots this month - only 4 remaining</span> {/* Adjusted text color */}
         </motion.div>
 
         {/* Right - floating stat cards */}
@@ -110,12 +81,12 @@ const Hero = () => (
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + i * 0.12 }}
-              className="glass-card-dark p-6 text-center hover:scale-105 transition-transform duration-300"
+              className="glass-card p-6 text-center hover:scale-105 transition-transform duration-300 bg-gray-50/50 border border-gray-100" // Adjusted for white background
             >
               <div className={`font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r ${s.color} bg-clip-text text-transparent`}>
                 {s.num}
               </div>
-              <div className="text-sm text-primary-foreground/60 mt-1">{s.label}</div>
+              <div className="text-sm text-muted-foreground mt-1">{s.label}</div> {/* Adjusted text color */}
             </motion.div>
           ))}
         </motion.div>
@@ -126,7 +97,7 @@ const Hero = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="mt-16 lg:hidden glass-card-dark p-6 grid grid-cols-2 gap-6 "
+        className="mt-16 lg:hidden glass-card p-6 grid grid-cols-2 gap-6 bg-gray-50/50 border border-gray-100" // Adjusted for white background
       >
         {[
           { num: "50+", label: " Brands Launched" },
@@ -138,7 +109,7 @@ const Hero = () => (
             <div className="bg-gradient-to-b from-[#7B2FD9] to-[#60B8F0] text-transparent bg-clip-text text-[1.4rem] font-bold">
               {s.num}
             </div>
-            <div className="text-xs text-primary-foreground/60 mt-1">{s.label}</div>
+            <div className="text-xs text-muted-foreground mt-1">{s.label}</div> {/* Adjusted text color */}
           </div>
         ))}
       </motion.div>
@@ -151,7 +122,7 @@ const Hero = () => (
       transition={{ delay: 1.5 }}
       className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
     >
-      <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-1.5">
+      <div className="w-6 h-10 rounded-full border-2 border-muted-foreground flex items-start justify-center p-1.5"> {/* Adjusted border color */}
         <motion.div
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
