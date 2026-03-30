@@ -48,7 +48,7 @@ const Hero = () => (
           <div className="flex flex-col sm:flex-row gap-4 mb-12 mt-4">
             <Link
               to="/contact"
-              className="gradient-btn px-4 text-base flex items-center justify-center gap-2 shadow-xl"
+              className="gradient-btn px-4 py-4 text-base flex items-center justify-center gap-2 shadow-xl"
             >
              Try Free Sample<ArrowRight size={18} />
             </Link>
