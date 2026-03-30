@@ -17,7 +17,7 @@ const Pricing = () => {
   const [activeTab, setActiveTab] = useState<"ecommerce" | "brand">("ecommerce");
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-50 via-white to-white text-slate-900 selection:bg-purple-200">
+    <div className="min-h-screen bg-gradient-to-r from-purple-50 via-white to-white text-slate-900">
       <Navbar />
 
       {/* Header */}

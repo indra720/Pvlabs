@@ -6,41 +6,33 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { ecommerceImages,brandImages, ecommerceServices, brandServices } from "@/lib/services-data";
-
-
-const getEcommerceImages = (mainImage: string) => {
-  const otherImages = ecommerceImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
-
-const getBrandImages = (mainImage: string) => {
-  const otherImages = brandImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
+import { ecommerceServices, brandServices } from "@/lib/services-data";
 
 
 const ServicesGrid = () => (
   <>
     <style>{`
       .swiper-button-next, .swiper-button-prev {
-        background-color: rgba(255, 255, 255, 0.35);
-        backdrop-filter: blur(4px);
-        width: 20px !important;
-        height: 20px !important;
+        background-color: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(8px);
+        width: 28px !important;
+        height: 28px !important;
         border-radius: 50%;
-        padding:2px !important;
-        color: #ffffff !important;
+        padding: 2px !important;
+        color: #000000 !important;
         transition: all 0.3s ease;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        z-index: 20;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
       .swiper-button-next:hover, .swiper-button-prev:hover {
-        background-color: rgba(255, 255, 255, 0.55);
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: scale(1.1);
       }
       .swiper-button-next:after, .swiper-button-prev:after {
-        font-size: 8px !important;
+        font-size: 10px !important;
         font-weight: 900 !important;
       }
       .swiper-pagination-bullet {
@@ -53,15 +45,15 @@ const ServicesGrid = () => (
         opacity: 1;
         background: #ffffff !important;
       }
-    `}</style>
-    <section className="section-padding gradient-bg-soft">
+      `}</style>
+      <section className="section-padding gradient-bg-soft">
       <div className="w-full sm:max-w-7xl mx-auto ">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}s
-          viewport={{ once: true }}
-          className="text-center mb-10"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-10"
+      >
           <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
             WHAT WE CREATE
           </span>
@@ -151,7 +143,7 @@ const ServiceItem = ({ service, color }: { service: any, color: string }) => (
           delay: 3000,
           disableOnInteraction: false,
         }}
-        navigation={true}
+        // navigation={true}
         pagination={{ clickable: true }}
         loop={true}
         className="w-full h-full"

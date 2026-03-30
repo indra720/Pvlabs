@@ -1,46 +1,97 @@
-import producthero from "../assets/producthero-1.jpg"
-import productheroagain from "../assets/producthero-2.avif"
-import lifestyle from "../assets/lifestyle1.webp"
-import lifestyleagain from "../assets/lifestle2.png"
-import acontent from "../assets/a+content.webp"
-import inforgraphic from "../assets/inforgraphic.png"
-import catlog from "../assets/catlog.webp"
-import logodesign from "../assets/logodesing.jpg"
-import brandiden from "../assets/brand3.jpg"
-import packing from "../assets/packing.jpg"
-import socialimg from "../assets/socialimg.png"
-import addgoogle from "../assets/adgoogle.webp" 
-import presentation from "../assets/presenation.jpg" 
+// Hero Images
+import HeroImages1 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-00-218.png";
+import HeroImages2 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-20-286.png";
+import HeroImages3 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-44-719.png";
+import HeroImages4 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-05-999.png";
+import HeroImages5 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-34-641.png";
+import HeroImages6 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-56-726.png";
+import HeroImages7 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-41-16-835.png";
+import HeroImages8 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-41-37-125.png";
 
-// Split Image Collections
-export const ecommerceImages = [
-  producthero,
-  productheroagain,
-  lifestyle,
-  lifestyleagain,
-  acontent,
-  inforgraphic,
-  catlog
-];
+// lifestyle images
+import lifestyleimages1 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-43-38-494.png";
+import lifestyleimages2 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-02-310.png";
+import lifestyleimages3 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-24-597.png";
+import lifestyleimages4 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-48-166.png";
+import lifestyleimages5 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-45-12-341.png";
+import lifestyleimages6 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-45-37-928.png";
+import lifestyleimages7 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-46-01-704.png";
 
-export const brandImages = [
-  logodesign,
-  brandiden,
-  packing,
-  socialimg,
-  addgoogle,
-  presentation
-];
+// A+ & EBC
+import AEBC1 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-03-22-784.png";
+import AEBC2 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-03-43-183.png";
+import AEBC3 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-04-04-095.png";
+import AEBC4 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-04-34-920.png";
+import AEBC5 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-05-05-282.jpg";
+import AEBC6 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-05-19-767.jpg";
+import AEBC7 from "../assets/PV Labs Images/A+ & EBC/smm-3.webp";
 
-export const getEcommerceImages = (mainImage: string) => {
-  const otherImages = ecommerceImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
+// infographics
+import infographics1 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-47-45-837.png";
+import infographics2 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-48-40-860.png";
+import infographics3 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-50-41-082.png";
+import infographics4 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-51-17-374.png";
+import infographics5 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-51-47-368.png";
+import infographics6 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-52-10-461.png";
+import infographics7 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-54-00-408.png";
 
-export const getBrandImages = (mainImage: string) => {
-  const otherImages = brandImages.filter(img => img !== mainImage);
-  return [mainImage, ...otherImages.sort(() => 0.5 - Math.random())];
-};
+// Cataloging & RPD
+import CatalogingRPD1 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-58-26-899.png";
+import CatalogingRPD2 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-59-11-967.png";
+import CatalogingRPD3 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-59-48-230.png";
+import CatalogingRPD4 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-00-23-209.png";
+import CatalogingRPD5 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-01-04-972.png";
+import CatalogingRPD6 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-01-34-940.png";
+import CatalogingRPD7 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-03-03-159.png";
+
+// Logo Designing
+import LogoDesigning1 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-06-19-211.png";
+import LogoDesigning2 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-07-36-515.png";
+import LogoDesigning3 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-08-35-535.png";
+import LogoDesigning4 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-10-37-881.png";
+import LogoDesigning5 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-10-59-976.png";
+import LogoDesigning6 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-11-29-226.png";
+import LogoDesigning7 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-11-53-253.png";
+import LogoDesigning8 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-12-19-618.png";
+
+// Packaging Design
+import PackagingDesign1 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-13-18-219.png";
+import PackagingDesign2 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-13-40-384.png";
+import PackagingDesign3 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-02-184.png";
+import PackagingDesign4 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-27-534.png";
+import PackagingDesign5 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-52-365.png";
+import PackagingDesign6 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-15-15-657.png";
+import PackagingDesign7 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-15-39-608.png";
+import PackagingDesign8 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-16-02-344.png";
+
+// Social Media Creatives
+import SocialMediaCreatives1 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-03-26-908.png";
+import SocialMediaCreatives2 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-03-47-609.png";
+import SocialMediaCreatives3 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-09-721.png";
+import SocialMediaCreatives4 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-32-404.png";
+import SocialMediaCreatives5 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-51-843.png";
+import SocialMediaCreatives6 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-05-11-328.png";
+import SocialMediaCreatives7 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-05-32-503.png";
+import SocialMediaCreatives8 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-06-00-166.png";
+
+// Ad Creatives (Meta & Google)
+import AdCreativesMetaGoogle1 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-07-18-773.png";
+import AdCreativesMetaGoogle2 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-07-41-505.png";
+import AdCreativesMetaGoogle3 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-05-323.png";
+import AdCreativesMetaGoogle4 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-26-648.png";
+import AdCreativesMetaGoogle5 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-46-458.png";
+import AdCreativesMetaGoogle6 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-09-07-460.png";
+import AdCreativesMetaGoogle7 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-09-27-602.png";
+
+// Presentation & Pitch Deck
+import PresentationPitchDeck1 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-54-15-739.png";
+import PresentationPitchDeck2 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-54-38-409.png";
+import PresentationPitchDeck3 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-04-898.png";
+import PresentationPitchDeck4 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-31-775.png";
+import PresentationPitchDeck5 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-54-806.png";
+import PresentationPitchDeck6 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-06-806.png";
+import PresentationPitchDeck7 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-31-184.png";
+import PresentationPitchDeck8 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-51-020.png";
 
 export const ecommerceServices = [
   {
@@ -57,8 +108,8 @@ export const ecommerceServices = [
       "3–5 day delivery"
     ],
     cta: "→ See Hero Image Examples",
-    image: producthero,
-    images: getEcommerceImages(producthero)
+    image: HeroImages1,
+    images: [HeroImages1, HeroImages2, HeroImages3, HeroImages4, HeroImages5, HeroImages6, HeroImages7, HeroImages8]
   },
   {
     id: "lifestyle-scene-images",
@@ -72,8 +123,8 @@ export const ecommerceServices = [
       "Multiple scenes per product"
     ],
     cta: "→ See Lifestyle Examples",
-    image: lifestyle,
-    images: getEcommerceImages(lifestyle)
+    image: lifestyleimages1,
+    images: [lifestyleimages1, lifestyleimages2, lifestyleimages3, lifestyleimages4, lifestyleimages5, lifestyleimages6, lifestyleimages7]
   },
   {
     id: "a-content-ebc-design",
@@ -89,8 +140,8 @@ export const ecommerceServices = [
       "Delivered within 5 days"
     ],
     cta: "→ See A+ Content Examples",
-    image: lifestyleagain,
-    images: getEcommerceImages(lifestyleagain)
+    image: AEBC1,
+    images: [AEBC1, AEBC2, AEBC3, AEBC4, AEBC5, AEBC6, AEBC7]
   },
   {
     id: "infographics-listing-images",
@@ -104,8 +155,8 @@ export const ecommerceServices = [
       "Trust & certification badges"
     ],
     cta: "→ See Infographic Examples",
-    image: acontent,
-    images: getEcommerceImages(acontent)
+    image: infographics1,
+    images: [infographics1, infographics2, infographics3, infographics4, infographics5, infographics6, infographics7]
   },
   {
     id: "catalog-rpd-creation",
@@ -121,8 +172,8 @@ export const ecommerceServices = [
       "Image spec compliance"
     ],
     cta: "→ Talk to Us About Catalog",
-    image: catlog,
-    images: getEcommerceImages(catlog)
+    image: CatalogingRPD1,
+    images: [CatalogingRPD1, CatalogingRPD2, CatalogingRPD3, CatalogingRPD4, CatalogingRPD5, CatalogingRPD6, CatalogingRPD7]
   }
 ];
 
@@ -139,8 +190,8 @@ export const brandServices = [
       "Complete brand guidelines PDF"
     ],
     cta: "→ See Branding Examples",
-    image: logodesign,
-    images: getBrandImages(logodesign)
+    image: LogoDesigning1,
+    images: [LogoDesigning1, LogoDesigning2, LogoDesigning3, LogoDesigning4, LogoDesigning5, LogoDesigning6, LogoDesigning7, LogoDesigning8]
   },
   {
     id: "packaging-design",
@@ -154,8 +205,8 @@ export const brandServices = [
       "Multiple size variants"
     ],
     cta: "→ See Packaging Examples",
-    image: packing,
-    images: getBrandImages(packing)
+    image: PackagingDesign1,
+    images: [PackagingDesign1, PackagingDesign2, PackagingDesign3, PackagingDesign4, PackagingDesign5, PackagingDesign6, PackagingDesign7, PackagingDesign8]
   },
   {
     id: "social-media-creatives",
@@ -169,8 +220,8 @@ export const brandServices = [
       "Batch delivery (30 posts/month)"
     ],
     cta: "→ See Social Examples",
-    image: brandiden,
-    images: getBrandImages(brandiden)
+    image: SocialMediaCreatives1,
+    images: [SocialMediaCreatives1, SocialMediaCreatives2, SocialMediaCreatives3, SocialMediaCreatives4, SocialMediaCreatives5, SocialMediaCreatives6, SocialMediaCreatives7, SocialMediaCreatives8]
   },
   {
     id: "ad-creatives-meta-google",
@@ -185,8 +236,8 @@ export const brandServices = [
       "Brand consistent design"
     ],
     cta: "→ See Ad Creative Examples",
-    image: addgoogle,
-    images: getBrandImages(addgoogle)
+    image: AdCreativesMetaGoogle1,
+    images: [AdCreativesMetaGoogle1, AdCreativesMetaGoogle2, AdCreativesMetaGoogle3, AdCreativesMetaGoogle4, AdCreativesMetaGoogle5, AdCreativesMetaGoogle6, AdCreativesMetaGoogle7]
   },
   {
     id: "presentation-pitch-deck",
@@ -200,7 +251,7 @@ export const brandServices = [
       "Editable templates delivered"
     ],
     cta: "→ See Deck Examples",
-    image: presentation,
-    images: getBrandImages(presentation)
+    image: PresentationPitchDeck1,
+    images: [PresentationPitchDeck1, PresentationPitchDeck2, PresentationPitchDeck3, PresentationPitchDeck4, PresentationPitchDeck5, PresentationPitchDeck6, PresentationPitchDeck7, PresentationPitchDeck8]
   }
 ];
