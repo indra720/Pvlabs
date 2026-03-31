@@ -46,14 +46,14 @@ const ServicesGrid = () => (
         background: #ffffff !important;
       }
       `}</style>
-      <section className="section-padding gradient-bg-soft">
+    <section className="section-padding gradient-bg-soft">
       <div className="w-full sm:max-w-7xl mx-auto ">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-10"
-      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
           <span className="bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-[3px]">
             WHAT WE CREATE
           </span>
@@ -136,25 +136,30 @@ const ServiceItem = ({ service, color }: { service: any, color: string }) => (
   >
     <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 border border-gray-100">
       <Swiper
-        // modules={[Autoplay, Navigation, Pagination]} // Commented out unused modules
-        // spaceBetween={0}
-        // slidesPerView={1}
-        // autoplay={false} // Disabled autoplay
-        // navigation={false} // Disabled navigation
-        // pagination={false} // Disabled pagination
-        // loop={false} // Disabled loop
+        modules={[Autoplay, Navigation, Pagination]} // Commented out unused modules
+        spaceBetween={0}
+        slidesPerView={1}
+        autoplay={true} // Disabled autoplay
+        navigation={false} // Disabled navigation
+        pagination={true} // Disabled pagination
+        loop={true} // Disabled loop
         className="w-full h-full"
       >        {service.images && service.images.length > 0 ? (
-          service.images.map((img: string, idx: number) => (
-            <SwiperSlide key={idx} className="w-full h-full">
-              <img src={img} alt={`${service.title} - ${idx + 1}`} className="w-full h-full object-cover" />
-            </SwiperSlide>
-          ))
-        ) : (
-          <SwiperSlide className="w-full h-full">
-            <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform" />
+        service.images.map((img: string, idx: number) => (
+          <SwiperSlide key={idx} className="w-full h-full">
+            <img
+              src={img}
+              loading={idx === 0 ? "eager" : "lazy"}
+              alt={`${service.title} - ${idx + 1}`}
+              className="w-full h-full object-cover"
+            />
           </SwiperSlide>
-        )}
+        ))
+      ) : (
+        <SwiperSlide className="w-full h-full">
+          <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform" />
+        </SwiperSlide>
+      )}
       </Swiper>
       {service.badge && (
         <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold text-white shadow-lg z-10 ${service.badgeType === 'hot' ? 'gradient-bg-vivid' :
