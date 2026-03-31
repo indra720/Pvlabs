@@ -125,13 +125,13 @@ const Blog = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="section-padding gradient-bg-vivid text-center">
-        <div className="max-w-2xl mx-auto">
+      <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 rounded-md text-center mx-auto w-[calc(100%-2rem)] sm:max-w-4xl m-5">
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Stay in the loop</h2>
           <p className="text-primary-foreground/80 mb-8">Get the latest design insights, tips, and trends delivered to your inbox weekly.</p>
-          <div className="flex gap-3 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input type="email" placeholder="your@email.com" className="flex-1 bg-background/20 border border-background/30 rounded-full px-5 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-background/30" />
-            <button className="bg-background text-foreground px-6 py-3 rounded-full font-semibold text-sm hover:shadow-xl transition-all">Subscribe</button>
+            <button className="bg-background text-foreground px-6 py-3 rounded-full font-semibold text-sm hover:shadow-xl transition-all ">Subscribe</button>
           </div>
         </div>
       </section>

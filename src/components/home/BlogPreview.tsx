@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, User, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import serviceWebdesign from "../../assets/Blog1.png";
-import serviceBranding from "../../assets/Blog2.png";
-import serviceAppdesign from "../../assets/Blog3.png";
+import serviceWebdesign from "../../assets/Blog11.png";
+import serviceBranding from "../../assets/Blog22.png";
+import serviceAppdesign from "../../assets/Blog33.png";
+
 
 const posts = [
   {
