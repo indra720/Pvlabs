@@ -125,7 +125,7 @@ const blogData: Record<string, any> = {
               </li>
               <li className="flex gap-4">
                 <span className="text-red-400 font-bold">05.</span>
-                <p className="text-sm text-gray-300"><span className="text-white font-bold">No lifestyle images:</span> Hard to build an emotional connection with just white backgrounds.</p>
+                <p className="text-sm text-gray-300"><span className="text-white font-bold">No LifeStyle Images - C:</span> Hard to build an emotional connection with just white backgrounds.</p>
               </li>
               <li className="flex gap-4">
                 <span className="text-red-400 font-bold">06.</span>
@@ -243,7 +243,7 @@ const blogData: Record<string, any> = {
           <div className="glass-card p-6 md:p-8 bg-white/50 border-purple-50">
             <h3 className="text-xl font-bold mb-4 text-gray-900">What is A+ Content?</h3>
             <p className="text-gray-600 text-sm leading-relaxed font-medium">
-              A+ Content (previously EBC) is Amazon's premium listing feature that lets brand-registered sellers replace the plain text product description with rich visual content — banners, comparison charts, lifestyle images, and more.
+              A+ Content (previously EBC) is Amazon's premium listing feature that lets brand-registered sellers replace the plain text product description with rich visual content — banners, comparison charts, LifeStyle Images - C, and more.
             </p>
           </div>
           <div className="glass-card p-6 md:p-8 bg-purple-900 text-white border-none relative overflow-hidden">

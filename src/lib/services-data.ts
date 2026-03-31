@@ -1,97 +1,97 @@
 // Hero Images
-import HeroImages1 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-00-218.png";
-import HeroImages2 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-20-286.png";
-import HeroImages3 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-39-44-719.png";
-import HeroImages4 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-05-999.png";
-import HeroImages5 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-34-641.png";
-import HeroImages6 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-40-56-726.png";
-import HeroImages7 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-41-16-835.png";
-import HeroImages8 from "../assets/PV Labs Images/Hero Images/Picsart_26-03-29_20-41-37-125.png";
+import HeroImages1 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-00-218.png";
+import HeroImages2 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (1).png";
+import HeroImages3 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (2).png";
+import HeroImages4 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (3).png";
+import HeroImages5 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (4).png";
+import HeroImages6 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (5).png";
+import HeroImages7 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (6).png";
+import HeroImages8 from "../assets/PV Labs Images - C/Hero Images - C/26-03-29_20-39-20-286 (7).png";
 
-// lifestyle images
-import lifestyleimages1 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-43-38-494.png";
-import lifestyleimages2 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-02-310.png";
-import lifestyleimages3 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-24-597.png";
-import lifestyleimages4 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-44-48-166.png";
-import lifestyleimages5 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-45-12-341.png";
-import lifestyleimages6 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-45-37-928.png";
-import lifestyleimages7 from "../assets/PV Labs Images/lifestyle images/Picsart_26-03-29_20-46-01-704.png";
+// LifeStyle Images - C
+import lifestyleimages1 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-43-38-494.png";
+import lifestyleimages2 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-44-02-310.png";
+import lifestyleimages3 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-44-24-597.png";
+import lifestyleimages4 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-44-48-166.png";
+import lifestyleimages5 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-45-37-928.png";
+import lifestyleimages6 from "../assets/PV Labs Images - C/LifeStyle Images - C/26-03-29_20-46-01-704.png";
+import lifestyleimages7 from "../assets/PV Labs Images - C/LifeStyle Images - C/6-03-29_20-45-12-341.png";
 
 // A+ & EBC
-import AEBC1 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-03-22-784.png";
-import AEBC2 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-03-43-183.png";
-import AEBC3 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-04-04-095.png";
-import AEBC4 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-04-34-920.png";
-import AEBC5 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-05-05-282.jpg";
-import AEBC6 from "../assets/PV Labs Images/A+ & EBC/Picsart_26-03-30_02-05-19-767.jpg";
-import AEBC7 from "../assets/PV Labs Images/A+ & EBC/smm-3.webp";
+import AEBC1 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (1).jpg";
+import AEBC2 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (2).jpg";
+import AEBC3 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (3).png";
+import AEBC4 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (4).png";
+import AEBC5 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (1).webp";
+import AEBC6 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (2).png";
+import AEBC7 from "../assets/PV Labs Images - C/A+ & EBC - C/26-03-30_02-03-22-784 (1).webp";
 
 // infographics
-import infographics1 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-47-45-837.png";
-import infographics2 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-48-40-860.png";
-import infographics3 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-50-41-082.png";
-import infographics4 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-51-17-374.png";
-import infographics5 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-51-47-368.png";
-import infographics6 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-52-10-461.png";
-import infographics7 from "../assets/PV Labs Images/infographics/Picsart_26-03-29_20-54-00-408.png";
+import infographics1 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-47-45-837.png";
+import infographics2 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-50-41-082.png";
+import infographics3 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-51-17-374.png";
+import infographics4 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-51-47-368.png";
+import infographics5 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-52-10-461.png";
+import infographics6 from "../assets/PV Labs Images - C/infographics - C/26-03-29_20-54-00-408.png";
+import infographics7 from "../assets/PV Labs Images - C/infographics - C/6-03-29_20-48-40-860.png";
 
 // Cataloging & RPD
-import CatalogingRPD1 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-58-26-899.png";
-import CatalogingRPD2 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-59-11-967.png";
-import CatalogingRPD3 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_20-59-48-230.png";
-import CatalogingRPD4 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-00-23-209.png";
-import CatalogingRPD5 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-01-04-972.png";
-import CatalogingRPD6 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-01-34-940.png";
-import CatalogingRPD7 from "../assets/PV Labs Images/Cataloging & RPD/Picsart_26-03-29_21-03-03-159.png";
+import CatalogingRPD1 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_20-58-26-899.png";
+import CatalogingRPD2 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_20-59-48-230.png";
+import CatalogingRPD3 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_21-00-23-209.png";
+import CatalogingRPD4 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_21-01-04-972.png";
+import CatalogingRPD5 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_21-03-03-159.png";
+import CatalogingRPD6 from "../assets/PV Labs Images - C/Cataloging & RPD - C/26-03-29_21-01-34-940.png";
+import CatalogingRPD7 from "../assets/PV Labs Images - C/Cataloging & RPD - C/6-03-29_20-59-11-967.png";
 
 // Logo Designing
-import LogoDesigning1 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-06-19-211.png";
-import LogoDesigning2 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-07-36-515.png";
-import LogoDesigning3 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-08-35-535.png";
-import LogoDesigning4 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-10-37-881.png";
-import LogoDesigning5 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-10-59-976.png";
-import LogoDesigning6 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-11-29-226.png";
-import LogoDesigning7 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-11-53-253.png";
-import LogoDesigning8 from "../assets/PV Labs Images/Logo Designing/Picsart_26-03-29_21-12-19-618.png";
+import LogoDesigning1 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (1).png";
+import LogoDesigning2 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (2).png";
+import LogoDesigning3 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (3).png";
+import LogoDesigning4 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (4).png";
+import LogoDesigning5 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (5).png";
+import LogoDesigning6 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (6).png";
+import LogoDesigning7 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (7).png";
+import LogoDesigning8 from "../assets/PV Labs Images - C/Logo Designing - C/26-03-29_21-08-35-535 (8).png";
 
 // Packaging Design
-import PackagingDesign1 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-13-18-219.png";
-import PackagingDesign2 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-13-40-384.png";
-import PackagingDesign3 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-02-184.png";
-import PackagingDesign4 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-27-534.png";
-import PackagingDesign5 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-14-52-365.png";
-import PackagingDesign6 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-15-15-657.png";
-import PackagingDesign7 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-15-39-608.png";
-import PackagingDesign8 from "../assets/PV Labs Images/Packaging Design/Picsart_26-03-29_21-16-02-344.png";
+import PackagingDesign1 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (1).png";
+import PackagingDesign2 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (2).png";
+import PackagingDesign3 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (3).png";
+import PackagingDesign4 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (4).png";
+import PackagingDesign5 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (5).png";
+import PackagingDesign6 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (6).png";
+import PackagingDesign7 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (7).png";
+import PackagingDesign8 from "../assets/PV Labs Images - C/Packaging Design - C/26-03-29_21-14-52-365 (8).png";
 
 // Social Media Creatives
-import SocialMediaCreatives1 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-03-26-908.png";
-import SocialMediaCreatives2 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-03-47-609.png";
-import SocialMediaCreatives3 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-09-721.png";
-import SocialMediaCreatives4 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-32-404.png";
-import SocialMediaCreatives5 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-04-51-843.png";
-import SocialMediaCreatives6 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-05-11-328.png";
-import SocialMediaCreatives7 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-05-32-503.png";
-import SocialMediaCreatives8 from "../assets/PV Labs Images/Social Media Creatives/Picsart_26-03-29_22-06-00-166.png";
+import SocialMediaCreatives1 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (1).png";
+import SocialMediaCreatives2 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (2).png";
+import SocialMediaCreatives3 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (3).png";
+import SocialMediaCreatives4 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (4).png";
+import SocialMediaCreatives5 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (5).png";
+import SocialMediaCreatives6 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (6).png";
+import SocialMediaCreatives7 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (7).png";
+import SocialMediaCreatives8 from "../assets/PV Labs Images - C/Social Media Creatives - C/26-03-29_22-03-26-908 (8).png";
 
 // Ad Creatives (Meta & Google)
-import AdCreativesMetaGoogle1 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-07-18-773.png";
-import AdCreativesMetaGoogle2 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-07-41-505.png";
-import AdCreativesMetaGoogle3 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-05-323.png";
-import AdCreativesMetaGoogle4 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-26-648.png";
-import AdCreativesMetaGoogle5 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-08-46-458.png";
-import AdCreativesMetaGoogle6 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-09-07-460.png";
-import AdCreativesMetaGoogle7 from "../assets/PV Labs Images/Ad Creatives (Meta & Google)/Picsart_26-03-29_22-09-27-602.png";
+import AdCreativesMetaGoogle1 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (1).png";
+import AdCreativesMetaGoogle2 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (2).png";
+import AdCreativesMetaGoogle3 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (3).png";
+import AdCreativesMetaGoogle4 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (4).png";
+import AdCreativesMetaGoogle5 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (5).png";
+import AdCreativesMetaGoogle6 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (6).png";
+import AdCreativesMetaGoogle7 from "../assets/PV Labs Images - C/Ad Creatives (Meta & Google) -C/26-03-29_22-07-18-773 (7).png";
 
 // Presentation & Pitch Deck
-import PresentationPitchDeck1 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-54-15-739.png";
-import PresentationPitchDeck2 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-54-38-409.png";
-import PresentationPitchDeck3 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-04-898.png";
-import PresentationPitchDeck4 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-31-775.png";
-import PresentationPitchDeck5 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-55-54-806.png";
-import PresentationPitchDeck6 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-06-806.png";
-import PresentationPitchDeck7 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-31-184.png";
-import PresentationPitchDeck8 from "../assets/PV Labs Images/Presentation & Pitch Deck/Picsart_26-03-30_00-57-51-020.png";
+import PresentationPitchDeck1 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (1).png";
+import PresentationPitchDeck2 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (2).png";
+import PresentationPitchDeck3 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (3).png";
+import PresentationPitchDeck4 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (4).png";
+import PresentationPitchDeck5 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (5).png";
+import PresentationPitchDeck6 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (6).png";
+import PresentationPitchDeck7 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (7).png";
+import PresentationPitchDeck8 from "../assets/PV Labs Images - C/Presentation & Pitch Deck - C/26-03-30_00-57-31-184 (8).png";
 
 export const ecommerceServices = [
   {
