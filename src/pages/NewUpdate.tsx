@@ -200,7 +200,7 @@
 // 3. Text on hero image Strictly against Amazon's guidelines. Your listing can get suppressed without warning.
 // 4. Same image uploaded multiple times Buyers notice. It signals low effort and kills trust instantly.
 // 5. Ignoring mobile buyers Over 70% of Amazon India traffic is mobile. Your infographic text must be readable on a 5-inch screen — if it's too small, it's useless.
-// 6. No lifestyle image Products without lifestyle images have significantly lower conversion — especially in home, fashion, and personal care categories.
+// 6. No lifestyle image Products without LifeStyle Images - C have significantly lower conversion — especially in home, fashion, and personal care categories.
 
 // Category-Specific Tips for Indian Sellers
 // Skincare & Personal Care: Skin-tone accurate renders matter. Show the texture, show the consistency. Before/after graphics work extremely well here.
@@ -275,7 +275,7 @@
 // Same product. Same price. Same reviews. But they're outselling you — and A+ Content is probably why.
 
 // What is A+ Content on Amazon?
-// A+ Content (previously called Enhanced Brand Content or EBC) is Amazon's premium listing feature that lets brand-registered sellers replace the plain text product description with rich visual content — banners, comparison charts, lifestyle images, ingredient breakdowns, brand stories, and more.
+// A+ Content (previously called Enhanced Brand Content or EBC) is Amazon's premium listing feature that lets brand-registered sellers replace the plain text product description with rich visual content — banners, comparison charts, LifeStyle Images - C, ingredient breakdowns, brand stories, and more.
 // Think of it as the difference between a roadside pamphlet and a premium product catalogue.
 // It lives below the fold on your listing page — after the bullet points, before the reviews.
 
@@ -339,8 +339,8 @@
 // A+ Content for Different Categories — What Works
 // Skincare & Beauty: Ingredient storytelling is everything. Dermatologist badge visuals, before/after graphics, skin-type suitability charts — buyers in this category research heavily before buying.
 // Health & Supplements: Certifications front and center — FSSAI, lab-tested, organic, non-GMO. Dosage guide, ingredient breakdown, usage instructions as visual modules.
-// Home & Kitchen: Dimensions and scale references in every module. Lifestyle images in real Indian home settings — not stock Western interiors. Material quality callouts.
-// Fashion & Apparel: Fabric composition, care instructions, size guide, model measurements. Lifestyle images showing the product styled — not just flat lays.
+// Home & Kitchen: Dimensions and scale references in every module. LifeStyle Images - C in real Indian home settings — not stock Western interiors. Material quality callouts.
+// Fashion & Apparel: Fabric composition, care instructions, size guide, model measurements. LifeStyle Images - C showing the product styled — not just flat lays.
 // Electronics: Full specs breakdown, compatibility chart, in-the-box contents visual, setup guide preview. Reduces "not as described" complaints significantly.
 
 // Should You Do A+ Content Yourself or Hire Someone?
@@ -435,7 +435,7 @@
 // No borders or decorative elements
 // Supporting Images:
 // Same resolution requirements — minimum 1000 × 1000px
-// Lifestyle images allowed and encouraged
+// LifeStyle Images - C allowed and encouraged
 // Infographics with text overlays allowed
 // Maximum images per listing: varies by category — typically 6 to 9
 // Image Ratio:

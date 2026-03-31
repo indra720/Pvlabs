@@ -757,7 +757,7 @@
 // | --- | --- |
 // | **Current** | Logo Design · Brand Identity · Website UI · Mobile App UI · Packaging · Motion Graphics · All Services |
 // | **Remove** | Website UI · Mobile App UI · Motion Graphics |
-// | **Change To** | Product Hero Images · Lifestyle Images · A+ Content & EBC · Infographics · Packaging Design · Logo & Brand Identity · All Services → |
+// | **Change To** | Product Hero Images · LifeStyle Images - C · A+ Content & EBC · Infographics · Packaging Design · Logo & Brand Identity · All Services → |
 // | **"All Services" link** | Keep - links to services page |
 
 // ---
