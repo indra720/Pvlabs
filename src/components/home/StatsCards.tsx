@@ -7,7 +7,7 @@ const stats = [
     title: "WHATEVER YOU SELL",
     subtitle: "Handled with care",
     icon: Boxes,
-    content: ["Wellness & Health", "Fashion", "Utility", "Lifestyle", "Consumer Goods" ,"Beauty & Skincare","Food && Beverage","Jewellery","Tech","Home && Garden"],
+    content: ["Wellness & Health", "Fashion", "Utility", "Lifestyle", "Consumer Goods" ,"Beauty & Skincare","Food & Beverage","Jewellery","Tech","Home & Garden"],
     isBlack: false,
     gradient: "from-purple-500/20 to-blue-500/20",
   },
@@ -123,7 +123,7 @@ const StatsCards = () => {
                   {Array.isArray(stat.content) ? (
                     <>
                       <div className="flex flex-wrap gap-2">
-                        {visibleItems.map((item, i) => (
+                        {Array.isArray(visibleItems) && visibleItems.map((item, i) => (
                           <motion.span
                             key={i}
                             initial={{ opacity: 0, scale: 0.8 }}
