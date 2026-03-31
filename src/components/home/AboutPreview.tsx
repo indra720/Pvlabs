@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Globe, Palette, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 // Realistic professional photography URL from Unsplash
-const aboutTeam = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070";
+import aboutTeam from "../../assets/about-team2.png"
 
 const AboutPreview = () => (
  <>

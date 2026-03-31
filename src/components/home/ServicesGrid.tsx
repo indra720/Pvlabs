@@ -136,22 +136,18 @@ const ServiceItem = ({ service, color }: { service: any, color: string }) => (
   >
     <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 border border-gray-100">
       <Swiper
-        modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={0}
-        slidesPerView={1}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        // navigation={true}
-        pagination={{ clickable: true }}
-        loop={true}
+        // modules={[Autoplay, Navigation, Pagination]} // Commented out unused modules
+        // spaceBetween={0}
+        // slidesPerView={1}
+        // autoplay={false} // Disabled autoplay
+        // navigation={false} // Disabled navigation
+        // pagination={false} // Disabled pagination
+        // loop={false} // Disabled loop
         className="w-full h-full"
-      >
-        {service.images && service.images.length > 0 ? (
+      >        {service.images && service.images.length > 0 ? (
           service.images.map((img: string, idx: number) => (
             <SwiperSlide key={idx} className="w-full h-full">
-              <img src={img} alt={`${service.title} - ${idx + 1}`} className="w-full h-full object-cover transition-transform" />
+              <img src={img} alt={`${service.title} - ${idx + 1}`} className="w-full h-full object-cover" />
             </SwiperSlide>
           ))
         ) : (
