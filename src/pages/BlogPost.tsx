@@ -4,9 +4,9 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Clock, User, Calendar, Sparkles, ShieldCheck, ArrowRight, Twitter, Linkedin, Facebook, Link as LinkIcon } from "lucide-react";
 import { socialLinks } from "@/lib/social-links";
-import serviceBranding from "../assets/Blog1.png";
-import serviceWebdesign from "../assets/Blog2.png";
-import serviceAppdesign from "../assets/Blog3.png";
+import serviceBranding from "../assets/Blog11.png";
+import serviceWebdesign from "../assets/Blog22.png";
+import serviceAppdesign from "../assets/Blog33.png";
 import serviceSocial from "@/assets/service-social.jpg";
 
 const blogData: Record<string, any> = {
@@ -676,12 +676,12 @@ const BlogPost = () => {
         <section className="px-4 sm:px-6 md:px-12 mb-12 md:mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="rounded-2xl sm:rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl border border-gray-100">
-              <img src={post.image} alt={post.title} className="w-screen h-full aspect-video md:aspect-[21/10] object-cover" />
+              <img src={post.image} alt={post.title} className="w-screen h-full  object-cover" />
             </div>
           </div>
         </section>
 
-        <section className="px-4 sm:px-6 md:px-12 pb-20 md:pb-24">
+        <section className="px-4 sm:px-6 md:px-12 pb-20 md:pb-24 ">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-[80px_1fr] gap-8 md:gap-12">
               <div className="hidden lg:flex flex-col gap-4 sticky top-40 h-fit">

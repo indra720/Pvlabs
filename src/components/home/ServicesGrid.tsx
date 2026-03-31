@@ -147,12 +147,7 @@ const ServiceItem = ({ service, color }: { service: any, color: string }) => (
       >        {service.images && service.images.length > 0 ? (
         service.images.map((img: string, idx: number) => (
           <SwiperSlide key={idx} className="w-full h-full">
-            <img
-              src={img}
-              loading={idx === 0 ? "eager" : "lazy"}
-              alt={`${service.title} - ${idx + 1}`}
-              className="w-full h-full object-cover"
-            />
+            <img src={img} alt={`${service.title} - ${idx + 1}`} className="w-full h-full object-cover" />
           </SwiperSlide>
         ))
       ) : (
