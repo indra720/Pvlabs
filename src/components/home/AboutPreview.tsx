@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import aboutTeam from "../../assets/about-team.jpg";
+import aboutTeam from "../../assets/about-team2.png";
 
 const AboutPreview = () => (
   <>
