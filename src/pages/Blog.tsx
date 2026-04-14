@@ -59,7 +59,7 @@ const Blog = () => {
 
       {/* Featured */}
       {!search && active === "All" && (
-        <section className="px-6 md:px-12 pb-12">
+        <section className="px-6 py-5 pb-12">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Featured Articles</h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -89,7 +89,7 @@ const Blog = () => {
       )}
 
       {/* Categories */}
-      <section className="px-6 md:px-12 pb-4">
+      <section className="px-6 md:px-12 pb-4 py-2">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-3">
           {categories.map(c => (
             <button key={c} onClick={() => setActive(c)} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${active === c ? "gradient-btn" : "bg-secondary text-muted-foreground hover:bg-secondary/80"}`}>
@@ -123,6 +123,8 @@ const Blog = () => {
         </div>
         {filtered.length === 0 && <p className="text-center text-muted-foreground py-12">No articles found matching your search.</p>}
       </section>
+
+      
 
       {/* Newsletter */}
       <section className="section-padding bg-gradient-to-r from-slate-900 to-slate-800 rounded-md text-center mx-auto w-[calc(100%-2rem)] sm:max-w-4xl m-5">
