@@ -12,7 +12,7 @@ const posts = [
     title: "Amazon Listing Images — Complete Guide for Indian Sellers 2026",
     category: "Guide",
     readTime: "8 min",
-    author: "Rudra",
+    // author: "Rudra",
     image: serviceWebdesign,
     excerpt: "Wrong images cost you sales every single day. Here's exactly what Amazon wants — and what Indian sellers keep getting wrong.",
     side: "left"
@@ -22,7 +22,7 @@ const posts = [
     title: "What is A+ Content & Why Every Amazon Brand Needs It",
     category: "Education",
     readTime: "7 min",
-    author: "Tankaar Sharma",
+    // author: "Tankaar Sharma",
     image: serviceBranding,
     excerpt: "Most Amazon sellers have never used A+ Content. The ones who have — won't stop. Here's everything you need to know before your competitors figure it out.",
     side: "center"
@@ -32,7 +32,7 @@ const posts = [
     title: "Flipkart Listing Image Requirements — Full Size & Format Guide 2026",
     category: "Guide",
     readTime: "6 min",
-    author: "Rudra",
+    // author: "Rudra",
     image: serviceAppdesign,
     excerpt: "Flipkart rejects thousands of listings every day for image errors. Here's the exact spec sheet Indian sellers need — so yours never gets rejected.",
     side: "right"
@@ -85,8 +85,8 @@ const BlogPreview = () => {
                     </div>
                     <h3 className="font-heading font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">{p.title}</h3>
                     <p className="text-sm text-gray-500 mb-4 leading-relaxed line-clamp-3 font-medium">{p.excerpt}</p>
-                    <div className="flex flex-col sm:flex-row items-center justify-between mt-auto pt-4 border-t border-border/50">
-                      <span className="text-xs text-gray-400 flex items-center gap-1 font-bold uppercase tracking-widest"><User size={12} /> {p.author}</span>
+                    <div className="flex flex-col sm:flex-row items-center justify-end mt-auto pt-4 border-t border-border/50">
+                      {/* <span className="text-xs text-gray-400 flex items-center gap-1 font-bold uppercase tracking-widest"><User size={12} /> {p.author}</span> */}
                       <span className="text-sm text-primary flex items-center gap-1 font-bold uppercase tracking-widest">
                         Read more <ArrowRight size={14} />
                       </span>
