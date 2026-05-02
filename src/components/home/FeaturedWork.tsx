@@ -15,8 +15,7 @@ const projects = [
   { title: "FitPulse App UI", category: "Mobile App", image: serviceAppdesign, client: "FitPulse", result: "User engagement up 300%" },
   { title: "GreenLeaf Packaging", category: "Packaging", image: servicePackaging, client: "GreenLeaf Co.", result: "Sales increased 45%" },
   { title: "CloudSync Dashboard", category: "Web Design", image: serviceWebdesign, client: "CloudSync", result: "Task completion improved 60%" },
-  { title: "Apex Motion Reel", category: "Motion", image: serviceMotion, client: "Apex Digital", result: "10M+ social views" },
-  { title: "Luxe Print Campaign", category: "Print", image: servicePrint, client: "Luxe Fashion", result: "40% more foot traffic" },
+ 
 ];
 
 const FeaturedWork = () => (

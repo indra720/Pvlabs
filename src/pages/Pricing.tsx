@@ -112,7 +112,7 @@ const Pricing = () => {
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">Full Listing Upgrade</h3>
                     <p className="text-slate-500 text-sm mb-8 font-medium">Make the entire listing work as one system</p>
                     <div className="mb-8 p-4 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-purple-100">
-                      <span className="text-5xl font-extrabold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent">₹699</span>
+                      <span className="text-5xl font-extrabold bg-gradient-to-r from-[#7B2FD9] to-[#60B8F0] bg-clip-text text-transparent">₹799</span>
                       <span className="text-sm text-slate-500 font-bold ml-2">/ starting</span>
                       <p className="text-slate-400 text-xs mt-1 font-semibold uppercase">Up to ₹1,499 · Category dependent</p>
                     </div>
@@ -175,9 +175,9 @@ const Pricing = () => {
                           Listing Images + RPD/A+ Combined
                           <span className="text-[10px] bg-[#7B2FD9] text-white px-2 py-0.5 rounded-full font-bold shadow-sm">RECOMMENDED</span>
                         </td>
-                        <td className="p-6 text-center text-[#7B2FD9] font-bold text-sm">₹699/SKU</td>
-                        <td className="p-6 text-center text-[#7B2FD9] font-bold text-sm">₹649/SKU</td>
-                        <td className="p-6 text-center text-[#7B2FD9] font-extrabold text-xl bg-purple-100/50">₹499<span className="text-xs font-normal text-slate-500">/SKU</span></td>
+                        <td className="p-6 text-center text-[#7B2FD9] font-bold text-sm">₹799/SKU</td>
+                        <td className="p-7 text-center text-[#7B2FD9] font-bold text-sm">₹749/SKU</td>
+                        <td className="p-6 text-center text-[#7B2FD9] font-extrabold text-xl bg-purple-100/50">₹599<span className="text-xs font-normal text-slate-500">/SKU</span></td>
                       </tr>
                     </tbody>
                   </table>

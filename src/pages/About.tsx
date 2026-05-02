@@ -41,7 +41,7 @@ const About = () => {
                 Flipkart were losing sales because of bad visuals. Not bad products. Bad visuals.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                We're a team of two brothers - a data scientist and a business strategist -
+                We're a team of experts graphics Designers -
                 who built a studio that replaces expensive photoshoots with world-class
                 product visuals. No camera. No shipping. No delays.
               </p>

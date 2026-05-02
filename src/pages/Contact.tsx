@@ -7,14 +7,6 @@ import { socialLinks } from "@/lib/social-links";
 import { FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", service: "", budget: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you! We'll be in touch within 24 hours.");
-    setForm({ name: "", email: "", service: "", budget: "", message: "" });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -40,59 +32,27 @@ const Contact = () => {
 
       <section className="p-6 md:px-12 pb-24">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
-          {/* Form */}
+          {/* WhatsApp Card replacing Form */}
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-3">
-            <div className="glass-card p-8 shadow-xl">
-              <h2 className="font-heading text-2xl font-bold mb-2 text-foreground">Get a Free Quote</h2>
-              <p className="text-sm text-muted-foreground mb-6">Tell us about your project and we'll get back to you with a detailed proposal.</p>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block text-foreground">Full Name *</label>
-                    <input type="text" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your Name" className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block text-foreground">Email Address *</label>
-                    <input type="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="you@company.com" className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block text-foreground">Service Needed</label>
-                    <select value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30">
-                      <option value="">Select a service</option>
-                      <option>Product Hero Images</option>
-                      <option>Lifestyle & Scene Images</option>
-                      <option>A+ Content / EBC Design</option>
-                      <option>Listing Infographics</option>
-                      <option>Logo & Brand Identity</option>
-                      <option>Packaging Design</option>
-                      <option>Social Media Creatives</option>
-                      <option>Meta/Google Ad Creatives</option>
-                      <option>Cataloging / RPD Creation</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block text-foreground">Budget Range</label>
-                    <select value={form.budget} onChange={e => setForm({ ...form, budget: e.target.value })} className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30">
-                      <option value="">Select budget</option>
-                      <option>₹5,000 - ₹10,000</option>
-                      <option>₹10,000 - ₹25,000</option>
-                      <option>₹25,000+</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block text-foreground">Project Details *</label>
-                  <textarea rows={5} required value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your project goals, timeline, and any specific requirements..." className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" />
-                </div>
-
-                <button type="submit" className="gradient-btn px-8 py-3.5 text-sm flex items-center gap-2 w-full sm:w-auto justify-center">
-                  <Send size={16} /> Send Message
-                </button>
-              </form>
+            <div className="glass-card p-10 shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[400px]">
+              <div className="w-20 h-20 rounded-full bg-green-500 flex items-center justify-center text-white mb-6 shadow-lg shadow-green-200">
+                <FaWhatsapp size={40}/>
+              </div>
+              <h2 className="font-heading text-3xl font-extrabold mb-3 text-foreground">Start Chat on WhatsApp</h2>
+              <p className="text-base text-muted-foreground mb-8 max-w-md">
+                Need a quick quote or have a project in mind? Message us on WhatsApp for instant support.
+              </p>
+              <a 
+                href="https://wa.me/917417791003" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-green-500 text-white rounded-2xl font-bold text-base hover:bg-green-600 transition-all transform hover:scale-105 flex items-center justify-center gap-3 shadow-xl shadow-green-100"
+              >
+                <FaWhatsapp size={20}/> Message us Now
+              </a>
+              <p className="mt-6 text-xs text-muted-foreground flex items-center gap-2">
+                <CheckCircle size={12} className="text-green-500" /> Response within minutes
+              </p>
             </div>
           </motion.div>
 
@@ -124,22 +84,6 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-            </div>
-
-            <div className="glass-card p-6 bg-green-50/50 border-green-100 flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white mb-4 shadow-lg shadow-green-200">
-                <FaWhatsapp size={32}/>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp Us</h3>
-              <p className="text-sm text-gray-600 mb-6">Prefer a quick chat? Message us on WhatsApp for instant support.</p>
-              <a 
-                href="https://wa.me/917417791003" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
-              >
-                Start Chat on WhatsApp
-              </a>
             </div>
           </motion.div>
         </div>

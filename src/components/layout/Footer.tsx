@@ -60,6 +60,7 @@ const Footer = () => {
                 { label: "Our Work", path: "/portfolio" },
                 // { label: "Testimonials", path: "/testimonials" },
                 { label: "FAQ", path: "/faq" },
+                { label: "Careers", path: "/careers" },
                 { label: "Contact", path: "/contact" },
               ].map((l) => (
                 <Link key={l.label} to={l.path} className="text-sm text-background/60 hover:text-primary transition-colors">{l.label}</Link>

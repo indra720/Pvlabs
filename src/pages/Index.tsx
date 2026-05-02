@@ -30,7 +30,7 @@ const Index = () => (
     {/* <Testimonials /> */}
     <WhyChoose />
     {/* <Industries /> */}
-    <Founders showLayout={false} />
+    {/* <Founders showLayout={false} /> */}
     {/* <Awards /> */}
     <BlogPreview />
     <FAQ />
