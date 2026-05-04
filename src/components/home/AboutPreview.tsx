@@ -35,6 +35,43 @@ const AboutPreview = () => (
 
             {/* ✅ UPDATED LIST */}
 
+            <div className="space-y-6 mt-10 mb-8">
+              {[
+                { 
+                  title: "Conversion-Driven Designs", 
+                  desc: "We don't just create pretty pictures; we build visuals that convert visitors into customers.",
+                  icon: <TrendingUp size={20} />
+                },
+                { 
+                  title: "Marketplace Expertise", 
+                  desc: "Fully optimized content for major platforms like Amazon, Flipkart, and Myntra.",
+                  icon: <Globe size={20} />
+                },
+                { 
+                  title: "Data-Backed Strategy", 
+                  desc: "We analyze your competition to ensure your brand stands out and dominates the market.",
+                  icon: <Users size={20} />
+                },
+              ].map((item, i) => (
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex gap-4 items-start group"
+                >
+                  <div className="mt-1 bg-white shadow-sm border border-purple-100 p-2 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg">{item.title}</h4>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
             {/* CTA */}
             <Link
               to="/about"
@@ -42,26 +79,6 @@ const AboutPreview = () => (
             >
               See Our work <ArrowRight size={16} />
             </Link>
-
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4 items-center">
-              {[
-                { num: "50+", label: " Brands Launched" },
-                { num: "10,000+", label: "Visuals Delivered" },
-                { num: "3-5", label: "Day Turnaround" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="glass-card w-[200px] bg-white border-purple-100 p-4 text-center shadow-sm"
-                >
-                  <div className="bg-gradient-to-b from-[#7B2FD9] to-[#60B8F0] text-transparent bg-clip-text text-[1.4rem] font-bold">
-                    {s.num}
-                  </div>
-                  <div className="text-xs text-gray-600 mt-0.5">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           {/* RIGHT */}
