@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="w-full px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 smpo:grid-cols-2 lg:grid-cols-5  gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="mb-4 inline-block">
@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="font-heading font-semibold mb-6 text-white uppercase tracking-wider text-xs">Services</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col  gap-3">
               {[
                 { label: "Product Hero Images", path: "/services" },
                 { label: "LifeStyle Images", path: "/services" },
@@ -60,6 +60,7 @@ const Footer = () => {
                 { label: "Our Work", path: "/portfolio" },
                 // { label: "Testimonials", path: "/testimonials" },
                 { label: "FAQ", path: "/faq" },
+                { label: "Careers", path: "/careers" },
                 { label: "Contact", path: "/contact" },
               ].map((l) => (
                 <Link key={l.label} to={l.path} className="text-sm text-background/60 hover:text-primary transition-colors">{l.label}</Link>

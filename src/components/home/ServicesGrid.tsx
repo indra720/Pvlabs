@@ -139,7 +139,7 @@ const ServiceItem = ({ service, color }: { service: any, color: string }) => (
         modules={[Autoplay, Navigation, Pagination]} // Commented out unused modules
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={true} // Disabled autoplay
+        autoplay={{ delay: 1000, disableOnInteraction: false }} // Disabled autoplay
         navigation={false} // Disabled navigation
         pagination={true} // Disabled pagination
         loop={true} // Disabled loop
