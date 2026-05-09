@@ -198,7 +198,7 @@ const ServiceCard = ({ service, index, category }: { service: any, index: number
           spaceBetween={0}
           slidesPerView={1}
           autoplay={{
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           // navigation={true}

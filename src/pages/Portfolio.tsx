@@ -162,7 +162,7 @@ const projects = [
     desc: "Complete Rich Product Description design for a jewellery brand on Myntra , feature modules, material callouts, size and styling guide.",
     brand: "Nipura Jewellery",
     result: "Myntra RPD approved, first attempt",
-    images: [nipura1, nipura2, nipura2, nipura4]
+    images: [nipura1, nipura2, nipura3, nipura4]
   },
   {
     title: "Attar Ayurveda Bhringraj Powder A+",
