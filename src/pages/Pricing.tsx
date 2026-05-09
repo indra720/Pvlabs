@@ -71,8 +71,8 @@ const Pricing = () => {
               {/* Single SKU Section */}
               <section>
                 <div className="mb-12 text-center md:text-left">
-                  <span className="text-[#7B2FD9] text-sm font-bold uppercase tracking-widest bg-purple-100 px-3 py-1 rounded-md">SINGLE PRODUCT</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4">Start with one SKU.</h2>
+                  <span className="text-[#7B2FD9] text-sm font-bold uppercase tracking-widest bg-purple-100 px-3 py-1 rounded-md">START PACKAGE</span>
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4">Start with 10 SKU.</h2>
                   <p className="text-slate-600 mt-2 text-lg">Test us on your best listing. Zero commitment. Full quality.</p>
                 </div>
 
