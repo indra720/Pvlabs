@@ -9,7 +9,7 @@ const AboutPreview = () => (
 
     <section className="section-padding bg-purple-50">
       <div className="w-full">
-        <div className="grid lg:grid-cols-2 gap-12 ">
+        <div className="grid lg:grid-cols-2 gap-6 ">
 
           {/* LEFT */}
           <motion.div
@@ -29,7 +29,7 @@ const AboutPreview = () => (
               </span>
             </h2>
 
-            <span className="text-gray-600 leading-relaxed mb-4 text-2xl text-justify max-w-[480px] block">
+            <span className="text-gray-600 leading-relaxed mb-4 text-xl w-auto block">
               We started PV Labs with one mission - help Indian e-commerce sellers compete with the best...
             </span>
 
