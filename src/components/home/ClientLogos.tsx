@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import campus from "@/assets/marquelogo/campus.jpeg";
-import xyxx from "@/assets/marquelogo/xyxx.jpeg";
-import derma from "@/assets/marquelogo/derm2.jpeg";
-import sparx from "@/assets/marquelogo/sparx2.avif";
-import kapiva from "@/assets/marquelogo/kapiva2.jpeg";
+import attar from "@/assets/marquelogo/Attar2.jpeg";
+import nipura from "@/assets/marquelogo/Nipura.jpeg";
+import Aldo from "@/assets/marquelogo/aldo2.jpeg";
+import pv from "@/assets/marquelogo/pv.jpeg";
+import azelia from "@/assets/marquelogo/Azelia.jpeg";
 import noise from "@/assets/marquelogo/noise.jpeg";
 import mbmuscle from "@/assets/marquelogo/mbmuscle.jpeg";
 import boat from "@/assets/marquelogo/boat2.jpeg";
@@ -15,7 +15,7 @@ import healtkart from "@/assets/marquelogo/health.jpeg";
 
 
 const logos = [
-  campus, xyxx, derma, sparx, kapiva, noise, mbmuscle, boat, snitch, hrx, bewkoof, wakefit, healtkart
+  attar, nipura, Aldo, pv, azelia, noise, mbmuscle, boat, snitch, hrx, bewkoof, wakefit, healtkart
 ];
 
 const ClientLogos = () => {
