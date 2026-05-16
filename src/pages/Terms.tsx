@@ -82,7 +82,7 @@ const sections = [
     title: "Governing Law",
     icon: Globe,
     subtitle: "Legal Framework",
-    content: "These terms are governed by the laws of the State of California. Any disputes shall be resolved through arbitration in San Francisco, CA, under the rules of the American Arbitration Association.",
+    content: "These terms are governed by the laws of India. Any disputes shall be resolved through arbitration in Meerut, UP, under the relevant arbitration rules.",
     gradient: "from-purple-500/20 to-pink-500/20",
   },
   {
@@ -90,7 +90,7 @@ const sections = [
     title: "Contact Information",
     icon: Mail,
     subtitle: "Reach Out",
-    content: "For questions about these Terms of Service, contact us at legal@pvlabs.design or write to: PV Labs, 123 Design Street, San Francisco, CA 94105, USA.",
+    content: "For questions about these Terms of Service, contact us at growth@pvlabs.ai.",
     gradient: "from-emerald-500/20 to-teal-500/20",
   },
 ];
@@ -277,9 +277,11 @@ const Terms = () => {
                   </p>
                   <div className="space-y-4 md:space-y-6">
                     <motion.a 
-                      href="mailto:legal@pvlabs.design"
+                      href="mailto:growth@pvlabs.ai"
                       whileHover={{ x: 5 }}
                       className="flex items-center gap-4 group"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors flex-shrink-0">
                         <Mail size={18} className="text-primary group-hover:text-white" />

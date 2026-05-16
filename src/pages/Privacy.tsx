@@ -261,9 +261,11 @@ const Privacy = () => {
                   </p>
                   <div className="space-y-4 md:space-y-6">
                     <motion.a 
-                      href="mailto:pvlabs.ai@gmail.com"
+                      href="mailto:growth@pvlabs.ai"
                       whileHover={{ x: 5 }}
                       className="flex items-center gap-4 group"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors flex-shrink-0">
                         <Mail size={18} className="text-primary group-hover:text-white" />
