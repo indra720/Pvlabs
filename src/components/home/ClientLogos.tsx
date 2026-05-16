@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import attar from "@/assets/marquelogo/Attar2.jpeg";
 import nipura from "@/assets/marquelogo/Nipura.jpeg";
 import Aldo from "@/assets/marquelogo/aldo2.jpeg";
-import pv from "@/assets/marquelogo/pv.jpeg";
+import pv from "@/assets/marquelogo/pv2.jpeg";
 import azelia from "@/assets/marquelogo/Azelia.jpeg";
 import noise from "@/assets/marquelogo/noise.jpeg";
 import mbmuscle from "@/assets/marquelogo/mbmuscle.jpeg";
