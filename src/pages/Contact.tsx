@@ -59,8 +59,8 @@ const Contact = () => {
           {/* Info */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-2 space-y-5">
             {[
-              { icon: Mail, label: "Email Us", value: "growth@pvlabs.ai", sub: "We respond within 24 hours" },
-              { icon: Phone, label: "Call Us", value: "+91 74177 91003", sub: "Mon–Sat, 10AM–7PM IST" },
+              { icon: Mail, label: "Email Us", value: "growth@pvlabs.ai", sub: "We respond within 24 hours", href: "mailto:growth@pvlabs.ai" },
+              { icon: Phone, label: "Call Us", value: "+91 74177 91003", sub: "Mon–Sat, 10AM–7PM IST", href: "tel:+917417791003" },
               { icon: Clock, label: "Business Hours", value: "Mon – Sat: 10AM – 7PM IST", sub: "Sunday: Closed" },
             ].map((item, i) => (
               <div key={i} className="glass-card p-5 flex items-start gap-4 hover:shadow-lg transition-shadow">
@@ -69,7 +69,18 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">{item.label}</div>
-                  <div className="text-sm text-foreground">{item.value}</div>
+                  {item.href ? (
+                    <a 
+                      href={item.href} 
+                      className="text-sm text-foreground hover:text-primary transition-colors"
+                      target={item.href.startsWith('mailto:') ? "_blank" : undefined}
+                      rel={item.href.startsWith('mailto:') ? "noopener noreferrer" : undefined}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <div className="text-sm text-foreground">{item.value}</div>
+                  )}
                   <div className="text-xs text-muted-foreground">{item.sub}</div>
                 </div>
               </div>

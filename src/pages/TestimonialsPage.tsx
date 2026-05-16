@@ -128,16 +128,16 @@ const TestimonialsPage = () => (
       <div className="max-w-7xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
 
-          <h1 className="font-heading text-5xl md:text-7xl font-extrabold mt-3 mb-6 text-foreground">
+          <h1 className="font-heading text-5xl font-semibold mt-3 mb-6 text-foreground">
             What our clients <span className="gradient-text">say</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what 200+ clients have to say about working with PV Labs.
+            Don't just take our word for it. Here's what 100+ clients have to say about working with PV Labs.
           </p>
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             {[
-              { num: "4.9/5", label: "Average Rating" },
-              { num: "98%", label: "Would Recommend" },
+              { num: "4.8/5", label: "Average Rating" },
+              { num: "96%", label: "Would Recommend" },
               { num: "50+", label: "Brands Served" },
             ].map((s, i) => (
               <div key={i} className="text-center">

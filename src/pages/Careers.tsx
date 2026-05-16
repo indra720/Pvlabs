@@ -7,23 +7,80 @@ import { MapPin, Clock, DollarSign, ArrowRight, Heart, Zap, Globe, Coffee, Palet
 import aboutTeam from "@/assets/about-team.jpg";
 
 const perks = [
-  { icon: Globe, title: "Fully Remote", desc: "Work from anywhere in the world" },
-  { icon: Clock, title: "Flexible Hours", desc: "We trust you to manage your time" },
-  { icon: DollarSign, title: "Competitive Pay", desc: "Above-market compensation + equity" },
-  { icon: Heart, title: "Health & Wellness", desc: "Full medical, dental, and vision" },
-  { icon: GraduationCap, title: "Learning Budget", desc: "$2,000/year for courses & conferences" },
-  { icon: Coffee, title: "Unlimited PTO", desc: "Take the time you need to recharge" },
-  { icon: Palette, title: "Creative Freedom", desc: "Work on projects that inspire you" },
-  { icon: Zap, title: "Latest Tools", desc: "Best-in-class software and hardware" },
+  { icon: Globe, title: "Work Counts", desc: "Every visual you make goes live on Amazon, Flipkart, Myntra. Real stores. Real buyers." },
+  {
+    icon: Clock, title: "Own Your Time", desc: "No one's watching the clock. Deliver well, work when you're sharp."
+  },
+  { icon: DollarSign, title: "No Salary Games", desc: "What we offer, we pay. No we'll revisit in 6 months stories." },
+  { icon: Heart, title: "Talk to the Top", desc: "Your idea reaches the decision-maker the same day. Not next quarter." },
+  { icon: GraduationCap, title: "Deep Work Only", desc: "We don't do pointless meetings. Your focus stays yours." },
+  { icon: Coffee, title: "Grow or Stagnate", desc: "Small team means nowhere to hide — and nowhere to stop learning." },
+  { icon: Palette, title: "Real Brands. Real Stakes", desc: "You'll see your work on actual product listings people buy from." },
+  { icon: Zap, title: "Tools That Work", desc: " We don't make you fight bad software. Right tools, from day one." },
 ];
 
 const jobs = [
-  { title: "Senior Brand Designer", dept: "Design", type: "Full-time", location: "Remote", salary: "$90K - $130K", desc: "Lead brand identity projects for global clients. 5+ years experience required.", requirements: ["5+ years brand design experience", "Expert in Adobe Creative Suite & Figma", "Strong typography and layout skills", "Client presentation experience", "Portfolio showing brand systems"] },
-  { title: "UI/UX Designer", dept: "Design", type: "Full-time", location: "Remote", salary: "$80K - $120K", desc: "Design beautiful, intuitive digital experiences for web and mobile.", requirements: ["3+ years UI/UX experience", "Proficient in Figma", "Understanding of design systems", "User research experience", "Strong portfolio"] },
-  { title: "Motion Graphics Designer", dept: "Design", type: "Full-time", location: "Remote", salary: "$75K - $110K", desc: "Create stunning animations and motion graphics for brands.", requirements: ["3+ years motion design experience", "Expert in After Effects & Cinema 4D", "Understanding of timing and easing", "Sound design a plus", "Motion reel required"] },
-  { title: "Project Manager", dept: "Operations", type: "Full-time", location: "Remote / SF", salary: "$70K - $100K", desc: "Manage creative projects from kickoff to delivery.", requirements: ["3+ years PM experience", "Experience with creative teams", "Excellent communication", "Familiarity with design tools", "PMP or Scrum certification a plus"] },
-  { title: "Junior Graphic Designer", dept: "Design", type: "Full-time", location: "Remote", salary: "$50K - $70K", desc: "Support the team on branding, social media, and print projects.", requirements: ["1-2 years experience or strong portfolio", "Proficient in Figma & Illustrator", "Strong design fundamentals", "Eager to learn and grow", "Degree in design or related field"] },
-  { title: "Content Writer (Design Focus)", dept: "Marketing", type: "Part-time", location: "Remote", salary: "$40/hr", desc: "Write engaging articles and content about design, branding, and creativity.", requirements: ["Strong writing portfolio", "Knowledge of design industry", "SEO understanding", "2+ articles/week capacity", "Experience with CMS platforms"] },
+  {
+    title: "Visual Content Intern",
+    dept: "Creative",
+    type: "Full-time",
+    location: "Remote",
+
+    desc: "Create premium product visuals for Indian e-commerce brands using advanced digital tools and proprietary workflows.",
+    requirements: [
+      "Strong visual sense — you know what looks premium and what doesn't",
+      "Expert in crafting detailed creative briefs and visual direction",
+      "Strong command over digital content generation tools",
+      "Ability to translate a client brief into precise visual output",
+      "Deadline-driven, no hand-holding needed"
+    ]
+  },
+
+  {
+    title: "Operations Executive",
+    dept: "Operations",
+    type: "Full-time",
+    location: "Remote",
+
+    desc: "Keep everything running smoothly — client communication, project tracking, delivery coordination, and record maintenance.",
+    requirements: [
+      "Clear communicator in Hindi and English both",
+      "Genuinely organized, not just on paper",
+      "Can handle multiple ongoing projects without dropping things",
+      "Comfortable sending follow-ups and client emails independently"
+    ]
+  },
+
+  {
+    title: "Etsy & Marketplace Specialist",
+    dept: "E-commerce + Design",
+    type: "Full-time",
+    location: "Remote",
+
+    desc: "Manage Etsy store operations while creating fresh, on-demand listing visuals and product graphics using Canva and similar tools — as per project requirements.",
+    requirements: [
+      "Canva expert — fast, clean, creative output",
+      "Can create new designs from scratch based on brief, not just templates",
+      "Understands what visually sells on Etsy and international platforms",
+      "Detail-oriented with listing titles, tags, and descriptions",
+      "Comfortable communicating in English with international customers",
+      "Can handle orders, queries, and store health without supervision"
+    ]
+  },
+
+  {
+    title: "Accounts & Payments",
+    dept: "Finance",
+    type: "Full-time / Part-time",
+    location: "Remote",
+
+    desc: "Track transactions, manage payment follow-ups, maintain GST records and invoices.",
+    requirements: [
+      "Basic accounting knowledge",
+      "Confident with Excel or Tally",
+      "Not uncomfortable chasing payments when needed"
+    ]
+  }
 ];
 
 const Careers = () => {
@@ -38,16 +95,16 @@ const Careers = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary text-sm font-semibold uppercase tracking-widest">Careers</span>
-              <h1 className="font-heading text-5xl md:text-6xl font-extrabold mt-3 mb-6 text-foreground">
-                Join the <span className="gradient-text">creative revolution</span>
+              <h1 className="font-heading text-5xl  font-extrabold mt-3 mb-6 text-foreground">
+                We're building something real. <span className="gradient-text text-4xl italic">Come to be part of it</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                We're building the world's most talented creative team. If you're passionate about design that drives business results, we want to hear from you.
+                PV Labs is a visual services team working with Indian e-commerce brands-Amazon,Flipkart,Myntra,Ajio,D2C.We are small focused,and growing.You won't get lost here.Every person on the team directly impacts what we deliver.
               </p>
               <div className="flex gap-4 text-sm text-muted-foreground">
-                <span className="glass-card px-4 py-2">{jobs.length} Open positions</span>
-                <span className="glass-card px-4 py-2">Remote-first</span>
-                <span className="glass-card px-4 py-2">15+ team members</span>
+                <span className="glass-card px-4 py-2">Open Roles</span>
+                <span className="glass-card px-4 py-2">Work From Home</span>
+                <span className="glass-card px-4 py-2">India-based Team</span>
               </div>
             </div>
             <div className="rounded-[24px] overflow-hidden shadow-xl">
@@ -81,9 +138,9 @@ const Careers = () => {
           <h2 className="font-heading text-3xl font-bold text-foreground text-center mb-12">Our <span className="gradient-text">Culture</span></h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Craft Over Speed", desc: "We value thoughtful, well-crafted work. Quality is never sacrificed for speed. Every pixel matters." },
-              { title: "Radical Transparency", desc: "We share everything openly - from financials to feedback. No politics, no ego, just honest collaboration." },
-              { title: "Growth Mindset", desc: "We invest in our people. Monthly learning sessions, annual conference budget, and mentorship programs." },
+              { title: "Quality Over Speed", desc: "We don't rush work out the door. Every visual we deliver represents a brand — and we treat it that way. One good image beats five average ones." },
+              { title: "No Hidden Agendas", desc: "Small team means no room for politics. What's working, what's not — everyone knows. We talk straight, fix fast, move on." },
+              { title: "Builder's Mindset", desc: "We're still building — systems, processes, client base. If you're someone who sees a problem and fixes it without being asked, you'll fit right in." },
             ].map((v, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card p-8">
                 <h3 className="font-heading text-xl font-bold text-foreground mb-3">{v.title}</h3>
@@ -108,7 +165,7 @@ const Careers = () => {
                       <span className="text-xs text-muted-foreground flex items-center gap-1"><Briefcase size={12} /> {j.dept}</span>
                       <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock size={12} /> {j.type}</span>
                       <span className="text-xs text-muted-foreground flex items-center gap-1"><MapPin size={12} /> {j.location}</span>
-                      <span className="text-xs text-primary font-semibold flex items-center gap-1"><DollarSign size={12} /> {j.salary}</span>
+                      {/* <span className="text-xs text-primary font-semibold flex items-center gap-1"><DollarSign size={12} /> {j.salary}</span> */}
                     </div>
                   </div>
                   <span className={`text-primary text-xl transition-transform ${selectedJob === i ? "rotate-45" : ""}`}>+</span>
@@ -136,10 +193,11 @@ const Careers = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding gradient-bg-vivid text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="max-w-3xl mx-auto  section-padding bg-gradient-to-r from-slate-900 to-slate-800 text-center m-5 rounded-md shadow-sm">
+        <div className="max-w-3xl mx-auto ">
           <h2 className="font-heading text-4xl font-bold text-primary-foreground mb-4">Don't see your role?</h2>
-          <p className="text-primary-foreground/80 mb-8">We're always looking for exceptional talent. Send us your portfolio and let's chat.</p>
+          <p className="text-primary-foreground/80 mb-8">If you think you can add value to what we're building — just reach out. Send your work to growth@pvlabs.in
+          </p>
           <Link to="/contact" className="bg-background text-foreground px-8 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
             Send Your Portfolio <ArrowRight size={18} />
           </Link>

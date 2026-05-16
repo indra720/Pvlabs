@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="w-full px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 smpo:grid-cols-2 lg:grid-cols-5  gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5  gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="mb-4 inline-block">
-              <img 
-                src={logo} 
-                alt="PV Labs" 
-                className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 hover:scale-105" 
+              <img
+                src={logo}
+                alt="PV Labs"
+                className="h-16 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 hover:scale-105"
               />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed mb-6 max-w-[280px]">
@@ -72,7 +72,12 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold mb-6 text-white uppercase tracking-wider text-xs">Talk to us</h4>
             <div className="flex flex-col gap-4 text-sm text-background/60">
-              <a href="mailto:growth@pvlabs.ai" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a 
+                href="mailto:growth@pvlabs.ai" 
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Mail size={14} className="text-primary" /> growth@pvlabs.ai
               </a>
               <a href="tel:+917417791003" className="flex items-center gap-2 hover:text-primary transition-colors">
@@ -81,11 +86,11 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Clock size={14} className="text-primary" /> Mon–Sat · 10am–7pm IST
               </div>
-              <a 
-                href="https://wa.me/917417791003" 
+              <a
+                href="https://wa.me/917417791003"
                 className="mt-2 bg-black hover:bg-green-300 border-white text-white px-6 py-2.5 rounded-full font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all w-fit"
               >
-                <FaWhatsapp/> WhatsApp Us
+                <FaWhatsapp /> WhatsApp Us
               </a>
             </div>
           </div>
